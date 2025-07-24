@@ -1,0 +1,7 @@
+---
+// Redirigir a la versión localizada de la página
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+// Redirigir a la versión localizada de la página
+return Astro.redirect(getRelativeLocaleUrl(Astro.preferredLocale));
+---

@@ -1,0 +1,11 @@
+---
+import type { PortfolioEntry } from "@/types";
+import EntryLayout from "@components/portfolio/EntryLayout.astro";
+import { getIndex } from "@lib/contentParser";
+
+const lang = Astro.params.lang || "en";
+
+const entry = (await getIndex("portfolio", lang)) as PortfolioEntry;
+---
+
+<EntryLayout entry={entry} />

@@ -1,0 +1,14 @@
+---
+import type { AuthorsEntry } from "@/types";
+import CollectionLayout from "@components/authors/CollectionLayout.astro";
+import { getEntries } from "@lib/contentParser";
+import { getIndex } from "@lib/contentParser";
+import { sortByTitle } from "@lib/sortFunctions";
+
+const lang = Astro.params.lang || "en";
+
+const authorIndex = await getIndex("authors", lang) as AuthorsEntry;
+const entries = await getEntries("authors", sortByTitle, lang) as AuthorsEntry[];
+---
+
+<CollectionLayout authorIndex={authorIndex} entries={entries} />

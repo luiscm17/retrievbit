@@ -1,0 +1,11 @@
+---
+import { getIndex } from "@lib/contentParser";
+import EntryLayout from "@components/index-cards/EntryLayout.astro";
+import type { IndexCardsEntry } from "@/types";
+
+const lang = Astro.params.lang || "en";
+
+const entry = (await getIndex("indexCards", lang)) as IndexCardsEntry;
+---
+
+<EntryLayout entry={entry}/>
