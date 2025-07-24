@@ -1,0 +1,13 @@
+---
+import CollectionLayout from "@components/docs/CollectionLayout.astro";
+import { getIndex, getGroups } from "@lib/contentParser";
+import type { DocsEntry } from "@/types";
+import { sortByTitle } from "@lib/sortFunctions";
+
+const lang = Astro.params.lang || "es";
+
+const collectionIndex = (await getIndex("docs", lang)) as DocsEntry;
+const groupIndices = (await getGroups("docs", lang, sortByTitle)) as DocsEntry[];
+---
+
+<CollectionLayout entries={groupIndices} collectionIndex={collectionIndex} />

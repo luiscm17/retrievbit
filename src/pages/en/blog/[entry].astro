@@ -1,4 +1,5 @@
 ---
+import type { GetStaticPaths } from "astro";
 import type { BlogEntry } from "@/types";
 import { sortByDate } from "@lib/sortFunctions";
 import EntryLayout from "@components/blog/EntryLayout.astro";
@@ -6,12 +7,13 @@ import { getEntries } from "@lib/contentParser";
 import similerItems from "@lib/similarItems";
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+  const lang = "en";
+  const entries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
   const paths = entries.map((entry) => ({
     params: {
       entry: entry.id,
     },
-    props: { entry, entries },
+    props: { entry, entries},
   }));
   return paths;
 }

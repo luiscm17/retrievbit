@@ -15,8 +15,11 @@ const searchableCollections = [
   "terms",
 ] as CollectionKey[];
 
+const lang = Astro.params.lang || "en";
+
 const searchList = (await getEntriesBatch(
   searchableCollections,
+  lang,
   undefined,
   false
 )) as SearchableEntry[];

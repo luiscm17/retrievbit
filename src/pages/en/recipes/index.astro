@@ -7,7 +7,7 @@ import type { RecipesEntry } from "@/types";
 const lang = Astro.params.lang || "en";
 
 const entryIndex = (await getIndex("recipes", lang)) as RecipesEntry;
-const entries = (await getEntries("recipes", sortByDate, lang)) as RecipesEntry[];
+const entries = (await getEntries("recipes", lang, sortByDate)) as RecipesEntry[];
 
 const { slug } = Astro.params;
 

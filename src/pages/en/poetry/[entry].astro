@@ -4,8 +4,10 @@ import { sortByDate } from "@lib/sortFunctions";
 import EntryLayout from "@components/poetry/EntryLayout.astro";
 import { getEntries } from "@lib/contentParser";
 
+const lang = "en";
+
 export async function getStaticPaths() {
-  const entries = (await getEntries("poetry", sortByDate)) as PoetryEntry[];
+  const entries = (await getEntries("poetry", lang, sortByDate)) as PoetryEntry[];
   const pageIDs: string[] = entries.map((entry) => entry.id);
   const pageCount = pageIDs.length;
 

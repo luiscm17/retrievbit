@@ -7,7 +7,7 @@ import { sortByTitle } from "@lib/sortFunctions";
 const lang = Astro.params.lang || "en";
 
 const collectionIndex = (await getIndex("docs", lang)) as DocsEntry;
-const groupIndices = (await getGroups("docs", sortByTitle, lang)) as DocsEntry[];
+const groupIndices = (await getGroups("docs", lang, sortByTitle)) as DocsEntry[];
 ---
 
 <CollectionLayout entries={groupIndices} collectionIndex={collectionIndex} />

@@ -4,8 +4,10 @@ import EntryLayout from "@components/recipes/EntryLayout.astro";
 import { getEntries } from "@lib/contentParser";
 import { sortByTitle } from "@lib/sortFunctions";
 
+const lang = "en";
+
 export async function getStaticPaths() {
-  const entries = await getEntries("recipes", sortByTitle) as RecipesEntry[];
+  const entries = await getEntries("recipes", lang, sortByTitle) as RecipesEntry[];
   const paths = entries.map((entry) => ({
     params: {
       entry: entry.id,

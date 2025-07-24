@@ -1,5 +1,9 @@
 // content reading
 const readingTime = (content: string, complexity: number): string => {
+
+  if (!content || typeof content !== "string") {
+    return "0 min";
+  }
   const WPS = 200 / 60;
 
   let images = 0;

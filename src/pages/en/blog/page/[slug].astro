@@ -5,11 +5,12 @@ import { sortByDate } from "@lib/sortFunctions";
 import CollectionLayout from "@components/blog/CollectionLayout.astro";
 import type { BlogEntry } from "@/types";
 
+const lang = "en";
 const { slug } = Astro.params;
 const currentPageIndex = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
 
-const entryIndex = (await getIndex("blog")) as BlogEntry;
-const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+const entryIndex = (await getIndex("blog", lang)) as BlogEntry;
+const entries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
 
 const allCategories = await getTaxaMultiset("blog", "categories");
 const categories = await getTaxa("blog", "categories");
@@ -25,7 +26,7 @@ const pageCount: number = Math.ceil(
 );
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("blog", sortByDate)) as BlogEntry[];
+  const entries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
   // divisor below must equal entriesPerPage
   const pageCount = Math.ceil(entries.length / 4);
   const paths = [];

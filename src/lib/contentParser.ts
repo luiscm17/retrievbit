@@ -4,7 +4,7 @@ import type { GenericEntry } from "@/types";
 export const getIndex = async (
   collection: CollectionKey, 
   lang: string  
-): Promise<GenericEntry> => {
+): Promise<GenericEntry | undefined> => {
   const index = await getEntry(collection, `${lang}/${collection}/-index`);
   return index;
 }
