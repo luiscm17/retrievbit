@@ -2,10 +2,10 @@ import { getEntry, getCollection, type CollectionKey } from "astro:content";
 import type { GenericEntry } from "@/types";
 
 export const getIndex = async (
-  collection: CollectionKey, 
-  lang: string  
+  collection: CollectionKey,
+  lang: string
 ): Promise<GenericEntry | undefined> => {
-  const index = await getEntry(collection, `${lang}/${collection}/-index`);
+  const index = await getEntry(collection, `${lang}/${collection.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}/-index`);
   return index;
 }
 
@@ -16,16 +16,38 @@ export const getEntries = async (
   noIndex = true,
   noDrafts = true
 ): Promise<GenericEntry[]> => {
-  let entries: GenericEntry[] = await getCollection(collection, ({id}) => {
-    return id.match(new RegExp(`^${lang}/`)) !== null;
-  });
-  entries = noIndex
-    ? entries.filter((entry: GenericEntry) => !entry.id.match(/^-/))
-    : entries;
-  entries = noDrafts
-    ? entries.filter((entry: GenericEntry) => 'draft' in entry.data && !entry.data.draft)
-    : entries;
-  entries = sortFunction ? sortFunction(entries) : entries;
+  // Convertir el nombre de la colección a formato kebab-case
+  const collectionName = collection.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+  
+  // Construir el patrón para matchear rutas con prefijo de idioma
+  const pattern = new RegExp(`^${lang}/${collectionName}/`);
+  
+  // Obtener todas las entradas que coincidan con el patrón
+  let entries: GenericEntry[] = [];
+  try {
+    entries = await getCollection(collection, ({ id }) => {
+      return id.match(pattern) !== null;
+    });
+  } catch (error) {
+    console.error(`Error al obtener entradas para la colección ${collection}:`, error);
+    return [];
+  }
+
+  // Filtrar índices si es necesario
+  if (noIndex) {
+    entries = entries.filter(entry => !entry.id.endsWith('-index'));
+  }
+
+  // Filtrar borradores si es necesario
+  if (noDrafts) {
+    entries = entries.filter(entry => !('draft' in entry.data) || !entry.data.draft);
+  }
+
+  // Ordenar si se proporciona una función de ordenamiento
+  if (sortFunction) {
+    entries = sortFunction(entries);
+  }
+
   return entries;
 };
 
@@ -54,7 +76,8 @@ export const getGroups = async (
   let entries = await getEntries(collection, lang, sortFunction, false);
   entries = entries.filter((entry: GenericEntry) => {
     const segments = entry.id.split("/");
-    return segments.length === 2 && segments[1] == "-index";
+    // La estructura esperada es: /lang/collection/grupo/-index
+    return segments.length === 4 && segments[3] == "-index";
   });
   return entries;
 };
@@ -66,10 +89,36 @@ export const getEntriesInGroup = async (
   groupSlug: string,
   sortFunction?: ((array: any[]) => any[]),
 ): Promise<GenericEntry[]> => {
-  let entries = await getEntries(collection, lang, sortFunction);
-  entries = entries.filter((data: any) => {
-    const segments = data.id.split("/");
-    return segments[0] === groupSlug && segments.length > 1 && segments[1] !== "-index";
+  // Primero obtenemos todas las entradas sin filtrar
+  let entries = [];
+  try {
+    entries = await getCollection(collection, ({ id }) => {
+      // Filtramos solo las entradas que pertenecen al idioma y colección correctos
+      return id.startsWith(`${lang}/`);
+    });
+  } catch (error) {
+    console.error('Error in getCollection:', error);
+    return [];
+  }
+
+  // Luego filtramos para obtener solo las entradas del grupo específico
+  const filteredEntries = entries.filter((entry) => {
+    const segments = entry.id.split('/');
+    
+    // La estructura debe ser: lang/collection/groupSlug/filename
+    // Solo verificamos el idioma y el slug del grupo, no el nombre de la colección
+    return (
+      segments.length === 4 && // lang/collection/groupSlug/filename
+      segments[0] === lang &&
+      segments[2] === groupSlug &&
+      !entry.id.endsWith('-index')
+    );
   });
-  return entries;
+
+  // Aplicamos la función de ordenamiento si se proporciona
+  if (sortFunction) {
+    return sortFunction(filteredEntries);
+  }
+
+  return filteredEntries;
 };

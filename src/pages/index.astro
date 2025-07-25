@@ -1,7 +1,10 @@
 ---
-// Redirigir a la versión localizada de la página
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
-// Redirigir a la versión localizada de la página
-return Astro.redirect(getRelativeLocaleUrl(Astro.preferredLocale));
+// Obtener el idioma por defecto de la configuración
+const defaultLocale = 'en';
+
+// Redirigir usando getRelativeLocaleUrl que respeta la configuración de i18n
+const url = getRelativeLocaleUrl(defaultLocale, '/');
+return Astro.redirect(url);
 ---

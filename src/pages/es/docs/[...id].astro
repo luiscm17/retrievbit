@@ -4,59 +4,96 @@ import EntryLayout from "@components/docs/EntryLayout.astro";
 import CollectionLayout from "@components/docs/CollectionLayout.astro";
 import { getEntries, getEntriesInGroup, getGroups } from "@lib/contentParser";
 import { sortByTitle } from "@lib/sortFunctions";
+import { getCollection as getAstroCollection } from "astro:content";
 
+// Usar "es" directamente ya que estamos en la carpeta /es/docs/
 const lang = "es";
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("docs", lang, sortByTitle)) as DocsEntry[];
+  try {
+    // Usar getEntries para obtener las entradas ya procesadas
+    const entries = (await getEntries("docs", "es", sortByTitle, false, true)) as DocsEntry[];
+    const paths = [];
 
-  const paths = entries.map((entry) => {
-    const segments = entry.id.replace("/-index", "").split("/");
+    // Procesar cada entrada
+    for (const entry of entries) {
+      const segments = entry.id.split("/");
 
-    if (segments.length === 1) {
-      return {
-        params: { id: segments[0] },
-        props: { entry, isGroup: true },
-      };
-    } else if (segments.length === 2) {
-      return {
-        params: { id: entry.id },
-        props: { entry, isGroup: false },
-      };
+      // La estructura debe ser: lang/collection/...
+      if (segments.length >= 3 && segments[0] === "es" && segments[1] === "docs") {
+        // Es un grupo (ej: es/docs/characters)
+        if (segments.length === 3 || (segments.length === 4 && entry.id.endsWith("-index"))) {
+          const groupSlug = segments[2];
+          paths.push({
+            params: { id: groupSlug },
+            props: {
+              entry: {
+                ...entry,
+                id: `es/docs/${groupSlug}`,
+              },
+              isGroup: true,
+            },
+          });
+        }
+        // Es un documento dentro de un grupo (ej: es/docs/characters/hero)
+        else if (segments.length === 4 || (segments.length === 5 && entry.id.endsWith("-index"))) {
+          const groupSlug = segments[2];
+          const docSlug = segments[3].replace("-index", "");
+          paths.push({
+            params: { id: `${groupSlug}/${docSlug}` },
+            props: {
+              entry: {
+                ...entry,
+                id: `es/docs/${groupSlug}/${docSlug}`,
+              },
+              isGroup: false,
+            },
+          });
+        }
+      }
     }
-  });
 
-  return paths;
+    return paths;
+  } catch (error) {
+    console.error("Error in getStaticPaths:", error);
+    return [];
+  }
 }
 
 const { entry, isGroup } = Astro.props;
-const groupName = entry.id.replace("/-index", "");
-const groupEntries = isGroup
-  ? ((await getEntriesInGroup("docs", groupName, lang, sortByTitle)) as DocsEntry[])
-  : [];
+const segments = entry.id.split("/");
+// El nombre del grupo está en el tercer segmento (índice 2) para /es/docs/characters
+const groupName = segments[2];
 
-// Construct Doc Browser menu
+let groupEntries: DocsEntry[] = [];
+if (isGroup) {
+  groupEntries = (await getEntriesInGroup("docs", "es", groupName, sortByTitle)) as DocsEntry[];
+}
+
+// Construir menú del navegador
 const browserMenu: MenuItem[] = [];
-const groups = (await getGroups("docs", lang, sortByTitle)) as DocsEntry[];
-await Promise.all(
-  groups.map(async (group) => {
-    const groupEntries = (await getEntriesInGroup(
-      "docs",
-      group.id.replace("/-index", ""),
-      lang,
-      sortByTitle
-    )) as DocsEntry[];
-    browserMenu.push({
-      title: group.data.title,
-      id: group.id.replace("/-index", ""),
-      children: groupEntries.map((groupEntry) => ({
-        title: groupEntry.data.title,
-        id: groupEntry.id,
-        children: [],
-      })),
-    });
-  })
-);
+const groups = (await getGroups("docs", "es", sortByTitle)) as DocsEntry[];
+
+for (const group of groups) {
+  const groupSlug = group.id.split("/").pop() || "";
+
+  const currentGroupEntries = (await getEntriesInGroup(
+    "docs",
+    "es", // Usar la variable lang que ya está definida
+    groupSlug,
+    sortByTitle,
+  )) as DocsEntry[];
+
+  browserMenu.push({
+    title: group.data.title,
+    id: groupSlug,
+    children: currentGroupEntries.map((entry) => ({
+      title: entry.data.title,
+      id: entry.id.split("/").pop() || "",
+      children: [],
+    })),
+  });
+}
 ---
 
 {

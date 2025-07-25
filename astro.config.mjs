@@ -17,7 +17,11 @@ export default defineConfig({
     locales: ['en', 'es'],
     routing: {
       prefixDefaultLocale: true,
-    }
+    },
+    // fallback: {
+    //   // Si no se encuentra una traducción, usa el inglés
+    //   en: {}
+    // }
   },
   site: "https://janedoe.com",
   base: "/",
