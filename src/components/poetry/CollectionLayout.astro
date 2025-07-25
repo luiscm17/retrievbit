@@ -21,7 +21,7 @@ const { entryIndex, entries } = Astro.props;
             {
               entries.map((entry) => (
                 <li class="my-2">
-                  <a href={`/poetry/${entry.id}`}>
+                  <a href={`/${entry.id.split('/')[0]}/poetry/${entry.id.split('/').pop()}`}>
                     <h4>{entry.data.title}</h4>
                   </a>
                 </li>

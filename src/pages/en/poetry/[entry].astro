@@ -7,15 +7,18 @@ import { getEntries } from "@lib/contentParser";
 const lang = "en";
 
 export async function getStaticPaths() {
+  const lang = "en";
   const entries = (await getEntries("poetry", lang, sortByDate)) as PoetryEntry[];
   const pageIDs: string[] = entries.map((entry) => entry.id);
   const pageCount = pageIDs.length;
 
   const paths = entries.map((entry) => {
     const pageIndex = pageIDs.indexOf(entry.id);
+    // Extraer solo el slug de la entrada sin el prefijo de idioma
+    const slug = entry.id.split('/').pop();
     return {
       params: {
-        entry: entry.id,
+        entry: slug,
       },
       props: { entry, pageIDs, pageIndex, pageCount },
     };

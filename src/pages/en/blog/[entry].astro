@@ -8,13 +8,18 @@ import similerItems from "@lib/similarItems";
 
 export async function getStaticPaths() {
   const lang = "en";
-  const entries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
-  const paths = entries.map((entry) => ({
-    params: {
-      entry: entry.id,
-    },
-    props: { entry, entries},
-  }));
+  const entries = (await getEntries("blog", "en", sortByDate)) as BlogEntry[];
+  const paths = entries.map((entry) => {
+    // Extraer el slug de la entrada (sin el prefijo de idioma)
+    const entrySlug = entry.id.split("/").slice(2).join("/");
+
+    return {
+      params: {
+        entry: entrySlug, // Usar solo el slug sin el prefijo de idioma
+      },
+      props: { entry, entries },
+    };
+  });
   return paths;
 }
 

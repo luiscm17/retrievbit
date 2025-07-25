@@ -4,16 +4,19 @@ import EntryLayout from "@components/recipes/EntryLayout.astro";
 import { getEntries } from "@lib/contentParser";
 import { sortByTitle } from "@lib/sortFunctions";
 
-const lang = "es";
-
 export async function getStaticPaths() {
-  const entries = await getEntries("recipes", lang, sortByTitle) as RecipesEntry[];
-  const paths = entries.map((entry) => ({
-    params: {
-      entry: entry.id,
-    },
-    props: { entry },
-  }));
+  const lang = "es";
+  const entries = (await getEntries("recipes", lang, sortByTitle)) as RecipesEntry[];
+  const paths = entries.map((entry) => {
+    // Extraer solo el slug de la receta sin el prefijo de idioma
+    const slug = entry.id.split("/").pop();
+    return {
+      params: {
+        entry: slug,
+      },
+      props: { entry },
+    };
+  });
   return paths;
 }
 

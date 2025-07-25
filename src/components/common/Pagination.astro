@@ -6,9 +6,10 @@ type Props = {
   pageIndex?: number;
   pageCount?: number;
   pageIDs?: string[];
+  lang?: string;
 };
 
-const { collection, pageIndex = 1, pageCount = 1, pageIDs } = Astro.props;
+const { collection, pageIndex = 1, pageCount = 1, pageIDs, lang = '' } = Astro.props;
 
 let pageList: number[] = [];
 for (let i = 1; i <= pageCount; i++) {
@@ -19,13 +20,16 @@ let prevPage: string | null;
 let nextPage: string | null;
 
 if (pageIDs) {
+  const prevId = pageIDs[pageIndex - 1]?.split('/').pop();
+  const nextId = pageIDs[pageIndex + 1]?.split('/').pop();
+  
   prevPage =
     pageIndex > 0
-      ? `${collection ? "/" + collection : ""}/${pageIDs[pageIndex - 1]}`
+      ? `/${lang}${collection ? '/' + collection : ''}/${prevId}`
       : null;
   nextPage =
     pageIndex < pageCount - 1
-      ? `${collection ? "/" + collection : ""}/${pageIDs[pageIndex + 1]}`
+      ? `/${lang}${collection ? '/' + collection : ''}/${nextId}`
       : null;
 } else {
   prevPage =

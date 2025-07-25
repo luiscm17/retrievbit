@@ -8,13 +8,23 @@ import { sortByDate } from "@lib/sortFunctions";
 const lang = "es";
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("authors", lang)) as AuthorsEntry[];
-  const paths = entries.map((entry) => ({
-    params: {
-      entry: entry.id,
-    },
-    props: { entry },
-  }));
+  const entries = (await getEntries("authors", "es")) as AuthorsEntry[];
+  const paths = entries.map((entry) => {
+    // Extraer solo el slug del autor sin el prefijo de idioma
+    const slug = entry.id.split('/').pop();
+    return {
+      params: {
+        entry: slug,
+      },
+      props: { 
+        entry: {
+          ...entry,
+          // Asegurarse de que el ID incluya el prefijo 'es/'
+          id: `es/${slug}`
+        } 
+      },
+    };
+  });
   return paths;
 }
 
