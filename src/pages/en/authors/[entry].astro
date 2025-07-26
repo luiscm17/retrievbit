@@ -16,13 +16,14 @@ export async function getStaticPaths() {
   }));
 }
 
-const lang = "en";
 const { entry } = Astro.props;
+const lang = Astro.currentLocale || "en";
 const { title } = entry.data;
 const blogEntries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
 const filteredBlogEntries = blogEntries.filter(
   (entry: BlogEntry) =>
-    slugify(entry.data.author?.id ? entry.data.author.id : "Jane Doe") === slugify(title),
+    slugify(entry.data.author?.id ? entry.data.author.id : "Jane Doe") ===
+    slugify(title)
 );
 ---
 

@@ -5,9 +5,8 @@ import { slugify } from "@lib/textConverter";
 import { getEntries } from "@lib/contentParser";
 import { sortByDate } from "@lib/sortFunctions";
 
-const lang = "es";
-
 export async function getStaticPaths() {
+  const lang = "es";
   const entries = (await getEntries("authors", lang)) as AuthorsEntry[];
   return entries.map((entry) => ({
     params: {
@@ -18,6 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const lang = Astro.currentLocale || "es";
 const { title } = entry.data;
 const blogEntries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
 const filteredBlogEntries = blogEntries.filter(

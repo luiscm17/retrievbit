@@ -88,7 +88,7 @@ const languageUrls = Object.fromEntries(
         
         return (
           <a
-            href={languageUrls[locale]}
+            href={languageUrls[locale]} data-locale={locale}
             class={`block px-4 py-2 text-sm rounded ${
               isActive
                 ? 'bg-bg-s/40 dark:bg-darkmode-bg-s/30 text-primary-600 dark:text-primary-400 font-medium'
@@ -103,4 +103,42 @@ const languageUrls = Object.fromEntries(
       })}
     </div>
   </div>
+
+<script define:vars={{ languageNames, locales }}>
+  function updateLanguageSwitcher() {
+    const currentPathname = window.location.pathname;
+    const currentSearch = window.location.search;
+    const currentHash = window.location.hash;
+
+    // 1. Update button text
+    const pathLang = currentPathname.split('/')[1];
+    const currentLang = locales.includes(pathLang) ? pathLang : 'en';
+    const buttonText = document.querySelector('.language-button-text');
+    if (buttonText) {
+      buttonText.innerText = languageNames[currentLang];
+    }
+
+    // 2. Update dropdown links
+    let pathWithoutLocale = '/';
+    if (currentLang !== 'en' || currentPathname.startsWith('/en')) { // Default locale might not have a prefix
+        pathWithoutLocale = currentPathname.substring(currentPathname.indexOf('/', 1));
+    } else {
+        pathWithoutLocale = currentPathname;
+    }
+    
+    const links = document.querySelectorAll('[data-locale]');
+    links.forEach(link => {
+      const targetLocale = link.getAttribute('data-locale');
+      if (targetLocale) {
+        const newPath = `/${targetLocale}${pathWithoutLocale}${currentSearch}${currentHash}`;
+        link.setAttribute('href', newPath);
+      }
+    });
+  }
+
+  // Update on initial load for client-side scripts
+  document.addEventListener('astro:page-load', updateLanguageSwitcher);
+  // Update after view transitions navigation
+  document.addEventListener('astro:after-swap', updateLanguageSwitcher);
+</script>
 </div>

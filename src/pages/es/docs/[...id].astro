@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 
     if (isGroupPage) {
       // Si es una página de grupo, el slug es la ruta sin el '-index'
-      slug = slugParts.slice(0, -1).join("/") || '';
+      slug = slugParts.slice(0, -1).join("/") || undefined;
     } else {
       // Si es una página de contenido, el slug es la ruta completa
       slug = slugParts.join("/");

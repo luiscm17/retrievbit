@@ -10,7 +10,7 @@ interface MenuItem {
 }
 
 const { pathname } = Astro.url;
-const lang = Astro.url.pathname.split('/')[1] || 'en';
+const lang = Astro.currentLocale || 'en';
 
 const stickyHeader: boolean = true;
 
@@ -118,3 +118,37 @@ const menu: MenuItem[] = [
     </div>
   </nav>
 </header>
+
+<script>
+  function updateNavLinks() {
+    const currentPathname = window.location.pathname;
+    const locales = ["en", "es"];
+    const pathLang = currentPathname.split('/')[1];
+    const currentLang = locales.includes(pathLang) ? pathLang : "en";
+
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      let pathWithoutLocale = '/';
+      const hrefSegments = href.split('/').filter(Boolean);
+      
+      if (locales.includes(hrefSegments[0])) {
+        pathWithoutLocale = '/' + hrefSegments.slice(1).join('/');
+      } else {
+        pathWithoutLocale = href;
+      }
+
+      if (pathWithoutLocale === '/') {
+        link.setAttribute('href', `/${currentLang}/`);
+      } else {
+        link.setAttribute('href', `/${currentLang}${pathWithoutLocale}`);
+      }
+    });
+  }
+
+  document.addEventListener('astro:page-load', updateNavLinks);
+  document.addEventListener('astro:after-swap', updateNavLinks);
+</script>
