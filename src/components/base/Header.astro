@@ -1,58 +1,77 @@
 ---
 import ThemeSwitcher from "@components/base/ThemeSwitcher.astro";
 import LanguageSwitcher from "@components/base/LanguageSwitcher.astro";
+import { useTranslations } from "../../i18n/utils";
+import { ui } from "../../i18n/ui";
 import { IoSearch } from "react-icons/io5";
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 interface MenuItem {
   name: string;
   url: string;
+  key: string;
 }
 
-const { pathname } = Astro.url;
+const pathname = Astro.url.pathname;
+
+// Inyectar el diccionario de traducciones para el script del cliente
+const translations = JSON.stringify(ui);
 const lang = Astro.currentLocale || 'en';
 
 const stickyHeader: boolean = true;
 
+const t = useTranslations(lang as keyof typeof ui);
+
 const menu: MenuItem[] = [
   {
-    name: "Home",
-    url: getRelativeLocaleUrl(lang, '/'),
+    name: t("nav.home"),
+    url: getRelativeLocaleUrl(lang, "/"),
+    key: "nav.home",
   },
   {
-    name: "About",
-    url: getRelativeLocaleUrl(lang, '/about'),
+    name: t("nav.about"),
+    url: getRelativeLocaleUrl(lang, "/about"),
+    key: "nav.about",
   },
   {
-    name: "Docs",
-    url: getRelativeLocaleUrl(lang, '/docs'),
+    name: t("nav.docs"),
+    url: getRelativeLocaleUrl(lang, "/docs"),
+    key: "nav.docs",
   },
   {
-    name: "Blog",
-    url: getRelativeLocaleUrl(lang, '/blog'),
+    name: t("nav.blog"),
+    url: getRelativeLocaleUrl(lang, "/blog"),
+    key: "nav.blog",
   },
   {
-    name: "Recipes",
-    url: getRelativeLocaleUrl(lang, '/recipes'),
+    name: t("nav.recipes"),
+    url: getRelativeLocaleUrl(lang, "/recipes"),
+    key: "nav.recipes",
   },
   {
-    name: "Poetry",
-    url: getRelativeLocaleUrl(lang, '/poetry'),
+    name: t("nav.poetry"),
+    url: getRelativeLocaleUrl(lang, "/poetry"),
+    key: "nav.poetry",
   },
   {
-    name: "Index Cards",
-    url: getRelativeLocaleUrl(lang, '/index-cards'),
+    name: t("nav.index-cards"),
+    url: getRelativeLocaleUrl(lang, "/index-cards"),
+    key: "nav.index-cards",
   },
   {
-    name: "Authors",
-    url: getRelativeLocaleUrl(lang, '/authors'),
+    name: t("nav.authors"),
+    url: getRelativeLocaleUrl(lang, "/authors"),
+    key: "nav.authors",
   },
   {
-    name: "Portfolio",
-    url: getRelativeLocaleUrl(lang, '/portfolio'),
+    name: t("nav.portfolio"),
+    url: getRelativeLocaleUrl(lang, "/portfolio"),
+    key: "nav.portfolio",
   },
 ];
 ---
+
+<script type="application/json" id="header-translations" set:html={translations}></script>
 
 <header
   transition:persist
@@ -94,6 +113,7 @@ const menu: MenuItem[] = [
             <li>
               <a
                 href={item.url}
+                data-i18n-key={item.key}
                 class={`block p-2 font-secondary font-semibold text-txt-p transition dark:text-darkmode-txt-p lg:px-2 lg:py-3 ${
                   isActive ? "active" : ""
                 }`}
@@ -121,14 +141,22 @@ const menu: MenuItem[] = [
 
 <script>
   function updateNavLinks() {
-    const currentPathname = window.location.pathname;
-    const locales = ["en", "es"];
-    const pathLang = currentPathname.split('/')[1];
-    const currentLang = locales.includes(pathLang) ? pathLang : "en";
+    const translationsScript = document.getElementById('header-translations');
+    if (!translationsScript) return;
 
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    
+    const translations = JSON.parse(translationsScript.textContent || '{}');
+    const navLinks = document.querySelectorAll('[data-i18n-key]');
+    const currentLang = window.location.pathname.split('/')[1] || 'en';
+    const locales = Object.keys(translations);
+
     navLinks.forEach(link => {
+      // Actualizar el texto
+      const key = link.getAttribute('data-i18n-key');
+      if (key && translations[currentLang] && translations[currentLang][key]) {
+        link.textContent = translations[currentLang][key];
+      }
+
+      // Actualizar el enlace (href)
       const href = link.getAttribute('href');
       if (!href) return;
 
@@ -141,7 +169,7 @@ const menu: MenuItem[] = [
         pathWithoutLocale = href;
       }
 
-      if (pathWithoutLocale === '/') {
+      if (pathWithoutLocale === '/' || pathWithoutLocale === '/es' || pathWithoutLocale === '/en') {
         link.setAttribute('href', `/${currentLang}/`);
       } else {
         link.setAttribute('href', `/${currentLang}${pathWithoutLocale}`);
