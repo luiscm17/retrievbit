@@ -10,8 +10,8 @@ let h3 = h4 * font_scale;
 let h2 = h3 * font_scale;
 let h1 = h2 * font_scale;
 
-let fontPrimary = "serif";
-let fontPrimaryType = "serif";
+let fontPrimary = "Inter";
+let fontPrimaryType = "sans-serif";
 let fontSecondary = "open sans";
 let fontSecondaryType = "sans-serif";
 
@@ -49,7 +49,7 @@ module.exports = {
         },
         bg: {
           p: "#fff",
-          s: "#ddd",
+          s: "rgba(255, 255, 255, 0.85)",
           t: "#ddd",
         },
         border: "#ddd",
@@ -61,7 +61,7 @@ module.exports = {
           },
           bg: {
             p: "#222",
-            s: "#444",
+            s: "rgba(0, 0, 0, 0.75)",
             t: "#444",
           },
           border: "#444",
