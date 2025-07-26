@@ -49,16 +49,15 @@ const languageUrls = Object.fromEntries(
   <div>
     <button
       type="button"
-      class="inline-flex items-center justify-between w-full px-3 py-2 text-sm font-medium transition-colors duration-150 focus:outline-none focus:ring-0 focus:ring-offset-0 text-txt-p/90 dark:text-darkmode-txt-p/90 hover:bg-bg-s/30 dark:hover:bg-darkmode-bg-s/30"
-      :class="{ 'bg-bg-s/30 dark:bg-darkmode-bg-s/30': open }"
+      class="group inline-flex items-center justify-center rounded-lg py-2 font-secondary font-semibold text-txt-p transition hover:text-primary-500 focus:outline-none focus:ring-0 focus:ring-offset-0 dark:text-darkmode-txt-p md:px-2 lg:px-2"
       @click="open = !open"
       @keydown.escape="open = false"
       :aria-expanded="open"
       aria-haspopup="true"
     >
-      <span class="language-button-text">{languageNames[currentLang]}</span>
+      <span class="language-button-text transition-colors group-hover:text-primary-500 dark:group-hover:text-primary-400 lg:text-sm xl:text-base">{languageNames[currentLang]}</span>
       <svg
-        class="w-4 h-4 ml-2 transition-transform duration-200"
+        class="w-4 h-4 ml-2 transition duration-200 group-hover:text-primary-500 dark:group-hover:text-primary-400 md:w-3 md:h-3 lg:w-4 lg:h-4"
         :class="{ 'rotate-180': open }"
         fill="none"
         viewBox="0 0 24 24"

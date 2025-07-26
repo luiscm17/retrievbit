@@ -1,6 +1,6 @@
 ---
-title: The Arcane
-description: The mystical elements of the world
+title: El Arcano
+description: Los elementos místicos del mundo
 image: "@assets/docs/the-arcane/cover.jpg"
-imageAlt: Painting of swamp, with a glowing figure in the distance
+imageAlt: Pintura de la jungla, con un personaje brillante en la distancia
 ---

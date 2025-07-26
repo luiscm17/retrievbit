@@ -1,15 +1,17 @@
 ---
 import { lowerHumanize } from "@lib/textConverter";
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
 const { className }: { className?: string } = Astro.props;
 
-const lang = Astro.url.pathname.split('/')[1] || 'en';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const pathSegments = Astro.url.pathname.split("/").filter((x) => x).slice(1); // Remove lang prefix
 
-let parts = [
+let parts: { label: string; href: string; "aria-label": string | undefined }[] = [
   {
-    label: "Home",
+    label: t("nav.home"),
     href: getRelativeLocaleUrl(lang, ''), // Link to the language-specific home
     "aria-label": pathSegments.length === 0 ? "page" : undefined,
   },

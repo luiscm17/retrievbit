@@ -1,3 +1,4 @@
+import { ui } from '@i18n/ui';
 import React, { lazy, Suspense } from 'react';
 
 // Check if we are in a browser environment before trying to import the component
@@ -13,17 +14,19 @@ const LiteYouTubeEmbed = lazy(() => {
 interface Props {
   id: string;
   title: string;
+  lang: keyof typeof ui;
 }
 
-const Youtube = ({ id, title }: Props) => {
+const Youtube = ({ id, title, lang = 'en' }: Props) => {
+  const t = ui[lang];
   // Check if we're on the server. If so, render nothing or a placeholder.
   // This component is intended to be used with client:only, so this is a safeguard.
   if (typeof window === 'undefined') {
-    return <div className="yt-lite-container-ssr-placeholder">Video loading...</div>;
+    return <div className="yt-lite-container-ssr-placeholder">{t['youtube.videoLoading']}</div>;
   }
 
   return (
-    <Suspense fallback={<div className="yt-lite-container-ssr-placeholder">Loading video...</div>}>
+    <Suspense fallback={<div className="yt-lite-container-ssr-placeholder">{t['youtube.suspenseLoading']}</div>}>
       <div className="yt-lite-container">
         <LiteYouTubeEmbed id={id} title={title} />
       </div>

@@ -1,5 +1,5 @@
 ---
-title: Documentation
-description: This is the docs
+title: Documentación
+description: Esta es la documentación
 draft: false
 ---

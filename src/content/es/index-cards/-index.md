@@ -1,6 +1,6 @@
 ---
-title: Index Cards
-description: An example of content in an index card format.
+title: Tarjetas de Indice
+description: Un ejemplo de contenido en formato de tarjeta de indice.
 
 cards:
  - The 1st card

@@ -7,6 +7,11 @@ const descriptionLength = 200;
 
 interface Props {
   searchList: SearchableEntry[];
+  labels: {
+    placeholder: string;
+    noResults: string;
+    inputPlaceholder: string;
+  };
 }
 
 interface SearchResult {
@@ -18,7 +23,7 @@ const getPath = (entry: SearchableEntry) => {
   return `${entry.collection}/${entry.id.replace("-index", "")}`;
 };
 
-const SearchPage = ({ searchList }: Props) => {
+const SearchPage = ({ searchList, labels }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputVal, setInputVal] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -68,7 +73,7 @@ const SearchPage = ({ searchList }: Props) => {
             <div className="flex flex-nowrap">
               <input
                 className="w-full glass rounded-lg px-6 py-4 text-txt-p placeholder:text-txt-light dark:placeholder:text-darkmode-txt-light focus:border-darkmode-border focus:ring-transparent dark:text-darkmode-txt-light intersect:animate-fadeDown opacity-0 intersect-no-queue"
-                placeholder="search posts"
+                placeholder={labels.inputPlaceholder}
                 type="search"
                 name="search"
                 value={inputVal}
@@ -84,9 +89,7 @@ const SearchPage = ({ searchList }: Props) => {
           {searchResults?.length < 1 ? (
             <div className="col-10 lg:col-8 mx-auto p-2 text-center glass rounded-lg intersect:animate-fadeUp opacity-0">
               <p>
-                {inputVal.length < 1
-                  ? "Looking for something?"
-                  : "We couldn't find what you searched for. Try searching again."}
+                {inputVal.length < 1 ? labels.placeholder : labels.noResults}
               </p>
             </div>
           ) : (

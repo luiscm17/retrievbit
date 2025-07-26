@@ -1,4 +1,4 @@
 ---
-title: Blog Posts
-description: The blog of Jane and John Doe
+title: Publicaciones Blog
+description: Las publicaciones del blog de Jane y John Doe
 ---

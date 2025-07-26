@@ -1,15 +1,26 @@
 ---
 import type { SearchableEntry } from "@/types";
 import BaseLayout from "@components/base/BaseLayout.astro";
-import Search from "@components/search/Search";
+import Search from "@components/search/Search.tsx";
+import { useTranslations, getLangFromUrl } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const labels = {
+  placeholder: t('search.placeholder'),
+  noResults: t('search.noResults'),
+  inputPlaceholder: t('search.inputPlaceholder'),
+};
 
 interface Props {
   searchList: SearchableEntry[];
 }
 
 const { searchList } = Astro.props;
+
 ---
 
 <BaseLayout title="Search" description="Search for content on this site">
-  <Search client:load searchList={searchList} />
+  <Search client:load searchList={searchList} labels={labels} />
 </BaseLayout>

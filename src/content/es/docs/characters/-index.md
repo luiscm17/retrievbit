@@ -1,6 +1,6 @@
 ---
-title: Characters
-description: Character creation information
+title: Personajes
+description: Información de creación de personajes
 image: "@assets/docs/characters/cover.jpg"
-imageAlt: A white knight, painted dramatically
+imageAlt: Un caballero blanco, pintado dramáticamente
 ---

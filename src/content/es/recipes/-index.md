@@ -1,4 +1,4 @@
 ---
-title: Recipes
-description: A modest recipe book.
+title: Recetas
+description: Un modesto libro de recetas.
 ---

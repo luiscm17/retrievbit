@@ -1,5 +1,5 @@
 ---
-title: Freedom's Cost
+title: Costo de la Libertad
 author: john-doe
 date: 2024-10-10
 ---

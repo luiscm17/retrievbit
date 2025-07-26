@@ -1,6 +1,6 @@
 ---
 import Social from "@components/common/Social.astro";
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 ---
 
 <footer class="glass container lg:my-4 lg:rounded-lg intersect:animate-fadeUp opacity-0">
@@ -8,7 +8,9 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
     <div class="text-center lg:col-6 lg:mb-0 lg:text-left">
       <ul>
         <li class="m-2 inline-block">
-          <a href={getRelativeLocaleUrl(Astro.currentLocale || 'en', 'terms')}>&copy; Jane Doe 2025</a>
+          <a href={getRelativeLocaleUrl(Astro.currentLocale || "en", "terms")}
+            >&copy; Perfobit 2025</a
+          >
         </li>
       </ul>
     </div>

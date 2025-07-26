@@ -2,6 +2,9 @@
 import { plainify } from "@lib/textConverter";
 import Footer from "@components/base/Footer.astro";
 import Header from "@components/base/Header.astro";
+import { getLangFromUrl } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 import ObserverScript from "@components/base/ObserverScript.astro";
 import "@/styles/main.scss";
 import { ClientRouter } from "astro:transitions";
@@ -143,7 +146,7 @@ const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
   </head>
   <body>
     <Background />
-    <Header />
+    <Header lang={lang} />
     <main id="main-content" class="flex-1">
       <slot/>
     </main>

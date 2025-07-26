@@ -1,10 +1,10 @@
 ---
 import ThemeSwitcher from "@components/base/ThemeSwitcher.astro";
 import LanguageSwitcher from "@components/base/LanguageSwitcher.astro";
-import { useTranslations } from "../../i18n/utils";
-import { ui } from "../../i18n/ui";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { languages, ui } from "@i18n/ui";
 import { IoSearch } from "react-icons/io5";
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface MenuItem {
   name: string;
@@ -12,15 +12,11 @@ interface MenuItem {
   key: string;
 }
 
+const { stickyHeader = true, lang } = Astro.props;
+const t = useTranslations(lang);
+const locales = Object.keys(languages);
+
 const pathname = Astro.url.pathname;
-
-// Inyectar el diccionario de traducciones para el script del cliente
-const translations = JSON.stringify(ui);
-const lang = Astro.currentLocale || 'en';
-
-const stickyHeader: boolean = true;
-
-const t = useTranslations(lang as keyof typeof ui);
 
 const menu: MenuItem[] = [
   {
@@ -69,52 +65,89 @@ const menu: MenuItem[] = [
     key: "nav.portfolio",
   },
 ];
+
 ---
 
-<script type="application/json" id="header-translations" set:html={translations}></script>
+
 
 <header
-  transition:persist
+  transition:persist-props
   class={`container glass py-2 z-30 mb-4 lg:mt-4 lg:rounded-lg ${stickyHeader && "sticky top-0"}`}
 >
-  <nav class="relative flex flex-wrap items-center justify-between">
+  <nav class="relative flex flex-wrap items-center justify-between" x-data="{ open: false }">
     <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-0 cursor-pointer flex items-center md:hidden text-txt-p dark:text-darkmode-txt-p lg:order-1"
+    <button
+      @click="open = !open"
+      class="order-0 cursor-pointer flex items-center lg:hidden text-txt-p dark:text-darkmode-txt-p"
     >
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-        <title>Menu Open</title>
+      <svg x-show="!open" id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>{t('header.menu.open')}</title>
         <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
       </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-        <title>Menu Close</title>
+      <svg x-show="open" id="hide-button" class="h-6 fill-current" viewBox="0 0 20 20" style="display: none;">
+        <title>{t('header.menu.close')}</title>
         <polygon
           points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
           transform="rotate(45 10 10)"></polygon>
       </svg>
-    </label>
+    </button>
     <!-- /navbar toggler -->
+    <!-- Mobile Menu -->
     <ul
-      id="nav-menu"
-      class="text-center lg:text-left order-3 hidden w-full pb-6 md:order-1 md:flex md:w-auto md:space-x-2 md:pb-0 lg:space-x-4"
+      id="nav-menu-mobile"
+      @click.away="open = false"
+      x-show="open"
+      x-transition:enter="transition ease-out duration-100"
+      x-transition:enter-start="transform opacity-0 scale-95"
+      x-transition:enter-end="transform opacity-100 scale-100"
+      x-transition:leave="transition ease-in duration-75"
+      x-transition:leave-start="transform opacity-100 scale-100"
+      x-transition:leave-end="transform opacity-0 scale-95"
+      class="text-center order-3 w-full pb-6 lg:hidden"
+      style="display: none;"
     >
       {
         menu.map((item) => {
-          // Normalizar las URLs para comparación
-          const currentPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
-          const itemPath = item.url.endsWith('/') ? item.url.slice(0, -1) : item.url;
-          const isActive = currentPath === itemPath || 
-                          currentPath === `${itemPath}/` ||
-                          currentPath.startsWith(`${itemPath}/`);
-          
+          const currentPath = pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+          const itemPath = item.url.endsWith("/") ? item.url.slice(0, -1) : item.url;
+          const isActive =
+            currentPath === itemPath ||
+            (itemPath !== "/" && currentPath.startsWith(`${itemPath}/`));
+
+          return (
+            <li @click="open = false">
+              <a
+                href={item.url}
+                class={`block p-2 font-secondary font-semibold text-txt-p transition dark:text-darkmode-txt-p ${
+                  isActive ? "active" : ""
+                }`}
+              >
+                {item.name}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <!-- Desktop Menu -->
+    <ul
+      id="nav-menu-desktop"
+      class="text-center lg:text-left order-1 w-auto pb-0 space-x-2 xl:space-x-4 hidden lg:flex"
+    >
+      {
+        menu.map((item) => {
+          const currentPath = pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+          const itemPath = item.url.endsWith("/") ? item.url.slice(0, -1) : item.url;
+          const isActive =
+            currentPath === itemPath ||
+            (itemPath !== "/" && currentPath.startsWith(`${itemPath}/`));
+
           return (
             <li>
               <a
                 href={item.url}
-                data-i18n-key={item.key}
-                class={`block p-2 font-secondary font-semibold text-txt-p transition dark:text-darkmode-txt-p lg:px-2 lg:py-3 ${
+                class={`block p-2 font-secondary font-semibold text-txt-p transition dark:text-darkmode-txt-p lg:text-sm lg:px-2 xl:text-base ${
                   isActive ? "active" : ""
                 }`}
               >
@@ -128,10 +161,10 @@ const menu: MenuItem[] = [
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
       <a
         class="ml-4 p-2 text-txt-p hover:text-primary-500 dark:text-darkmode-txt-p dark:hover:text-primary-400"
-        href={getRelativeLocaleUrl(lang, '/search/')}
+        href={getRelativeLocaleUrl(lang, "/search/")}
         aria-label="Search"
       >
-        <IoSearch className="h-5 w-5" />
+        <IoSearch className="h-5 w-5 md:h-4 md:w-4 lg:h-5 lg:w-5" />
       </a>
       <LanguageSwitcher class="ml-2" />
       <ThemeSwitcher />
@@ -139,44 +172,6 @@ const menu: MenuItem[] = [
   </nav>
 </header>
 
-<script>
-  function updateNavLinks() {
-    const translationsScript = document.getElementById('header-translations');
-    if (!translationsScript) return;
 
-    const translations = JSON.parse(translationsScript.textContent || '{}');
-    const navLinks = document.querySelectorAll('[data-i18n-key]');
-    const currentLang = window.location.pathname.split('/')[1] || 'en';
-    const locales = Object.keys(translations);
 
-    navLinks.forEach(link => {
-      // Actualizar el texto
-      const key = link.getAttribute('data-i18n-key');
-      if (key && translations[currentLang] && translations[currentLang][key]) {
-        link.textContent = translations[currentLang][key];
-      }
 
-      // Actualizar el enlace (href)
-      const href = link.getAttribute('href');
-      if (!href) return;
-
-      let pathWithoutLocale = '/';
-      const hrefSegments = href.split('/').filter(Boolean);
-      
-      if (locales.includes(hrefSegments[0])) {
-        pathWithoutLocale = '/' + hrefSegments.slice(1).join('/');
-      } else {
-        pathWithoutLocale = href;
-      }
-
-      if (pathWithoutLocale === '/' || pathWithoutLocale === '/es' || pathWithoutLocale === '/en') {
-        link.setAttribute('href', `/${currentLang}/`);
-      } else {
-        link.setAttribute('href', `/${currentLang}${pathWithoutLocale}`);
-      }
-    });
-  }
-
-  document.addEventListener('astro:page-load', updateNavLinks);
-  document.addEventListener('astro:after-swap', updateNavLinks);
-</script>

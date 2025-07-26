@@ -1,6 +1,5 @@
 ---
-title: Tutorials
-description: This is the docs
-image: "@assets/backgrounds/bwca-dusk.png"
+title: Tutoriales
+description: Tutoriales de la documentación
 draft: false
 ---

@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "@components/base/BaseLayout.astro";
 import Button from "@components/common/Button.astro";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<BaseLayout title="Page Not Found">
+<BaseLayout title={t('404.title')}>
   <section class="section-sm text-center">
     <div class="container">
       <div class="row justify-center">
@@ -13,12 +17,9 @@ import Button from "@components/common/Button.astro";
           >
             404
           </span>
-          <h1 class="h2 mb-4">Page not found</h1>
-          <p class="mb-8">
-            The page you are looking for might have been removed, had its name
-            changed, or is temporarily unavailable.
-          </p>
-          <Button link="/" label="Back to Home" hoverInvert/>
+          <h1 class="h2 mb-4">{t('404.heading')}</h1>
+          <p class="mb-8">{t('404.message')}</p>
+          <Button link={`/${lang}/`} label={t('404.backToHome')} hoverInvert/>
         </div>
       </div>
     </div>
