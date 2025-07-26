@@ -1,15 +1,16 @@
 ---
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 type Props = {
   collection?: string;
   pageIndex?: number;
   pageCount?: number;
   pageIDs?: string[];
-  lang?: string;
 };
 
-const { collection, pageIndex = 1, pageCount = 1, pageIDs, lang = '' } = Astro.props;
+const { collection, pageIndex = 1, pageCount = 1, pageIDs } = Astro.props;
+const lang = Astro.url.pathname.split("/")[1] || "en";
 
 let pageList: number[] = [];
 for (let i = 1; i <= pageCount; i++) {
@@ -19,29 +20,17 @@ for (let i = 1; i <= pageCount; i++) {
 let prevPage: string | null;
 let nextPage: string | null;
 
+const basePath = collection ? `${collection}` : '';
+
 if (pageIDs) {
   const prevId = pageIDs[pageIndex - 1]?.split('/').pop();
   const nextId = pageIDs[pageIndex + 1]?.split('/').pop();
   
-  prevPage =
-    pageIndex > 0
-      ? `/${lang}${collection ? '/' + collection : ''}/${prevId}`
-      : null;
-  nextPage =
-    pageIndex < pageCount - 1
-      ? `/${lang}${collection ? '/' + collection : ''}/${nextId}`
-      : null;
+  prevPage = prevId ? getRelativeLocaleUrl(lang, `${basePath}/${prevId}`) : null;
+  nextPage = nextId ? getRelativeLocaleUrl(lang, `${basePath}/${nextId}`) : null;
 } else {
-  prevPage =
-    pageIndex === 2
-      ? `${collection ? "/" + collection : "/"}`
-      : pageIndex > 2
-        ? `${collection ? "/" + collection : ""}/page/${pageIndex - 1}`
-        : null;
-  nextPage =
-    pageIndex < pageCount
-      ? `${collection ? "/" + collection : ""}/page/${pageIndex + 1}`
-      : null;
+  prevPage = pageIndex > 1 ? getRelativeLocaleUrl(lang, pageIndex === 2 ? basePath : `${basePath}/page/${pageIndex - 1}`) : null;
+  nextPage = pageIndex < pageCount ? getRelativeLocaleUrl(lang, `${basePath}/page/${pageIndex + 1}`) : null;
 }
 ---
 
@@ -85,11 +74,7 @@ if (pageIDs) {
               </span>
             ) : (
               <a
-                href={
-                  pagination === 1
-                    ? `${collection ? "/" + collection : "/"}`
-                    : `${collection ? "/" + collection : ""}/page/${pagination}`
-                }
+                href={getRelativeLocaleUrl(lang, pagination === 1 ? basePath : `${basePath}/page/${pagination}`)}
                 aria-current="page"
                 class="col rounded px-4 py-2 font-semibold text-txt-p dark:text-darkmode-txt-p"
               >

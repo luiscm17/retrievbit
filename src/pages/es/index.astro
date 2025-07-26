@@ -3,7 +3,7 @@ import { getIndex } from "@lib/contentParser";
 import EntryLayout from "@components/home/EntryLayout.astro";
 import type { HomeEntry } from "@/types";
 
-const lang = Astro.params.lang || "es";
+const lang = Astro.url.pathname.split('/')[1] || "es";
 
 const entry = (await getIndex("home", lang)) as HomeEntry;
 ---

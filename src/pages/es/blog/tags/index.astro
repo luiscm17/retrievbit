@@ -2,11 +2,11 @@
 import TaxaLayout from "@components/blog/TaxaLayout.astro";
 import { getTaxa, getTaxaMultiset } from "@lib/taxonomyParser";
 
-const lang = "es";
+const lang = Astro.url.pathname.split('/')[1] || "es";
 const collection = "blog";
 const taxonomy = "tags";
-const taxa = await getTaxa(collection, taxonomy);
-const allTaxa = await getTaxaMultiset(collection, taxonomy);
+const taxa = await getTaxa(collection, taxonomy, lang);
+const allTaxa = await getTaxaMultiset(collection, taxonomy, lang);
 ---
 
 <TaxaLayout taxonomy={taxonomy} taxa={taxa} allTaxa={allTaxa} />

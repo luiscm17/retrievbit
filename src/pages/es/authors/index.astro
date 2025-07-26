@@ -5,7 +5,7 @@ import { getEntries } from "@lib/contentParser";
 import { getIndex } from "@lib/contentParser";
 import { sortByTitle } from "@lib/sortFunctions";
 
-const lang = Astro.params.lang || "es";
+const lang = Astro.url.pathname.split('/')[1] || "es";
 
 const authorIndex = await getIndex("authors", lang) as AuthorsEntry;
 const entries = await getEntries("authors", lang, sortByTitle) as AuthorsEntry[];

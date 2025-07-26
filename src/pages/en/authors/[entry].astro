@@ -6,29 +6,20 @@ import { getEntries } from "@lib/contentParser";
 import { sortByDate } from "@lib/sortFunctions";
 
 export async function getStaticPaths() {
-  const entries = (await getEntries("authors", "en")) as AuthorsEntry[];
-  const paths = entries.map((entry) => {
-    // Extraer solo el slug del autor sin el prefijo de idioma
-    const slug = entry.id.split("/").pop();
-    return {
-      params: {
-        entry: slug,
-      },
-      props: {
-        entry: {
-          ...entry,
-          // Asegurarse de que el ID incluya el prefijo 'en/'
-          id: `en/${slug}`,
-        },
-      },
-    };
-  });
-  return paths;
+  const lang = "en";
+  const entries = (await getEntries("authors", lang)) as AuthorsEntry[];
+  return entries.map((entry) => ({
+    params: {
+      entry: entry.id.split("/").pop()!,
+    },
+    props: { entry },
+  }));
 }
 
+const lang = "en";
 const { entry } = Astro.props;
 const { title } = entry.data;
-const blogEntries = (await getEntries("blog", "en", sortByDate)) as BlogEntry[];
+const blogEntries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
 const filteredBlogEntries = blogEntries.filter(
   (entry: BlogEntry) =>
     slugify(entry.data.author?.id ? entry.data.author.id : "Jane Doe") === slugify(title),

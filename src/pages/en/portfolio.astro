@@ -3,7 +3,7 @@ import type { PortfolioEntry } from "@/types";
 import EntryLayout from "@components/portfolio/EntryLayout.astro";
 import { getIndex } from "@lib/contentParser";
 
-const lang = Astro.params.lang || "en";
+const lang = Astro.url.pathname.split('/')[1] || "en";
 
 const entry = (await getIndex("portfolio", lang)) as PortfolioEntry;
 ---

@@ -21,7 +21,7 @@ const languageNames: Record<Locale, string> = {
 const currentLang = (() => {
   const langFromPath = Astro.url.pathname.split("/")[1];
   return locales.includes(langFromPath as Locale) ? (langFromPath as Locale) : "en";
-})();
+})() as Locale;
 
 // Obtener la ruta actual sin el prefijo de idioma
 const currentPath = (() => {
@@ -34,6 +34,14 @@ const currentPath = (() => {
   }
   return path;
 })();
+
+// Generar URLs para cada idioma
+const languageUrls = Object.fromEntries(
+  locales.map(locale => [
+    locale,
+    getRelativeLocaleUrl(locale, currentPath)
+  ])
+);
 
 ---
 
@@ -75,42 +83,24 @@ const currentPath = (() => {
     x-cloak
   >
     <div class="py-1" role="none">
-      {
-        locales.map((locale) => {
-          const url = `/${locale}${currentPath}`;
-          const isActive = currentLang === locale;
-          
-          return (
-            <a
-              href={url}
-              class={`block px-4 py-2 text-sm rounded ${
-                isActive
-                  ? 'bg-bg-s/40 dark:bg-darkmode-bg-s/30 text-primary-600 dark:text-primary-400 font-medium'
-                  : 'text-txt-p/90 dark:text-darkmode-txt-p/90 hover:bg-bg-s/40 dark:hover:bg-darkmode-bg-s/30'
-              } transition-colors duration-150 mx-1`}
-              role="menuitem"
-              @click="open = false"
-            >
-              {languageNames[locale]}
-            </a>
-          );
-        })
-      }
+      {locales.map((locale) => {
+        const isActive = currentLang === locale;
+        
+        return (
+          <a
+            href={languageUrls[locale]}
+            class={`block px-4 py-2 text-sm rounded ${
+              isActive
+                ? 'bg-bg-s/40 dark:bg-darkmode-bg-s/30 text-primary-600 dark:text-primary-400 font-medium'
+                : 'text-txt-p/90 dark:text-darkmode-txt-p/90 hover:bg-bg-s/40 dark:hover:bg-darkmode-bg-s/30'
+            } transition-colors duration-150 mx-1`}
+            role="menuitem"
+            @click="open = false"
+          >
+            {languageNames[locale]}
+          </a>
+        );
+      })}
     </div>
   </div>
-  
-  <script is:inline>
-    // Actualizar el texto del botón según el idioma
-    function updateLanguageButton() {
-      const lang = window.location.pathname.startsWith('/es') ? 'es' : 'en';
-      document.querySelectorAll('.language-button-text').forEach(button => {
-        button.textContent = { en: 'English', es: 'Español' }[lang];
-      });
-    }
-
-    // Configurar eventos
-    document.addEventListener('DOMContentLoaded', updateLanguageButton);
-    document.addEventListener('astro:page-load', updateLanguageButton);
-    updateLanguageButton(); // Ejecutar inmediatamente
-  </script>
 </div>

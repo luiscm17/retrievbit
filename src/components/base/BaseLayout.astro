@@ -24,10 +24,17 @@ const siteDescription = "Astrogon is a simple and elegant Astro theme.";
 const siteImage = "@assets/og-image.png";
 const siteAuthor = "Jane Doe";
 const baseUrl = "https://janedoe.com";
+
+// Obtener el idioma actual de la URL
+const currentLang = (() => {
+  const langFromPath = Astro.url.pathname.split("/")[1];
+  return ["en", "es"].includes(langFromPath) ? langFromPath : "en";
+})();
+const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={htmlLang}>
   <head>
     <!-- favicon -->
     <link
@@ -90,7 +97,7 @@ const baseUrl = "https://janedoe.com";
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content={`${baseUrl}/${Astro.url.pathname.replace("/", "")}`}
+      content={Astro.url.href}
     />
     <meta
       property="og:image"

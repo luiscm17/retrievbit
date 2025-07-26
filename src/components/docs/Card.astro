@@ -1,6 +1,7 @@
 ---
 import type { DocsEntry } from "@/types";
 import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   entry: DocsEntry;
@@ -8,6 +9,8 @@ interface Props {
 
 const { entry } = Astro.props;
 const { title, image, imageAlt } = entry.data;
+const lang = entry.id.split('/')[0];
+const path = entry.id.split('/').slice(1).join('/').replace(/-index$/, '');
 ---
 
 <div
@@ -16,7 +19,7 @@ const { title, image, imageAlt } = entry.data;
   <div class="glass h-full rounded-lg">
     <a
       class="group hover:opacity-100"
-      href={`/${Astro.url.pathname.split('/')[1]}/docs/${entry.id.split('/').slice(2).join('/').replace('/-index', '')}`}
+      href={getRelativeLocaleUrl(lang, path)}
     >
       <div class="relative rounded-lg pb-9/16 overflow-hidden">
         {

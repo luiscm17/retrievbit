@@ -6,7 +6,7 @@ import taxonomyFilter from "@lib/taxonomyFilter";
 import TaxonLayout from "@components/blog/TaxonLayout.astro";
 
 export async function getStaticPaths() {
-  const taxa = await getTaxa("blog", "categories");
+  const taxa = await getTaxa("blog", "categories", "es");
   const paths = taxa.map((taxon) => ({
     params: {
       category: taxon,
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { taxon } = Astro.props;
-const lang = "es";
+const lang = Astro.url.pathname.split('/')[1] || "es";
 const entries = await getEntries("blog", lang) as BlogEntry[];
 const filteredEntries: BlogEntry[] = taxonomyFilter(entries, "categories", taxon!);
 ---

@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import type { RecipesEntry } from "@/types";
 
 interface Props {
@@ -8,13 +9,15 @@ interface Props {
 
 const { entry } = Astro.props;
 const { title, image, imageAlt } = entry.data;
+const lang = entry.id.split('/')[0];
+const path = entry.id.split('/').slice(1).join('/');
 ---
 
 <div
   class="h-full m-2 pl-0 bg-gradient-to-br gradient rounded-lg intersect:animate-fadeUp opacity-0"
 >
   <div class="glass h-full rounded-lg">
-    <a class="group hover:opacity-100" href={`/${entry.id}`}>
+    <a class="group hover:opacity-100" href={getRelativeLocaleUrl(lang, path)}>
       <div class="relative rounded-lg pb-9/16 overflow-hidden">
         {
           image && (

@@ -5,7 +5,7 @@ import { getEntries, getIndex } from "@lib/contentParser";
 import { sortByDate } from "@lib/sortFunctions";
 import type { BlogEntry } from "@/types";
 
-const lang = Astro.params.lang || "es";
+const lang = Astro.url.pathname.split('/')[1] || "es";
 
 const { slug } = Astro.params;
 const currentPageIndex = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
@@ -13,9 +13,9 @@ const currentPageIndex = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
 const entryIndex = (await getIndex("blog", lang)) as BlogEntry;
 const entries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
 
-const allCategories = await getTaxaMultiset("blog", "categories");
-const categories = await getTaxa("blog", "categories");
-const tags = await getTaxa("blog", "tags");
+const allCategories = await getTaxaMultiset("blog", "categories", lang);
+const categories = await getTaxa("blog", "categories", lang);
+const tags = await getTaxa("blog", "tags", lang);
 
 const entriesPerPage = 4;
 const indexOfLastEntry = currentPageIndex * entriesPerPage;

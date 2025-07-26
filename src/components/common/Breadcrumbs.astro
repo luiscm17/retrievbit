@@ -1,25 +1,30 @@
 ---
 import { lowerHumanize } from "@lib/textConverter";
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const { className }: { className?: string } = Astro.props;
 
-const paths = Astro.url.pathname.split("/").filter((x) => x);
+const lang = Astro.url.pathname.split('/')[1] || 'en';
+const pathSegments = Astro.url.pathname.split("/").filter((x) => x).slice(1); // Remove lang prefix
+
 let parts = [
   {
     label: "Home",
-    href: "/",
-    "aria-label": Astro.url.pathname === "/" ? "page" : undefined,
+    href: getRelativeLocaleUrl(lang, ''), // Link to the language-specific home
+    "aria-label": pathSegments.length === 0 ? "page" : undefined,
   },
 ];
 
-paths.forEach((label: string, i: number) => {
-  const href = `/${paths.slice(0, i + 1).join("/")}`;
-  label !== "page" &&
-    parts.push({
-      label: lowerHumanize(label.replace(/[-_]/g, " ")) || "",
-      href,
-      "aria-label": Astro.url.pathname === href ? "page" : undefined,
-    });
+pathSegments.forEach((label: string, i: number) => {
+  // Rebuild the path without the language prefix
+  const relativePath = pathSegments.slice(0, i + 1).join("/");
+  const href = getRelativeLocaleUrl(lang, relativePath);
+  
+  parts.push({
+    label: lowerHumanize(label.replace(/[-_]/g, " ")) || "",
+    href,
+    "aria-label": Astro.url.pathname === href ? "page" : undefined,
+  });
 });
 ---
 

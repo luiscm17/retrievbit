@@ -10,54 +10,28 @@ import { getCollection as getAstroCollection } from 'astro:content';
 const lang = "en";
 
 export async function getStaticPaths() {
-  try {
-    // Usar getEntries para obtener las entradas ya procesadas
-    const entries = (await getEntries("docs", "en", sortByTitle, false, true)) as DocsEntry[];
-    const paths = [];
-    
-    // Procesar cada entrada
-    for (const entry of entries) {
-      const segments = entry.id.split('/');
-      
-      // La estructura debe ser: lang/collection/...
-      if (segments.length >= 3 && segments[0] === 'en' && segments[1] === 'docs') {
-        // Es un grupo (ej: en/docs/characters)
-        if (segments.length === 3 || (segments.length === 4 && entry.id.endsWith('-index'))) {
-          const groupSlug = segments[2];
-          paths.push({
-            params: { id: groupSlug },
-            props: { 
-              entry: {
-                ...entry,
-                id: `en/docs/${groupSlug}`
-              }, 
-              isGroup: true 
-            },
-          });
-        } 
-        // Es un documento dentro de un grupo (ej: en/docs/characters/hero)
-        else if (segments.length === 4 || (segments.length === 5 && entry.id.endsWith('-index'))) {
-          const groupSlug = segments[2];
-          const docSlug = segments[3].replace('-index', '');
-          paths.push({
-            params: { id: `${groupSlug}/${docSlug}` },
-            props: { 
-              entry: {
-                ...entry,
-                id: `en/docs/${groupSlug}/${docSlug}`
-              },
-              isGroup: false 
-            },
-          });
-        }
-      }
+  const entries = (await getEntries("docs", "en", undefined, false, true)) as DocsEntry[];
+
+  const paths = entries.map((entry) => {
+    const isGroupPage = entry.id.endsWith("-index");
+    const slugParts = entry.id.split("/").slice(2);
+    let slug: string | undefined;
+
+    if (isGroupPage) {
+      // Si es una página de grupo, el slug es la ruta sin el '-index'
+      slug = slugParts.slice(0, -1).join("/") || '';
+    } else {
+      // Si es una página de contenido, el slug es la ruta completa
+      slug = slugParts.join("/");
     }
 
-    return paths;
-  } catch (error) {
-    console.error('Error in getStaticPaths:', error);
-    return [];
-  }
+    return {
+      params: { id: slug },
+      props: { entry, isGroup: isGroupPage },
+    };
+  });
+
+  return paths;
 }
 
 const { entry, isGroup } = Astro.props;

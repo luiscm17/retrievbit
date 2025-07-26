@@ -4,7 +4,7 @@ import { getIndex, getEntries } from "@lib/contentParser";
 import { sortByDate } from "@lib/sortFunctions";
 import type { RecipesEntry } from "@/types";
 
-const lang = Astro.params.lang || "es";
+const lang = Astro.url.pathname.split('/')[1] || "es";
 
 const entryIndex = (await getIndex("recipes", lang)) as RecipesEntry;
 const entries = (await getEntries("recipes", lang, sortByDate)) as RecipesEntry[];

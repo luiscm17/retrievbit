@@ -17,6 +17,7 @@ import {
   FaRegClock,
 } from "react-icons/fa";
 import type { GenericEntry, EntryReference } from "@/types";
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 interface EntryData {
   title: string;
@@ -44,6 +45,8 @@ interface Props {
   showCategories?: boolean;
   showTags?: boolean;
 }
+
+const lang = Astro.url.pathname.split('/')[1] || 'en';
 
 const {
   entry,
@@ -97,7 +100,7 @@ tags?.sort((a: string, b: string) => a.localeCompare(b));
         <ul>
           {author && showAuthor && (
             <li class="mr-1 inline-block">
-              <a href={`/authors/${slugify(author.id)}`}>
+              <a href={getRelativeLocaleUrl(lang, `authors/${author.id.replace(/\.md$/, "")}`)}>
                 <FaRegUserCircle className={"-mt-1 inline-block"} />
                 {upperHumanize(author.id)}
               </a>
@@ -132,7 +135,7 @@ tags?.sort((a: string, b: string) => a.localeCompare(b));
           {categories && showCategories && (
             <li class="mr-1 inline-block">
               {categories.map((category: string, index: number) => (
-                <a href={`/blog/categories/${slugify(category)}`}>
+                <a href={getRelativeLocaleUrl(lang, `blog/categories/${category}`)}>
                   <FaRegFolder className={"ml-2 -mt-1 inline-block"} />
                   {upperHumanize(category)}
                 </a>
@@ -142,7 +145,7 @@ tags?.sort((a: string, b: string) => a.localeCompare(b));
           {tags && showTags && (
             <li class="mr-1 inline-block">
               {tags.map((tag: string, index: number) => (
-                <a href={`/blog/tags/${slugify(tag)}`}>
+                <a href={getRelativeLocaleUrl(lang, `blog/tags/${tag}`)}>
                   <FaHashtag className={"ml-2 -mt-1 inline-block"} />
                   {lowerHumanize(tag)}
                 </a>

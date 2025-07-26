@@ -21,8 +21,7 @@ const { Content } = await render(entry);
 const descriptionLength = 200;
 
 const entryDescription =
-  description ||
-  (autodescription ? plainify(entry.body!.slice(0, descriptionLength)) : null);
+  description || (autodescription ? plainify(entry.body!.slice(0, descriptionLength)) : null);
 ---
 
 <BaseLayout title={title} description={entryDescription} image={image?.src}>
@@ -41,19 +40,8 @@ const entryDescription =
   <section class=`container mt-4 mb-8 col md:col-8`>
     <hr />
     <div class="flex items-center justify-center lg:justify-end mt-4">
-      <Share
-        title={title}
-        description={entryDescription}
-        folder={"poetry"}
-        id={entry.id}
-      />
+      <Share title={title} description={entryDescription} />
     </div>
   </section>
-  <Pagination
-    collection="poetry"
-    pageIDs={pageIDs}
-    pageIndex={pageIndex}
-    pageCount={pageCount}
-    lang={entry.id.split('/')[0]}
-  />
+  <Pagination collection="poetry" pageIDs={pageIDs} pageIndex={pageIndex} pageCount={pageCount} />
 </BaseLayout>

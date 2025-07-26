@@ -2,6 +2,7 @@
 import BaseLayout from "@components/base/BaseLayout.astro";
 import PageHeader from "@components/common/PageHeader.astro";
 import type { PoetryEntry } from "@/types";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   entryIndex: PoetryEntry;
@@ -19,13 +20,18 @@ const { entryIndex, entries } = Astro.props;
         <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
           <ul>
             {
-              entries.map((entry) => (
-                <li class="my-2">
-                  <a href={`/${entry.id.split('/')[0]}/poetry/${entry.id.split('/').pop()}`}>
-                    <h4>{entry.data.title}</h4>
-                  </a>
-                </li>
-              ))
+              entries.map((entry) => {
+                const lang = entry.id.split("/")[0];
+                const slug = entry.id.split("/").pop();
+                const path = `poetry/${slug}`;
+                return (
+                  <li class="my-2">
+                    <a href={getRelativeLocaleUrl(lang, path)}>
+                      <h4>{entry.data.title}</h4>
+                    </a>
+                  </li>
+                );
+              })
             }
           </ul>
         </div>

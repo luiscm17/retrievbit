@@ -10,7 +10,7 @@ interface MenuItem {
 }
 
 const { pathname } = Astro.url;
-const lang: string = Astro.params.lang || 'en';
+const lang = Astro.url.pathname.split('/')[1] || 'en';
 
 const stickyHeader: boolean = true;
 

@@ -4,12 +4,17 @@ import { upperHumanize, plainify, slugify } from "@lib/textConverter";
 import { FaRegFolder, FaRegClock, FaHashtag, FaRegCalendarAlt } from "react-icons/fa";
 import readingTime from "@lib/readingTime";
 import { formatDate } from "@lib/formatDate";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   entry: BlogEntry;
+  isRelated?: boolean;
+  isFeatured?: boolean;
 }
 
-const { entry }: Props = Astro.props;
+const { entry, isRelated, isFeatured } = Astro.props;
+const lang = Astro.url.pathname.split("/")[1] || "en";
+const slug = entry.id.split("/").pop()!;
 const { title, description, autodescription, date, categories, tags, complexity } = entry.data;
 
 const descriptionLength = 200;
@@ -23,7 +28,7 @@ const entryDescription =
 <div class="h-full m-2 pl-0 bg-gradient-to-br gradient rounded-lg">
   <div class="glass h-full rounded-lg p-4 intersect:animate-fadeUp opacity-0">
     <h4 class="mb-2">
-      <a href={`/${entry.id}`}>
+      <a href={getRelativeLocaleUrl(lang, `blog/${slug}`)}>
         {title}
       </a>
     </h4>
@@ -32,7 +37,7 @@ const entryDescription =
         categories && (
           <li class="mr-0 inline-block">
             {categories.map((category: string, index: number) => (
-              <a href={`/blog/categories/${slugify(category)}`}>
+              <a href={getRelativeLocaleUrl(lang, `blog/categories/${slugify(category)}`)}>
                 <FaRegFolder className={"ml-2 -mt-1 inline-block"} />
                 {upperHumanize(category)}
               </a>
@@ -44,7 +49,7 @@ const entryDescription =
         <li class="mr-0 inline-block">
           {
             tags.map((tag: string, index: number) => (
-              <a href={`/blog/tags/${slugify(tag)}`}>
+              <a href={getRelativeLocaleUrl(lang, `blog/tags/${slugify(tag)}`)}>
                 <FaHashtag className={"ml-2 -mt-1 inline-block"} />
                 {lowerHumanize(tag)}
               </a>

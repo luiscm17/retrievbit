@@ -2,8 +2,12 @@ import { getEntries } from "./contentParser";
 import { slugify } from "./textConverter";
 import type { CollectionKey } from "astro:content";
 
-export const getTaxa = async (collection: CollectionKey, name: string) => {
-  const entries = await getEntries(collection);
+export const getTaxa = async (
+  collection: CollectionKey,
+  name: string,
+  lang: string,
+) => {
+  const entries = await getEntries(collection, lang);
   const taxonomyPages = entries.map((entry: any) => entry.data[name]);
   let taxonomies: string[] = [];
   for (let i = 0; i < taxonomyPages.length; i++) {
@@ -17,8 +21,12 @@ export const getTaxa = async (collection: CollectionKey, name: string) => {
   return taxonomy;
 };
 
-export const getTaxaMultiset = async (collection: CollectionKey, name: string) => {
-  const entries = await getEntries(collection);
+export const getTaxaMultiset = async (
+  collection: CollectionKey,
+  name: string,
+  lang: string,
+) => {
+  const entries = await getEntries(collection, lang);
   const taxonomyPages = entries.map((entry: any) => entry.data[name]);
   let taxonomies: string[] = [];
   for (let i = 0; i < taxonomyPages.length; i++) {

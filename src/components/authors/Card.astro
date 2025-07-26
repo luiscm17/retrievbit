@@ -3,6 +3,7 @@ import type { AuthorsEntry } from "@/types";
 import { plainify } from "@lib/textConverter";
 import { Image } from "astro:assets";
 import Social from "@components/common/Social.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   entry: AuthorsEntry;
@@ -10,6 +11,9 @@ interface Props {
 
 const { entry }: Props = Astro.props;
 const { title, image, imageAlt, social } = entry.data;
+const lang = entry.id.split('/')[0];
+const slug = entry.id.split('/').pop();
+const path = `authors/${slug}`;
 const bodyBrief = entry.body ? plainify(entry.body?.slice(0, 100)) : null;
 ---
 
@@ -30,7 +34,7 @@ const bodyBrief = entry.body ? plainify(entry.body?.slice(0, 100)) : null;
       )
     }
     <h4 class="mb-3">
-      <a href={`/${entry.id.split('/')[0]}/authors/${entry.id.split('/').pop()}`}>{title}</a>
+      <a href={getRelativeLocaleUrl(lang, path)}>{title}</a>
     </h4>
     {bodyBrief && <p class="mb-4">{bodyBrief}</p>}
     <Social links={social} />
