@@ -26,9 +26,11 @@
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-2 prose-td:text-txt-s prose-td:dark:text-darkmode-txt-s;
   // Lists
   @apply prose-li:text-txt-s prose-li:dark:text-darkmode-txt-s;
+
   li::marker {
     @apply text-txt-s dark:text-darkmode-txt-s;
   }
+
   li {
     p {
       @apply m-0; // in .mdx files, li elements can contain <p> tags

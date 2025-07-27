@@ -135,8 +135,8 @@ const portfolio = defineCollection({
   }),
 });
 
-const recipes = defineCollection({
-  loader: createLoader("recipes", PATTERNS.REGULAR),
+const tutorials = defineCollection({
+  loader: createLoader("tutorials", PATTERNS.REGULAR),
   schema: ({ image }) =>
     searchable.extend({
       date: z.date().optional(),
@@ -172,6 +172,6 @@ export const collections = {
   indexCards,
   poetry,
   portfolio,
-  recipes,
+  tutorials,
   terms,
 };

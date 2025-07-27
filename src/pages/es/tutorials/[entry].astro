@@ -1,0 +1,26 @@
+---
+import type { TutorialsEntry } from "@/types";
+import EntryLayout from "@components/tutorials/EntryLayout.astro";
+import { getEntries } from "@lib/contentParser";
+import { sortByTitle } from "@lib/sortFunctions";
+
+export async function getStaticPaths() {
+  const lang = "es";
+  const entries = (await getEntries("tutorials", lang, sortByTitle)) as TutorialsEntry[];
+  const paths = entries.map((entry) => {
+    // Extraer solo el slug de la receta sin el prefijo de idioma
+    const slug = entry.id.split("/").pop();
+    return {
+      params: {
+        entry: slug,
+      },
+      props: { entry },
+    };
+  });
+  return paths;
+}
+
+const { entry } = Astro.props;
+---
+
+<EntryLayout entry={entry} />
