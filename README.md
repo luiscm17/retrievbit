@@ -1,35 +1,56 @@
 
 <div align="center">
-  <img src="src/assets/astrogon-logo.svg" style="width:80%;" alt="Astrogon Logo" align="center" />
+  <img src="src/assets/astrogon-logo.svg" style="width:80%;" alt="Perfobit Logo" align="center" />
+  <h1>Perfobit</h1>
+  <p>Modern, multilingual content platform built with Astro</p>
 </div>
 
 ---
 
 [![GitHub License](https://img.shields.io/github/license/astrogon/astrogon?color=red)](https://github.com/astrogon/astrogon/blob/main/LICENSE) [![Repo Size](https://img.shields.io/github/repo-size/astrogon/astrogon)](https://github.com/astrogon/astrogon) ![GitHub branch check runs](https://img.shields.io/github/check-runs/astrogon/astrogon/main) [![Website](https://img.shields.io/website?up_message=online&up_color=limegreen&down_message=offline&down_color=yellow&url=https%3A%2F%2Fastrogon.reednel.com%2F)](https://astrogon.reednel.com/)
 
-Astrogon is a rapidly-customizable multipurpose website template built using Astro JS, Tailwind, and a sprinkle of React.
+> **Note**: This project is a fork of [Astrogon](https://github.com/astrogon/astrogon), a multipurpose website template built with Astro JS, Tailwind, and React. We've customized it to create a modern multilingual content platform.
 
-## Features
+## 🚀 Features
 
-### Content Collections
+### 🌐 Multilingual Support
 
-- Blog
-  - Implements **Categories** and **Tags**, for easy filtering and searching
-- Documentation
-  - **Multi-level** document structure
-  - Toggleable **Doc Browser** sidebar
-  - Toggleable **Table of Contents** sidebar
-- Recipes
-  - Demonstrates a highly **templated structure**
-- Authors - A collection that can **link entries across collections** by the Author field
-- Poetry - A trim interface for a lightweight collection, demonstrating pagination over the content pages
-- Index Cards - A variation on the "Poetry" layout, where all content is kept in a single file, and displayed in a single page
-- And more:
-  - Homepage
-  - About/Bio
-  - Portfolio
-  - Terms and Conditions
-  - 404 page
+- **English & Spanish** content out of the box
+- Easy to add more languages
+- Automatic language detection and switching
+- SEO-optimized URLs for each language
+
+### 📚 Content Collections
+
+- **Blog**
+  - Categories and Tags for organization
+  - Featured posts support
+  - Reading time estimation
+  - Author profiles
+
+- **Tutorials**
+  - Step-by-step guides
+  - Recipe-style formatting
+  - Cooking mode feature
+  - Print-friendly versions
+
+- **Concepts**
+  - Elegant content presentation
+  - Clean, focused reading experience
+  - Easy navigation between related concepts
+  - Responsive design for all devices
+
+- **Documentation**
+  - Hierarchical structure
+  - Search functionality
+  - Table of contents
+  - Versioning support
+
+- **Portfolio**
+  - Project showcase
+  - Filterable by category
+  - Responsive image galleries
+  - Project details and links
 
 #### Content Components & Features
 
@@ -42,21 +63,36 @@ Astrogon is a rapidly-customizable multipurpose website template built using Ast
 - Integrated **LaTeX** support for inline and block mathematical expressions
 - All the standard **MD/MDX** features, including footnotes, tables, and more
 
-### Additional Features
+### ✨ Key Features
 
-- Comprehensive **Light Mode** and **Dark Mode** support, with automatic detection of system preference
-- **Searchablility** over all content you choose to include
-- **Adaptive Layout** for all screen sizes, from phone a to a desktop monitor
-- **Tool Tips** that can be added seamlessly to any interactable element
-- **Breadcrumbs** for rapid navigation
-- Auto-populating **Related Content** section available for any content collection
-- Auto-calculating **Reading Time** available for any content collection
-- Togglable **Frosted Glass** effect on all components
-- Easily customizable color scheme and typography
-- Animated component **Transitions** for an elegant flourish
-- **Pagination** for any content collection
-- Component for **Social Media** sharing
-- Built-in patterns for **Search Engine Optimization**
+- **Dark/Light Mode**
+  - Automatic system preference detection
+  - Smooth theme switching
+  - Persistent user preference
+
+- **Enhanced Content Discovery**
+  - Full-text search across all content
+  - Related content suggestions
+  - Table of contents with smooth scrolling
+  - Category and tag filtering
+
+- **Performance Optimized**
+  - Blazing fast page loads with Astro
+  - Optimized images and assets
+  - Lazy loading for better performance
+  - Minimal JavaScript footprint
+
+- **Developer Experience**
+  - Clean, modular codebase
+  - TypeScript support
+  - Component-based architecture
+  - Easy theming system
+
+- **SEO & Social**
+  - SEO-optimized structure
+  - Open Graph and Twitter cards
+  - Sitemap generation
+  - RSS feed support
 
 Every one of these features was designed with modularity and customizability in mind, for the smoothest development experience possible. For more details, see [docs/customization.md](docs/customization.md).
 
@@ -79,14 +115,64 @@ See [docs/tech-stack.md](docs/tech-stack.md) for more details.
 
 > *This is relevant if you intend to deploy your site to Cloudflare. Starting with Astro 5.8, Node 18 is unsupported, but the old Cloudflare Pages uses 18 by default. Wrangler appears to be necessary to use the new Cloudflare Workers. Read about Astro deployment [here](https://docs.astro.build/en/guides/deploy/cloudflare/#cloudflare-workers).
 
-## License
+## 🛠️ Getting Started
 
-Astrogon is licensed under the [MIT License](LICENSE).
+### Prerequisites
 
-## Acknowledgments
+- Node.js 18+
+- npm or yarn
+- Git
 
-This template was originally inspired by the structures of [zeon-studio](https://github.com/zeon-studio)'s [astroplate](https://github.com/zeon-studio/astroplate), [jordienr](https://github.com/jordienr)'s [astro-design-system](https://github.com/jordienr/astro-design-system) and [TheOtterlord](https://github.com/TheOtterlord)'s [manual](https://github.com/TheOtterlord/manual).
+### Installation
 
-## Sponsorship
+1. Clone the repository:
 
-[reednel](https://github.com/reednel) has dedicated hundreds of hours to building this template, and continues to maintain and improve on it. This software is fully Free and Open Source, but if you find value in it, a small donation [[here](https://github.com/sponsors/reednel)] would be warmly appreciated.
+   ```bash
+   git clone https://github.com/luiscm17/perfobit.git
+   cd perfobit
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser to `http://localhost:4321`
+
+## 🚀 Deployment
+
+Deploy to your favorite platform:
+
+- [Vercel](https://vercel.com)
+- [Netlify](https://www.netlify.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- Or any static hosting service
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+Perfobit is a customized fork of [Astrogon](https://github.com/astrogon/astrogon), created by [reednel](https://github.com/reednel). Special thanks to the original authors and contributors for their work on this amazing template.
+
+Original Astrogon was inspired by:
+
+- [astroplate](https://github.com/zeon-studio/astroplate) by zeon-studio
+- [astro-design-system](https://github.com/jordienr/astro-design-system) by jordienr
+- [manual](https://github.com/TheOtterlord/manual) by TheOtterlord
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
