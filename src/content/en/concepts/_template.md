@@ -1,11 +1,11 @@
 ---
 title:
 description:
-image: "@assets/poetry/.jpg"
+image: "@assets/concepts/.jpg"
 imageAlt:
 author:
 date: YYYY-MM-DD
 draft: true
 ---
 
-Poem here.
+Concept here.

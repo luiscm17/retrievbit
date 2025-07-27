@@ -1,21 +1,21 @@
 ---
-import type { PoetryEntry } from "@/types";
+import type { ConceptsEntry } from "@/types";
 import { sortByDate } from "@lib/sortFunctions";
-import EntryLayout from "@components/poetry/EntryLayout.astro";
+import EntryLayout from "@components/concepts/EntryLayout.astro";
 import { getEntries } from "@lib/contentParser";
 
-const lang = "es";
+const lang = "en";
 
 export async function getStaticPaths() {
-  const lang = "es";
-  const entries = (await getEntries("poetry", lang, sortByDate)) as PoetryEntry[];
+  const lang = "en";
+  const entries = (await getEntries("concepts", lang, sortByDate)) as ConceptsEntry[];
   const pageIDs: string[] = entries.map((entry) => entry.id);
   const pageCount = pageIDs.length;
 
   const paths = entries.map((entry) => {
     const pageIndex = pageIDs.indexOf(entry.id);
     // Extraer solo el slug de la entrada sin el prefijo de idioma
-    const slug = entry.id.split('/').pop();
+    const slug = entry.id.split("/").pop();
     return {
       params: {
         entry: slug,

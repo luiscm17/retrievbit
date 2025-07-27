@@ -110,8 +110,8 @@ const indexCards = defineCollection({
   }),
 });
 
-const poetry = defineCollection({
-  loader: createLoader("poetry", PATTERNS.REGULAR),
+const concepts = defineCollection({
+  loader: createLoader("concepts", PATTERNS.REGULAR),
   schema: ({ image }) =>
     searchable.extend({
       date: z.date().optional(),
@@ -170,7 +170,7 @@ export const collections = {
   docs,
   home,
   indexCards,
-  poetry,
+  concepts,
   portfolio,
   tutorials,
   terms,

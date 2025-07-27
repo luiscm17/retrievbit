@@ -30,7 +30,7 @@ perfobit/
 │   │   ├── docs/        # Componentes para la documentación
 │   │   ├── home/        # Componentes de la página de inicio
 │   │   ├── index-cards/ # Componentes para tarjetas de índice
-│   │   ├── poetry/      # Componentes para la sección de poesía
+│   │   ├── concepts/    # Componentes para la sección de conceptos
 │   │   ├── portfolio/   # Componentes del portafolio
 │   │   ├── recipes/     # Componentes para recetas
 │   │   ├── search/      # Componentes de búsqueda
@@ -50,10 +50,10 @@ perfobit/
 │   │   │   │   └── tutorials/   # Tutoriales paso a paso
 │   │   │   ├── home/     # Contenido de la página de inicio
 │   │   │   ├── index-cards/  # Contenido para tarjetas de índice (versión resumida)
-│   │   │   ├── poetry/   # Colección de poemas con formato especializado
-│   │   │   │   ├── love/      # Poemas de amor
-│   │   │   │   ├── nature/    # Poemas sobre naturaleza
-│   │   │   │   └── fantasy/   # Poesía fantástica
+│   │   │   ├── concepts/   # Colección de conceptos con formato especializado
+│   │   │   │   ├── love/      # Conceptos de amor
+│   │   │   │   ├── nature/    # Conceptos sobre naturaleza
+│   │   │   │   └── fantasy/   # Conceptos fantásticos
 │   │   │   ├── portfolio/ # Proyectos y trabajos destacados
 │   │   │   ├── tutorials/  # Tutoriales paso a paso
 │   │   │   │   ├── appetizers/  # Entradas y aperitivos
@@ -104,9 +104,9 @@ perfobit/
 │   │   │   │   └── index.astro    # Listado de entradas
 │   │   │   ├── docs/           # Documentación
 │   │   │   │   └── [...path].astro # Rutas dinámicas para documentación
-│   │   │   ├── poetry/         # Sección de poesía
-│   │   │   │   ├── [entry].astro  # Poema individual
-│   │   │   │   └── index.astro    # Listado de poemas
+│   │   │   ├── concepts/         # Sección de conceptos
+│   │   │   │   ├── [entry].astro  # Concepto individual
+│   │   │   │   └── index.astro    # Listado de conceptos
 │   │   │   ├── tutorials/        # Tutoriales
 │   │   │   │   ├── [entry].astro  # Tutorial individual
 │   │   │   │   └── index.astro    # Listado de tutoriales
@@ -120,7 +120,7 @@ perfobit/
 │   │       ├── autores/          # Páginas de autores
 │   │       ├── blog/             # Blog en español
 │   │       ├── documentacion/    # Documentación
-│   │       ├── poesia/           # Sección de poesía
+│   │       ├── conceptos/        # Sección de conceptos
 │   │       ├── tutoriales/       # Tutoriales en español
 │   │       ├── index.astro       # Página de inicio
 │   │       ├── portafolio.astro  # Portafolio
@@ -273,7 +273,7 @@ Cada tipo de contenido soporta diferentes herramientas y características:
   - 📱 **Modo de cocina** (pantalla siempre encendida)
   - 🖨️ **Versión para imprimir**
 
-#### 📜 Poesía (`/poetry/`)
+#### 📜 Conceptos (`/concepts/`)
 
 - **Herramientas disponibles**:
   - ✨ **Formato poético especializado**
