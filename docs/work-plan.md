@@ -1,14 +1,14 @@
-# Plan de Trabajo: Desarrollo de Contenido para la Plataforma "Perfobit"
+# Plan de Trabajo: Desarrollo de Contenido para la Plataforma "Retrievbit"
 
 ## 1. Introducción y Objetivos
 
 ### 1.1 Propósito del Documento
 
-El presente Plan de Trabajo establece la estrategia, la arquitectura de la información y el plan de ejecución para la creación y gestión de contenido en la plataforma "Perfobit". El objetivo es transformar el sitio web existente en un recurso de referencia bilingüe (español/inglés) para profesionales y estudiantes en los campos de la ingeniería petrolera, con un enfoque especializado en perforación y la aplicación de la programación.
+El presente Plan de Trabajo establece la estrategia, la arquitectura de la información y el plan de ejecución para la creación y gestión de contenido en la plataforma "Retrievbit". El objetivo es transformar el sitio web existente en un recurso de referencia bilingüe (español/inglés) para profesionales y estudiantes en los campos de la ingeniería petrolera, con un enfoque especializado en perforación y la aplicación de la programación.
 
 ### 1.2 Visión del Proyecto
 
-Posicionar a "Perfobit" como una autoridad digital y una comunidad de aprendizaje líder, reconocida por la calidad, profundidad y aplicabilidad de su contenido técnico, cerrando la brecha entre la teoría de la ingeniería tradicional y las habilidades computacionales modernas.
+Posicionar a "Retrievbit" como una autoridad digital y una comunidad de aprendizaje líder, reconocida por la calidad, profundidad y aplicabilidad de su contenido técnico, cerrando la brecha entre la teoría de la ingeniería tradicional y las habilidades computacionales modernas.
 
 ### 1.3 Objetivos Estratégicos (KPIs)
 
@@ -102,7 +102,7 @@ Se propone un desarrollo iterativo en tres fases para asegurar un crecimiento so
 
 ### 3.3 Fase 3: Expansión y Autoridad (Meses 10-18)
 
-* **Objetivo:** Consolidar "Perfobit" como un referente en su nicho, explorar colaboraciones y formatos de contenido avanzados.
+* **Objetivo:** Consolidar "Retrievbit" como un referente en su nicho, explorar colaboraciones y formatos de contenido avanzados.
 * **Tareas Detalladas:**
     1. **Desarrollo de Contenido Avanzado:** Crear un curso completo y estructurado dentro de la sección `/docs`, posiblemente con ejercicios y evaluaciones.
     2. **Colaboraciones:** Invitar a otros profesionales de la industria a escribir artículos como autores invitados.

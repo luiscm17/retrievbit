@@ -1,4 +1,4 @@
-# 📚 Documentación del Proyecto Perfobit
+# 📚 Documentación del Proyecto Retrievbit
 
 ## 📋 Tabla de Contenidos
 
@@ -13,7 +13,7 @@
 ## Estructura del Proyecto {#estructura}
 
 ```bash
-perfobit/
+retrievbit/
 ├── .astro/               # Archivos de caché de Astro
 ├── .github/              # Configuración de GitHub (CI/CD, workflows)
 ├── docs/                 # Documentación del proyecto

@@ -1,7 +1,8 @@
 
+# Retrievbit
+
 <div align="center">
-  <img src="src/assets/astrogon-logo.svg" style="width:80%;" alt="Perfobit Logo" align="center" />
-  <h1>Perfobit</h1>
+  <img src="src/assets/retrievbit-logo.svg" style="width:80%;" alt="Retrievbit Logo" align="center" />
   <p>Modern, multilingual content platform built with Astro</p>
 </div>
 
@@ -113,7 +114,7 @@ See [docs/tech-stack.md](docs/tech-stack.md) for more details.
    1. Alternately*: `npx astro build`, `npx wrangler dev`
 5. See your changes live at `http://localhost:4321`
 
-> *This is relevant if you intend to deploy your site to Cloudflare. Starting with Astro 5.8, Node 18 is unsupported, but the old Cloudflare Pages uses 18 by default. Wrangler appears to be necessary to use the new Cloudflare Workers. Read about Astro deployment [here](https://docs.astro.build/en/guides/deploy/cloudflare/#cloudflare-workers).
+> *This is relevant if you intend to deploy your site to Cloudflare. Starting with Astro 5.8, Node 18 is unsupported, but the old Cloudflare Pages uses 18 by default. Wrangler appears to be necessary to use the new Cloudflare Workers. Read more about [Astro deployment on Cloudflare](https://docs.astro.build/en/guides/deploy/cloudflare/#cloudflare-workers).
 
 ## 🛠️ Getting Started
 
@@ -165,7 +166,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-Perfobit is a customized fork of [Astrogon](https://github.com/astrogon/astrogon), created by [reednel](https://github.com/reednel). Special thanks to the original authors and contributors for their work on this amazing template.
+Retrievbit is a customized fork of [Astrogon](https://github.com/astrogon/astrogon), created by [reednel](https://github.com/reednel). Special thanks to the original authors and contributors for their work on this amazing template.
 
 Original Astrogon was inspired by:
 

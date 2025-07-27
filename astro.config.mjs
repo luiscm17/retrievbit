@@ -23,7 +23,7 @@ export default defineConfig({
     //   en: {}
     // }
   },
-  site: "https://janedoe.com",
+  site: "https://retrievbit.com",
   base: "/",
   trailingSlash: "ignore",
   prefetch: {

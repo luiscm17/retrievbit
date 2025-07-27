@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2860.48 1451.34">
+  <!-- Generator: Adobe Illustrator 29.2.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 108)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Degradado_sin_nombre_193);
+      }
+
+      .st1 {
+        fill: url(#Degradado_sin_nombre_190);
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_204);
+      }
+
+      .st3, .st4 {
+        font-family: Haettenschweiler, Haettenschweiler;
+        font-size: 671.62px;
+        letter-spacing: .01em;
+      }
+
+      .st5 {
+        fill: url(#Degradado_sin_nombre_182);
+      }
+
+      .st4 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: .1px;
+      }
+
+      .st6 {
+        fill: url(#Degradado_sin_nombre_62);
+      }
+
+      .st7 {
+        fill: url(#Degradado_sin_nombre_178);
+      }
+
+      .st8 {
+        fill: url(#Degradado_sin_nombre_91);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_182" data-name="Degradado sin nombre 182" x1="490.21" y1="193.56" x2="996.04" y2="-145.88" gradientTransform="translate(-304.94 740.56) rotate(-29.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2282b2"/>
+      <stop offset=".12" stop-color="#3593b5"/>
+      <stop offset=".3" stop-color="#4ca8b9"/>
+      <stop offset=".49" stop-color="#5cb6bb"/>
+      <stop offset=".71" stop-color="#65bfbd"/>
+      <stop offset="1" stop-color="#69c2be"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_204" data-name="Degradado sin nombre 204" x1="636.98" y1="796.44" x2="841.38" y2="437.09" gradientTransform="translate(-80.69 117.89) rotate(-5.15)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#357886"/>
+      <stop offset=".05" stop-color="#408792"/>
+      <stop offset=".13" stop-color="#519da3"/>
+      <stop offset=".23" stop-color="#5daeb0"/>
+      <stop offset=".35" stop-color="#66baba"/>
+      <stop offset=".52" stop-color="#6bc1bf"/>
+      <stop offset="1" stop-color="#6dc3c1"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_91" data-name="Degradado sin nombre 91" x1="370.9" y1="1048.27" x2="895.58" y2="745.34" gradientTransform="translate(-80.69 117.89) rotate(-5.15)" gradientUnits="userSpaceOnUse">
+      <stop offset=".04" stop-color="#2d508a"/>
+      <stop offset=".13" stop-color="#336796"/>
+      <stop offset=".28" stop-color="#3c85a5"/>
+      <stop offset=".44" stop-color="#439db2"/>
+      <stop offset=".6" stop-color="#48aebb"/>
+      <stop offset=".78" stop-color="#4bb8c0"/>
+      <stop offset="1" stop-color="#4cbcc2"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_178" data-name="Degradado sin nombre 178" x1="669.01" y1="106.13" x2="445.88" y2="316.55" gradientTransform="translate(-304.94 740.56) rotate(-29.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#11767b"/>
+      <stop offset=".27" stop-color="#167281"/>
+      <stop offset=".66" stop-color="#276a94"/>
+      <stop offset="1" stop-color="#3a61ab"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_190" data-name="Degradado sin nombre 190" x1="669.74" y1="626.51" x2="558.02" y2="319.55" gradientTransform="translate(-80.69 117.89) rotate(-5.15)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020304"/>
+      <stop offset=".43" stop-color="#024138" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#039c84" stop-opacity=".75"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_193" data-name="Degradado sin nombre 193" x1="519.78" y1="986.39" x2="334.38" y2="717.5" gradientTransform="translate(-80.69 117.89) rotate(-5.15)" gradientUnits="userSpaceOnUse">
+      <stop offset=".04" stop-color="#315798"/>
+      <stop offset=".18" stop-color="#2c4f8a"/>
+      <stop offset=".44" stop-color="#203a65"/>
+      <stop offset=".79" stop-color="#0e182a"/>
+      <stop offset="1" stop-color="#020304"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_62" data-name="Degradado sin nombre 62" x1="1845.89" y1="940.3" x2="1910.24" y2="302.26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2b4269"/>
+      <stop offset=".03" stop-color="#345174"/>
+      <stop offset=".11" stop-color="#4b7690"/>
+      <stop offset=".19" stop-color="#5e94a6"/>
+      <stop offset=".27" stop-color="#6dacb8"/>
+      <stop offset=".36" stop-color="#77bcc5"/>
+      <stop offset=".45" stop-color="#7ec6cc"/>
+      <stop offset=".57" stop-color="#80cacf"/>
+      <stop offset=".68" stop-color="#9ad4da"/>
+      <stop offset="1" stop-color="#e6f4fa"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path class="st5" d="M607.4,283.26c-56.98-11.03-138.68,99.22-201.85,263.33-172.84-32.4-309.56-20.74-330.09,33.55,18.52-62.08,60.26-117.27,121.29-151.33l218.17-121.76c61.04-34.06,129.92-40.62,192.48-23.78Z"/>
+    <path class="st2" d="M765.4,406.44l121.76,218.17c34.06,61.04,40.62,129.92,23.78,192.48-.62,2.2-1.22,4.44-1.91,6.62-20.53,54.28-157.25,65.94-330.09,33.54,14.39-37.31,27.78-77.37,39.71-119.46,11.94-42.09,21.58-83.22,28.96-122.55,32.4-172.84,20.74-309.56-33.54-330.09,62.08,18.52,117.27,60.26,151.33,121.29Z"/>
+    <path class="st8" d="M909.03,823.7c-18.52,62.08-60.23,117.31-121.27,151.37l-218.17,121.76c-61.04,34.06-129.94,40.58-192.5,23.74,56.98,11.03,138.68-99.22,201.85-263.33,172.84,32.4,309.56,20.74,330.09-33.54Z"/>
+    <path class="st7" d="M405.56,546.59c-14.36,37.35-27.75,77.42-39.69,119.5-11.94,42.09-21.58,83.22-28.92,122.52-32.4,172.84-20.74,309.56,33.55,330.09-62.08-18.52-117.31-60.23-151.37-121.27l-121.76-218.17c-34.06-61.04-40.58-129.94-23.74-192.5.56-2.22,1.22-4.44,1.85-6.64,20.53-54.28,157.25-65.94,330.09-33.55Z"/>
+    <path class="st1" d="M647.61,615.23c-37.35-14.36-77.42-27.75-119.5-39.69-42.09-11.94-83.22-21.58-122.55-28.96,63.17-164.11,144.87-274.36,201.85-263.33,2.24.6,4.44,1.22,6.66,1.89,54.28,20.53,65.94,157.25,33.54,330.09Z"/>
+    <path class="st0" d="M578.94,857.24c-63.17,164.11-144.87,274.36-201.85,263.33-2.17-.58-4.44-1.22-6.59-1.87-54.28-20.53-65.94-157.25-33.55-330.09,37.31,14.39,77.37,27.78,119.46,39.71,42.09,11.94,83.22,21.58,122.52,28.92Z"/>
+  </g>
+  <g>
+    <text class="st3" transform="translate(978.11 954.97) scale(.79 1)"><tspan x="0" y="0">RETRIEVBIT</tspan></text>
+    <g>
+      <path class="st6" d="M1187.53,955.63h-81.14c-8.76-13.33-13.14-51.16-13.14-113.47v-.66l.51-28.2c.52-39.13.77-59.14.77-60.01,0-15.96-8.42-23.94-25.24-23.94v225.62h-81.14v-470.26h100.2c22.84,0,42.71,6.67,59.63,20,16.91,13.34,25.37,34.43,25.37,63.29v56.41c0,36.51-16.74,61.22-50.23,74.11,33.66,10.06,50.49,35.97,50.49,77.72l-1.29,51.49c0,75.21,5.06,117.84,15.2,127.9ZM1094.28,647.3v-77.59c0-16.44-8.33-24.66-24.99-24.66v127.24c16.65,0,24.99-8.33,24.99-24.99Z"/>
+      <path class="st6" d="M1365.19,954.97h-158.67v-470.26h157.64v60.34h-76.5v127.24h69.03v57.06h-69.03v165.28h77.53v60.34Z"/>
+      <path class="st6" d="M1555.73,546.03h-45.33v408.94h-81.14v-408.94h-45.34v-61.32h171.81v61.32Z"/>
+      <path class="st6" d="M1779.51,955.63h-81.14c-8.76-13.33-13.14-51.16-13.14-113.47v-.66l.51-28.2c.52-39.13.77-59.14.77-60.01,0-15.96-8.42-23.94-25.24-23.94v225.62h-81.14v-470.26h100.2c22.84,0,42.72,6.67,59.63,20,16.91,13.34,25.37,34.43,25.37,63.29v56.41c0,36.51-16.74,61.22-50.23,74.11,33.66,10.06,50.49,35.97,50.49,77.72l-1.29,51.49c0,75.21,5.06,117.84,15.2,127.9ZM1686.26,647.3v-77.59c0-16.44-8.33-24.66-24.99-24.66v127.24c16.65,0,24.99-8.33,24.99-24.99Z"/>
+      <path class="st6" d="M1878.35,954.97h-81.14v-470.26h81.14v470.26Z"/>
+      <path class="st6" d="M2061.16,954.97h-158.67v-470.26h157.64v60.34h-76.5v127.24h69.03v57.06h-69.03v165.28h77.53v60.34Z"/>
+      <path class="st6" d="M2289.57,484.71l-49.76,470.26h-114.69l-49.86-470.26h79.01l28.15,328.59,27.88-328.59h79.27Z"/>
+      <path class="st6" d="M2307.79,954.97v-470.26h95.57c22.84,0,42.67,6.62,59.5,19.84,16.83,13.23,25.24,34.38,25.24,63.46v65.26c0,33.01-15.8,56.3-47.4,69.85,33.31,10.49,49.97,33.12,49.97,67.88v91.17c0,31.05-7.95,54.27-23.83,69.69-15.89,15.41-34.82,23.12-56.8,23.12h-102.26ZM2411.6,649.93v-80.22c0-16.44-7.56-24.66-22.67-24.66v129.86c15.11,0,22.67-8.33,22.67-24.98ZM2411.6,869.71v-119.04c0-16.4-7.56-24.6-22.67-24.6v168.56c15.11,0,22.67-8.31,22.67-24.92Z"/>
+      <path class="st6" d="M2595.96,954.97h-81.14v-470.26h81.14v470.26Z"/>
+      <path class="st6" d="M2789.34,546.03h-45.33v408.94h-81.14v-408.94h-45.34v-61.32h171.81v61.32Z"/>
+    </g>
+    <text class="st4" transform="translate(978.11 954.97) scale(.79 1)"><tspan x="0" y="0">RETRIEVBIT</tspan></text>
+  </g>
+</svg>
