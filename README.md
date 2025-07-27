@@ -129,8 +129,8 @@ See [docs/tech-stack.md](docs/tech-stack.md) for more details.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/luiscm17/perfobit.git
-   cd perfobit
+   git clone https://github.com/luiscm17/retrievbit.git
+   cd retrievbit
    ```
 
 2. Install dependencies:
