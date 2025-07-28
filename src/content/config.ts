@@ -143,17 +143,19 @@ const tutorials = defineCollection({
       image: image().optional(),
       imageAlt: z.string().default(""),
       author: reference("authors").optional(),
-      prepTime: z.number().optional(),
-      servings: z.number().optional(),
-      diet: z.string().optional(),
-      ingredients: z
+      topics: z.string().optional(),
+      tools: z.string().optional(),
+      tags: z.string().optional(),
+      context: z
         .object({
           list: z.array(z.string()),
           qty: z.array(z.string()),
         })
         .optional(),
-      instructions: z.array(z.string()).optional(),
-      notes: z.array(z.string()).optional(),
+      development: z.array(z.string()).optional(),
+      application: z.array(z.string()).optional(),
+      summary: z.array(z.string()).optional(),
+      resources: z.array(z.string()).optional(),
     }),
 });
 

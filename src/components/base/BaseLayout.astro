@@ -22,10 +22,10 @@ export interface Props {
 
 const { title, description, image, noindex, canonical } = Astro.props;
 
-const siteTitle = "Retrievbits";
-const siteDescription = "Retrievbit is a simple and elegant Astro theme.";
+const siteTitle = "Retrievbit";
+const siteDescription = "Retrievbit is a modern, multilingual content platform built with Astro, featuring tutorials, concepts, and blog posts in multiple languages.";
 const siteImage = "@assets/og-image.png";
-const siteAuthor = "Luis CM";
+const siteAuthor = "Luis Condori";
 const baseUrl = "https://luiscm.com";
 
 // Obtener el idioma actual de la URL
@@ -40,45 +40,20 @@ const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
 <html lang={htmlLang}>
   <head>
     <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta name="theme-name" content="pages" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#fff"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#000"
-    />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
     <title>
       {plainify(title ? title : siteTitle)}
@@ -87,10 +62,7 @@ const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
     {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
     {noindex && <meta name="robots" content="noindex,nofollow" />}
 
-    <meta
-      name="description"
-      content={plainify(description ? description : siteDescription)}
-    />
+    <meta name="description" content={plainify(description ? description : siteDescription)} />
     <meta name="author" content={siteAuthor} />
     <meta property="og:title" content={plainify(title ? title : siteTitle)} />
     <meta
@@ -98,24 +70,15 @@ const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
       content={plainify(description ? description : siteDescription)}
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={Astro.url.href}
-    />
-    <meta
-      property="og:image"
-      content={`${baseUrl}${image ? image : siteImage}`}
-    />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={`${baseUrl}${image ? image : siteImage}`} />
 
     <meta name="twitter:title" content={plainify(title ? title : siteTitle)} />
     <meta
       name="twitter:description"
       content={plainify(description ? description : siteDescription)}
     />
-    <meta
-      name="twitter:image"
-      content={`${baseUrl}${image ? image : siteImage}`}
-    />
+    <meta name="twitter:image" content={`${baseUrl}${image ? image : siteImage}`} />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Alpine.js -->
@@ -139,7 +102,7 @@ const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
       integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
       crossorigin="anonymous"
       onload="renderMathInElement(document.body);"></script>
-      
+
     <!-- https://docs.astro.build/en/guides/view-transitions -->
     <ClientRouter fallback="swap" />
     <Tooltips interactive={false} delay={[333, 0]} />
@@ -148,7 +111,7 @@ const htmlLang = currentLang === "es" ? "es-ES" : "en-US";
     <Background />
     <Header lang={lang} />
     <main id="main-content" class="flex-1">
-      <slot/>
+      <slot />
     </main>
     <Footer />
     <!-- <ObserverScript /> -->

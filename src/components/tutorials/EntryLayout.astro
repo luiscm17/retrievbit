@@ -5,7 +5,8 @@ import { Image } from "astro:assets";
 import BaseLayout from "@components/base/BaseLayout.astro";
 import { upperHumanize, markdownify, slugify } from "@lib/textConverter";
 
-import { FaRegClock, FaRegUserCircle, FaUtensils, FaSeedling } from "react-icons/fa";
+import { FaRegUserCircle, FaTools, FaTags } from "react-icons/fa";
+import { GiOilRig } from "react-icons/gi";
 
 interface Props {
   entry: TutorialsEntry;
@@ -18,12 +19,14 @@ const {
   description,
   image,
   imageAlt,
-  prepTime,
-  servings,
-  diet,
-  ingredients,
-  instructions,
-  notes,
+  topics,
+  tools,
+  tags,
+  context,
+  development,
+  application,
+  summary,
+  resources,
 } = entry.data;
 ---
 
@@ -65,30 +68,30 @@ const {
                   </div>
                 )
               }
-              <!-- Prep Time -->
+              <!-- Topics -->
               {
-                prepTime && (
+                topics && (
                   <div class="m-4">
-                    <FaRegClock className={"mr-2 -mt-1 inline-block"} />
-                    {prepTime + " minutes"}
+                    <GiOilRig className={"mr-2 -mt-1 inline-block"} />
+                    {topics}
                   </div>
                 )
               }
-              <!-- Servings -->
+              <!-- Tools -->
               {
-                servings && (
+                tools && (
                   <div class="m-4">
-                    <FaUtensils className={"mr-2 -mt-1 inline-block"} />
-                    {servings === 1 ? "1 serving" : servings + " servings"}
+                    <FaTools className={"mr-2 -mt-1 inline-block"} />
+                    {tools}
                   </div>
                 )
               }
-              <!-- Diet -->
+              <!-- Tags -->
               {
-                diet && (
+                tags && (
                   <div class="m-4">
-                    <FaSeedling className={"mr-2 -mt-1 inline-block"} />
-                    {diet}
+                    <FaTags className={"mr-2 -mt-1 inline-block"} />
+                    {tags}
                   </div>
                 )
               }
@@ -96,7 +99,7 @@ const {
               {
                 description && (
                   <div>
-                    {author || prepTime || servings || diet ? <hr class="my-2" /> : null}
+                    {author || topics || tools || tags ? <hr class="my-2" /> : null}
                     <div class="m-4">
                       <div set:html={markdownify(description)} />
                     </div>
@@ -105,17 +108,17 @@ const {
               }
             </div>
           </section>
-          <!-- Ingredients -->
+          <!-- Context -->
           {
-            ingredients && (
+            context && (
               <section class="col basis-1/3 p-2 min-w-72">
                 <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Ingredients" class="mb-2" />
+                  <h2 set:html="Context" class="mb-2" />
                   <div class="row justify-center">
-                    {ingredients.list.map((it: string, index: number) => (
+                    {context.list.map((it: string, index: number) => (
                       <div class="row my-1">
-                        <div class="col-7" set:html={ingredients.list[index]} />
-                        <div class="col-5 text-right" set:html={ingredients.qty[index]} />
+                        <div class="col-7" set:html={context.list[index]} />
+                        <div class="col-5 text-right" set:html={context.qty[index]} />
                         <hr class="my-1" />
                       </div>
                     ))}
@@ -124,14 +127,14 @@ const {
               </section>
             )
           }
-          <!-- Instructions -->
+          <!-- Development -->
           {
-            instructions && (
+            development && (
               <section class="col basis-full p-2 min-w-72">
                 <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Instructions" class="mb-2" />
+                  <h2 set:html="Development" class="mb-2" />
                   <div class="row justify-center">
-                    {instructions.map((it: string, index: number) => (
+                    {development.map((it: string, index: number) => (
                       <div class="row my-1">
                         <div class="col">
                           {index + 1}. {it}
@@ -144,14 +147,50 @@ const {
               </section>
             )
           }
-          <!-- Notes -->
+          <!-- Application -->
           {
-            notes && (
+            application && (
               <section class="col basis-full p-2 min-w-72">
                 <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Notes" class="mb-2" />
+                  <h2 set:html="Application" class="mb-2" />
                   <div class="row justify-center">
-                    {notes.map((it: string, index: number) => (
+                    {application.map((it: string, index: number) => (
+                      <div class="row my-1">
+                        <div class="col">{it}</div>
+                        <hr class="my-1" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            )
+          }
+          <!-- Summary -->
+          {
+            summary && (
+              <section class="col basis-full p-2 min-w-72">
+                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
+                  <h2 set:html="Summary" class="mb-2" />
+                  <div class="row justify-center">
+                    {summary.map((it: string, index: number) => (
+                      <div class="row my-1">
+                        <div class="col">{it}</div>
+                        <hr class="my-1" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            )
+          }
+          <!-- Resources -->
+          {
+            resources && (
+              <section class="col basis-full p-2 min-w-72">
+                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
+                  <h2 set:html="Resources" class="mb-2" />
+                  <div class="row justify-center">
+                    {resources.map((it: string, index: number) => (
                       <div class="row my-1">
                         <div class="col">{it}</div>
                         <hr class="my-1" />

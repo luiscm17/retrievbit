@@ -30,14 +30,14 @@ const menu: MenuItem[] = [
     key: "nav.about",
   },
   {
-    name: t("nav.docs"),
-    url: getRelativeLocaleUrl(lang, "/docs"),
-    key: "nav.docs",
-  },
-  {
     name: t("nav.blog"),
     url: getRelativeLocaleUrl(lang, "/blog"),
     key: "nav.blog",
+  },
+  {
+    name: t("nav.docs"),
+    url: getRelativeLocaleUrl(lang, "/docs"),
+    key: "nav.docs",
   },
   {
     name: t("nav.tutorials"),
@@ -50,6 +50,11 @@ const menu: MenuItem[] = [
     key: "nav.concepts",
   },
   {
+    name: t("nav.portfolio"),
+    url: getRelativeLocaleUrl(lang, "/portfolio"),
+    key: "nav.portfolio",
+  },
+  {
     name: t("nav.index-cards"),
     url: getRelativeLocaleUrl(lang, "/index-cards"),
     key: "nav.index-cards",
@@ -58,11 +63,6 @@ const menu: MenuItem[] = [
     name: t("nav.authors"),
     url: getRelativeLocaleUrl(lang, "/authors"),
     key: "nav.authors",
-  },
-  {
-    name: t("nav.portfolio"),
-    url: getRelativeLocaleUrl(lang, "/portfolio"),
-    key: "nav.portfolio",
   },
 ];
 ---

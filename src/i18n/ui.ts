@@ -31,6 +31,7 @@ export const ui = {
         '404.backToHome': 'Back to Home',
         'header.menu.open': 'Menu Open',
         'header.menu.close': 'Menu Close',
+        'blog.relatedPosts': 'Related Posts',
     },
     es: {
         'nav.home': 'Inicio',
@@ -55,6 +56,7 @@ export const ui = {
         '404.backToHome': 'Volver al Inicio',
         'header.menu.open': 'Abrir Menú',
         'header.menu.close': 'Cerrar Menú',
+        'blog.relatedPosts': 'Publicaciones Relacionadas',
     },
 } as const;
 

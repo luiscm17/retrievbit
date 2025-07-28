@@ -7,6 +7,7 @@ import type { BlogEntry } from "@/types";
 import TableOfContents from "@components/common/TableOfContents.astro";
 import { render } from "astro:content";
 import EntryHeader from "@components/common/EntryHeader.astro";
+import { useTranslations, getLangFromUrl } from "@i18n/utils";
 interface Props {
   entry: BlogEntry;
   relatedEntries: BlogEntry[];
@@ -20,11 +21,13 @@ const descriptionLenth = 200; // the max length in characters for the auto-gener
 const globalHideToc = false; // set true to always hide the table of contents (right side menu)
 const tocDepth = 3; // maximum depth for the table of contents 1 = h1, etc
 
-const actuallyHideToc = hideToc || globalHideToc || headings.filter((heading) => heading.depth <= tocDepth).length === 0;
+const actuallyHideToc =
+  hideToc || globalHideToc || headings.filter((heading) => heading.depth <= tocDepth).length === 0;
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const entryDescription =
-  description ||
-  (autodescription ? plainify(entry.body!.slice(0, descriptionLenth)) : null);
+  description || (autodescription ? plainify(entry.body!.slice(0, descriptionLenth)) : null);
 ---
 
 <BaseLayout title={title} description={entryDescription} image={image?.src}>
@@ -57,19 +60,14 @@ const entryDescription =
   <section class=`container items-start justify-between mt-4`>
     <hr />
     <div class="flex items-center justify-center lg:justify-end mt-4">
-      <Share
-        title={title}
-        description={entryDescription}
-        folder={"blog"}
-        id={entry.id}
-      />
+      <Share title={title} description={entryDescription} folder={"blog"} id={entry.id} />
     </div>
   </section>
   <!-- Related posts -->
   {
     relatedEntries.length > 0 && (
       <section class="row justify-center my-8">
-        <h2 class="h3 mb-4 text-center">Related Posts</h2>
+        <h2 class="h3 mb-4 text-center">{t("blog.relatedPosts")}</h2>
         <div class="lg:col-10">
           <div class="row justify-center">
             {relatedEntries.slice(0, 2).map((entry) => (
