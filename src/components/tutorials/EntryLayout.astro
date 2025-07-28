@@ -4,15 +4,18 @@ import Share from "@components/common/Share.astro";
 import { Image } from "astro:assets";
 import BaseLayout from "@components/base/BaseLayout.astro";
 import { upperHumanize, markdownify, slugify } from "@lib/textConverter";
-
+import { render } from "astro:content";
 import { FaRegUserCircle, FaTools, FaTags } from "react-icons/fa";
-import { GiOilRig } from "react-icons/gi";
+import { FaOilWell } from "react-icons/fa6";
+
+
 
 interface Props {
   entry: TutorialsEntry;
 }
 
 const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
 const {
   title,
   author,
@@ -22,11 +25,6 @@ const {
   topics,
   tools,
   tags,
-  context,
-  development,
-  application,
-  summary,
-  resources,
 } = entry.data;
 ---
 
@@ -36,7 +34,11 @@ const {
       <div class="row justify-center">
         <article class="lg:col-10 flex flex-wrap content-start">
           <!-- Title -->
-          <h1 set:html={title} class="p-2 col basis-full min-w-72" />
+          <section class="col basis-full p-2 min-w-72">
+            <div class="glass rounded-lg px-4 py-4 intersect:animate-fadeDown opacity-0">
+              <h1 set:html={title} />
+            </div>
+          </section>
           <!-- Cover Photo -->
           {
             image && (
@@ -72,7 +74,7 @@ const {
               {
                 topics && (
                   <div class="m-4">
-                    <GiOilRig className={"mr-2 -mt-1 inline-block"} />
+                    <FaOilWell className={"mr-2 -mt-1 inline-block"} />
                     {topics}
                   </div>
                 )
@@ -109,98 +111,11 @@ const {
             </div>
           </section>
           <!-- Context -->
-          {
-            context && (
-              <section class="col basis-1/3 p-2 min-w-72">
-                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Context" class="mb-2" />
-                  <div class="row justify-center">
-                    {context.list.map((it: string, index: number) => (
-                      <div class="row my-1">
-                        <div class="col-7" set:html={context.list[index]} />
-                        <div class="col-5 text-right" set:html={context.qty[index]} />
-                        <hr class="my-1" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )
-          }
-          <!-- Development -->
-          {
-            development && (
-              <section class="col basis-full p-2 min-w-72">
-                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Development" class="mb-2" />
-                  <div class="row justify-center">
-                    {development.map((it: string, index: number) => (
-                      <div class="row my-1">
-                        <div class="col">
-                          {index + 1}. {it}
-                        </div>
-                        <hr class="my-1" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )
-          }
-          <!-- Application -->
-          {
-            application && (
-              <section class="col basis-full p-2 min-w-72">
-                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Application" class="mb-2" />
-                  <div class="row justify-center">
-                    {application.map((it: string, index: number) => (
-                      <div class="row my-1">
-                        <div class="col">{it}</div>
-                        <hr class="my-1" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )
-          }
-          <!-- Summary -->
-          {
-            summary && (
-              <section class="col basis-full p-2 min-w-72">
-                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Summary" class="mb-2" />
-                  <div class="row justify-center">
-                    {summary.map((it: string, index: number) => (
-                      <div class="row my-1">
-                        <div class="col">{it}</div>
-                        <hr class="my-1" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )
-          }
-          <!-- Resources -->
-          {
-            resources && (
-              <section class="col basis-full p-2 min-w-72">
-                <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-                  <h2 set:html="Resources" class="mb-2" />
-                  <div class="row justify-center">
-                    {resources.map((it: string, index: number) => (
-                      <div class="row my-1">
-                        <div class="col">{it}</div>
-                        <hr class="my-1" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )
-          }
+          <section class="col basis-full p-2 min-w-72">
+            <div class="content mb-4 glass px-4 rounded-lg intersect:animate-fadeUp opacity-0">
+              <Content />
+            </div>
+          </section>
         </article>
         <!-- Share -->
         <div class="flex col-10 p-2 items-center justify-center lg:justify-end px-6">

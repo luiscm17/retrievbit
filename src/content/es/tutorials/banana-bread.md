@@ -11,49 +11,20 @@ tags: "Baking, Recipe"
 draft: false
 
 context:
-  list:
-    - "Bananas (very ripe)"
-    - "All-purpose flour"
-    - "Baking soda"
-    - "Salt"
-    - "Butter (unsalted)"
-    - "Sugar (white and brown)"
-    - "Eggs"
-    - "Vanilla extract"
-    - "Cinnamon"
-  qty:
-    - "3 medium"
-    - "1 1/2 cups"
-    - "1 tsp"
-    - "1/2 tsp"
-    - "1/2 cup"
-    - "1/2 cup white, 1/2 cup brown"
-    - "2 large"
-    - "1 tsp"
-    - "1/2 tsp"
+  3 plátanos medianos muy maduros, 1 taza y media de harina común, 1 cucharadita de bicarbonato de sodio, 1/2 cucharadita de sal, 1/2 taza de mantequilla sin sal, 1/2 taza de azúcar blanca, 1/2 taza de azúcar morena, 2 huevos grandes, 1 cucharadita de extracto de vainilla y 1/2 cucharadita de canela molida.
 
 development:
-  - "Preheat oven to 350°F (175°C). Grease a 9x5 inch loaf pan."
-  - "In a large bowl, mash the bananas with a fork until smooth."
-  - "Mix in the melted butter, then add sugar, beaten eggs, and vanilla."
-  - "In another bowl, combine flour, baking soda, salt, and cinnamon."
-  - "Gradually add the dry ingredients to the banana mixture, stirring just until combined."
-  - "Pour batter into the prepared loaf pan."
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
+  
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
 
 application:
-  - "Bake for 60-65 minutes, or until a toothpick inserted into the center comes out clean."
-  - "Let cool in the pan for 10 minutes, then transfer to a wire rack to cool completely."
-  - "For best flavor, wrap the cooled bread in plastic wrap and let it sit overnight before serving."
-  - "Can be stored at room temperature for 2 days or refrigerated for up to a week."
+  Curabitur suscipit lorem in turpis rutrum facilisis. Sed risus erat, varius et orci non, elementum lacinia arcu. Duis aliquam convallis nunc. Proin non dui nec lectus ullamcorper tincidunt. Nulla facilisi. Aenean pretium, mauris sed semper tincidunt, nunc nisl fringilla odio, vel aliquam sapien nulla at nunc.
 
 summary:
-  - "This banana bread is perfect for using up overripe bananas."
-  - "The combination of white and brown sugar gives it a rich flavor."
-  - "For extra texture, add 1/2 cup of chopped walnuts or chocolate chips to the batter."
+  Vestibulum auctor dapibus neque. Maecenas sed nisi in urna semper tincidunt. Nulla facilisi. Nulla facilisi. Donec in libero sit amet nibh vulputate fermentum. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
 
 resources:
-  - "[Video Tutorial](#)"
-  - "[Printable Recipe Card](#)"
-  - "[Nutritional Information](#)"
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
 ---
 

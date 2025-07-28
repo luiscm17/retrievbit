@@ -146,16 +146,11 @@ const tutorials = defineCollection({
       topics: z.string().optional(),
       tools: z.string().optional(),
       tags: z.string().optional(),
-      context: z
-        .object({
-          list: z.array(z.string()),
-          qty: z.array(z.string()),
-        })
-        .optional(),
-      development: z.array(z.string()).optional(),
-      application: z.array(z.string()).optional(),
-      summary: z.array(z.string()).optional(),
-      resources: z.array(z.string()).optional(),
+      context: z.string().optional(),
+      development: z.string().optional(),
+      application: z.string().optional(),
+      summary: z.string().optional(),
+      resources: z.string().optional(),
     }),
 });
 
