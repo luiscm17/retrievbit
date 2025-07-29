@@ -65,9 +65,11 @@ tags: "Data Science, Python"
 
 ### Code and Syntax Highlighting
 
+Lore this is a `code` ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+
 #### SQL
 
-```sql
+```sql title="SQL Hola mundo"
 SELECT
   p.personID,
   id.firstName,
@@ -75,6 +77,7 @@ SELECT
 FROM
   dbo.Person AS p
 INNER JOIN dbo.Identity AS id ON id.identityID = p.currentIdentityID
+-- donde es where
 WHERE
   p.age > 30 AND p.eyeColor = 'grn'
 ```

@@ -9,6 +9,8 @@ import remarkToc from "remark-toc";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import cloudflare from "@astrojs/cloudflare";
+import rehypePrettyCode from 'rehype-pretty-code';
+import { transformerCopyButton } from '@rehype-pretty/transformers'
 
 // https://astro.build/config
 export default defineConfig({
@@ -41,13 +43,39 @@ export default defineConfig({
     remarkPlugins: [remarkToc, [remarkCollapse, {
       test: "Table of contents"
     }], remarkMath],
-    rehypePlugins: [[rehypeKatex, {}]],
-    shikiConfig: {
-      themes: { // https://shiki.style/themes
-        light: "light-plus",
-        dark: "dark-plus",
-      } 
-    },
+    rehypePlugins: [
+      rehypeKatex,
+      [rehypePrettyCode, {
+        theme: {
+          dark: 'github-dark-dimmed',
+          light: 'github-light',
+        },
+        onVisitLine(node) {
+          // Evita que se colapse el código
+          if (node.children.length === 0) {
+            node.children = [{ type: 'text', value: ' ' }];
+          }
+        },
+        onVisitHighlightedLine(node) {
+          node.properties.className.push('highlighted');
+        },
+        onVisitHighlightedWord(node) {
+          node.properties.className = ['word'];
+        },
+        transformers: [
+          transformerCopyButton({
+            visibility: 'hover',
+            feedbackDuration: 3_000,
+          }),
+        ],
+      }]
+    ],
+    // shikiConfig: {
+    //   themes: {
+    //     light: "github-light",
+    //     dark: "github-dark",
+    //   } 
+    // },
     extendDefaultPlugins: true
   },
 });

@@ -81,12 +81,15 @@ input[type=number] {
   }
 }
 
-html.dark .astro-code,
-html.dark .astro-code span {
-  color: var(--shiki-dark) !important;
-  background-color: var(--shiki-dark-bg) !important;
-}
+// Los estilos de los bloques de código ahora los maneja Shiki directamente
+// html.dark .astro-code,
+// html.dark .astro-code span {
+//   color: var(--shiki-dark) !important;
+//   background-color: var(--shiki-dark-bg) !important;
+// }
 
 // code {
 //   @apply after:border-none;
 // }
+
+/* Estilos para figuras y pre */
