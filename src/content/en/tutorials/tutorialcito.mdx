@@ -65,21 +65,35 @@ tags: "Data Science, Python"
 
 ### Code and Syntax Highlighting
 
-Lore this is a `code` ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+Lore this is a `code` ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod..
 
 #### SQL
 
-```sql title="SQL Hola mundo"
-SELECT
-  p.personID,
-  id.firstName,
-  id.lastName
-FROM
-  dbo.Person AS p
-INNER JOIN dbo.Identity AS id ON id.identityID = p.currentIdentityID
--- donde es where
-WHERE
-  p.age > 30 AND p.eyeColor = 'grn'
+```python title="saludar.py"
+def saludar(nombre: str) -> str:
+    """
+    Función que devuelve un saludo personalizado.
+    
+    Args:
+        nombre (str): Nombre de la persona a saludar
+    
+    Returns:
+        str: Mensaje de saludo
+    """
+    return f"¡Hola, {nombre}! Bienvenido a Python."
+
+# Ejemplo de uso
+
+if __name__ == "__main__":
+    nombre_usuario = "Usuario"
+    mensaje = saludar(nombre_usuario)
+    print(mensaje)  # Imprime: ¡Hola, Usuario! Bienvenido a Python.
+    
+    # Ejemplo con una lista
+
+    numeros = [1, 2, 3, 4, 5]
+    cuadrados = [n**2 for n in numeros]  # List comprehension
+    print(f"Cuadrados: {cuadrados}")  # Imprime: Cuadrados: [1, 4, 9, 16, 25]
 ```
 ---
 

@@ -10,7 +10,7 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import cloudflare from "@astrojs/cloudflare";
 import rehypePrettyCode from 'rehype-pretty-code';
-import { transformerCopyButton } from '@rehype-pretty/transformers'
+import { transformerCopyButton } from '@rehype-pretty/transformers';
 
 // https://astro.build/config
 export default defineConfig({
@@ -40,42 +40,48 @@ export default defineConfig({
     imports: ["@components/common/Button.astro", "@shortcodes/Accordion", "@shortcodes/Notice", "@shortcodes/Youtube", "@shortcodes/Tabs", "@shortcodes/Tab"]
   }), mdx()],
   markdown: {
+    syntaxHighlight: false,
     remarkPlugins: [remarkToc, [remarkCollapse, {
       test: "Table of contents"
     }], remarkMath],
     rehypePlugins: [
       rehypeKatex,
       [rehypePrettyCode, {
-        theme: {
-          dark: 'github-dark-dimmed',
-          light: 'github-light',
-        },
+        wrap: true,
+        theme: 'one-dark-pro', // Usa solo un tema
+        defaultLang: "plaintext",
+        keepBackground: true,
+        // Configuración del botón de copia
+        transformers: [
+          transformerCopyButton({
+            visibility: 'hover',
+            feedbackDuration: 3000,
+            buttonAttrs: {
+              class: 'copy-button'
+            },
+            feedbackAttrs: {
+              class: 'copy-feedback'
+            }
+          }),
+        ],
+        // Configuración adicional para mejorar la experiencia
         onVisitLine(node) {
-          // Evita que se colapse el código
           if (node.children.length === 0) {
             node.children = [{ type: 'text', value: ' ' }];
           }
         },
         onVisitHighlightedLine(node) {
-          node.properties.className.push('highlighted');
+          node.properties.className = ['line', 'highlighted'];
         },
         onVisitHighlightedWord(node) {
           node.properties.className = ['word'];
-        },
-        transformers: [
-          transformerCopyButton({
-            visibility: 'hover',
-            feedbackDuration: 3_000,
-          }),
-        ],
+        }
       }]
     ],
     // shikiConfig: {
-    //   themes: {
-    //     light: "github-light",
-    //     dark: "github-dark",
-    //   } 
+    //   wrap: true,
     // },
     extendDefaultPlugins: true
   },
 });
+
