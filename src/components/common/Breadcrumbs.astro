@@ -1,18 +1,43 @@
 ---
 import { lowerHumanize } from "@lib/textConverter";
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
 const { className }: { className?: string } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const pathSegments = Astro.url.pathname.split("/").filter((x) => x).slice(1); // Remove lang prefix
+const pathSegments = Astro.url.pathname
+  .split("/")
+  .filter((x) => x)
+  .slice(1); // Remove lang prefix
+
+const getTranslatedLabel = (segment: string): string => {
+  const directTranslations: Record<string, string> = {
+    blog: t("nav.blog") || "Blog",
+    categories: t("blog.categories") || "Categorías",
+    tags: t("blog.tags") || "Etiquetas",
+    page: t("blog.page") || "Página",
+    tutorials: t("nav.tutorials") || "Tutoriales",
+    concepts: t("nav.concepts") || "Conceptos",
+    authors: t("nav.authors") || "Autores",
+    portfolio: t("nav.portfolio") || "Portafolio",
+    indexCards: t("nav.index-cards") || "Fichas",
+  };
+
+  // Si hay una traducción directa, la usamos
+  if (directTranslations[segment.toLowerCase()]) {
+    return directTranslations[segment.toLowerCase()];
+  }
+
+  // Si no, usamos lowerHumanize
+  return lowerHumanize(segment.replace(/[-_]/g, " ")) || segment;
+};
 
 let parts: { label: string; href: string; "aria-label": string | undefined }[] = [
   {
     label: t("nav.home"),
-    href: getRelativeLocaleUrl(lang, ''), // Link to the language-specific home
+    href: getRelativeLocaleUrl(lang, ""), // Link to the language-specific home
     "aria-label": pathSegments.length === 0 ? "page" : undefined,
   },
 ];
@@ -21,9 +46,9 @@ pathSegments.forEach((label: string, i: number) => {
   // Rebuild the path without the language prefix
   const relativePath = pathSegments.slice(0, i + 1).join("/");
   const href = getRelativeLocaleUrl(lang, relativePath);
-  
+
   parts.push({
-    label: lowerHumanize(label.replace(/[-_]/g, " ")) || "",
+    label: getTranslatedLabel(label),
     href,
     "aria-label": Astro.url.pathname === href ? "page" : undefined,
   });

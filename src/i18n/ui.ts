@@ -34,6 +34,7 @@ export const ui = {
         'blog.relatedPosts': 'Related Posts',
         'blog.categories': 'Categories',
         'blog.tags': 'Tags',
+        'blog.page': 'Page',
     },
     es: {
         'nav.home': 'Inicio',
@@ -61,6 +62,7 @@ export const ui = {
         'blog.relatedPosts': 'Publicaciones Relacionadas',
         'blog.categories': 'Categorías',
         'blog.tags': 'Etiquetas',
+        'blog.page': 'Página',
     },
 } as const;
 
