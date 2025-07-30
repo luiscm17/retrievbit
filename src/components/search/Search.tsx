@@ -20,7 +20,7 @@ interface SearchResult {
 }
 
 const getPath = (entry: SearchableEntry) => {
-  return `${entry.collection}/${entry.id.replace("-index", "")}`;
+  return `${entry.id.replace("-index", "")}`;
 };
 
 const SearchPage = ({ searchList, labels }: Props) => {
@@ -101,10 +101,10 @@ const SearchPage = ({ searchList, labels }: Props) => {
                       {item.data.title}
                     </a>
                   </h4>
-                  { item.data.description && (
+                  {item.data.description && (
                     <p className="">{item.data.description}</p>
                   )}
-                  {  !item.data.description && item.data.autodescription && item.body && (
+                  {!item.data.description && item.data.autodescription && item.body && (
                     <p className="">{plainify(item.body.slice(0, descriptionLength))}</p>
                   )}
                 </div>
