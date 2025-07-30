@@ -2,20 +2,22 @@
 import BaseLayout from "@components/base/BaseLayout.astro";
 import { markdownify } from "@lib/textConverter";
 import Button from "@components/common/Button.astro";
-import type { HomeEntry, SearchableEntry } from "@/types";
+import type { HomeEntry, DocsEntry, SearchableEntry } from "@/types";
 import { Image } from "astro:assets";
 import { useTranslations, getLangFromUrl } from "@i18n/utils";
 import Search from "@components/search/Search.tsx";
+import DocCard from "@components/docs/Card.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 interface Props {
   entry: HomeEntry;
+  entries: DocsEntry[];
   searchList: SearchableEntry[];
 }
 
-const { entry, searchList = [] } = Astro.props;
+const { entry, entries, searchList = [] } = Astro.props;
 const { image, imageAlt, title, content, button } = entry.data;
 const labels = {
   placeholder: t("search.placeholder"),
@@ -46,9 +48,31 @@ const labels = {
           }
           <h1 set:html={markdownify(title)} class="mb-4" />
           <p set:html={markdownify(content)} class="mb-8" />
-          {button && <Button label={button.label} link={button.link} newtab hoverInvert color="" />}
+          {
+            button && <Button label={
+              button.label
+            } link={button.link} newtab hoverInvert color="" 
+            />
+          }
           {searchList.length > 0 && <Search client:load searchList={searchList} labels={labels} />}
         </div>
+      </div>
+      <div class="container text-center m-2">
+        <div class="rounded-lg p-0 bg-gradient-to-t gradient">
+          <div class="rounded-lg glass px-8 py-6 intersect:animate-fadeDown opacity-0 intersect-no-queue">
+            <h3 set:text="Petrolera" />
+            <p set:text="Este es un parrafo de prueba" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {
+          entries.map((entry: DocsEntry) => (
+            <div class="md:col-6 lg:col-4 h-min p-2">
+              <DocCard entry={entry} />
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>

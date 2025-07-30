@@ -1,5 +1,5 @@
 ---
 title: Documentación
-description: Esta es la documentación
+description: Documentación técnica y recursos educativos
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 image: "@assets/retrievbit-star.svg"
 imageAlt: Retrievbit logo
-title: Retrievbit ES
-content: Una planttilla de configuración rápìda par blogs, documentos, y más.
+title: Retrievbit
+content: Plataforma de conocimiento especializada en ingeniería petrolera y ciencia de datos, con documentación técnica y recursos educativos
 button:
   label: Mira el Código
-  link: https://github.com/luiscm17/perfobit
+  link: https://github.com/luiscm17/retrievbit
 ---

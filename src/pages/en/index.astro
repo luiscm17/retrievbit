@@ -1,8 +1,10 @@
 ---
 import { getIndex } from "@lib/contentParser";
 import EntryLayout from "@components/home/EntryLayout.astro";
-import type { HomeEntry, SearchableEntry } from "@/types";
+import type { HomeEntry, SearchableEntry, DocsEntry } from "@/types";
 import { getCollection, type CollectionEntry } from "astro:content";
+import { getGroups } from "@lib/contentParser";
+import { sortByTitle } from "@lib/sortFunctions";
 
 const lang = Astro.url.pathname.split("/")[1] || "en";
 
@@ -34,6 +36,7 @@ const allEntries = await Promise.all(
 
 const entry = (await getIndex("home", lang)) as HomeEntry;
 const searchList = allEntries.flat() as SearchableEntry[];
+const groupIndices = (await getGroups("docs", lang, sortByTitle)) as DocsEntry[];
 ---
 
-<EntryLayout entry={entry} searchList={searchList} />
+<EntryLayout entry={entry} entries={groupIndices} searchList={searchList} />

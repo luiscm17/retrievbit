@@ -1,5 +1,5 @@
 ---
 title: Documentation
-description: This is the docs
+description: Technical documentation and educational resources
 draft: false
 ---
