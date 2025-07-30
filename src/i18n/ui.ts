@@ -35,6 +35,8 @@ export const ui = {
         'blog.categories': 'Categories',
         'blog.tags': 'Tags',
         'blog.page': 'Page',
+        'search.title': 'Search',
+        'search.description': 'Search for content on this site',
     },
     es: {
         'nav.home': 'Inicio',
@@ -63,6 +65,8 @@ export const ui = {
         'blog.categories': 'Categorías',
         'blog.tags': 'Etiquetas',
         'blog.page': 'Página',
+        'search.title': 'Buscar',
+        'search.description': 'Buscar contenido en este sitio',
     },
 } as const;
 

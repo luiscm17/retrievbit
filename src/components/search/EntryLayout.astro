@@ -21,6 +21,6 @@ const { searchList } = Astro.props;
 
 ---
 
-<BaseLayout title="Search" description="Search for content on this site">
+<BaseLayout title={t("search.title")} description={t("search.description")}>
   <Search client:load searchList={searchList} labels={labels} />
 </BaseLayout>

@@ -7,51 +7,33 @@ import { getCollection, type CollectionEntry } from "astro:content";
 const lang = Astro.url.pathname.split("/")[1] || "en";
 
 // Obtener entradas tipadas correctamente
-const blogEntries = (await getCollection("blog", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"blog">[];
 
-const tutorialEntries = (await getCollection("tutorials", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"tutorials">[];
+type CollectionName = "blog" | "tutorials" | "docs" | "about" | "authors" | "concepts" | "portfolio" | "terms";
 
-const docsEntries = (await getCollection("docs", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"docs">[];
-
-const aboutEntries = (await getCollection("about", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"about">[];
-
-const authorsEntries = (await getCollection("authors", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"authors">[];
-
-const conceptsEntries = (await getCollection("concepts", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"concepts">[];
-
-const portfolioEntries = (await getCollection("portfolio", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"portfolio">[];
-
-const termsEntries = (await getCollection("terms", ({ id }) =>
-  id.startsWith(`${lang}/`),
-)) as CollectionEntry<"terms">[];
-
-// Crear searchList con el tipo correcto
-const searchList: SearchableEntry[] = [
-  ...blogEntries,
-  ...tutorialEntries,
-  ...docsEntries,
-  ...aboutEntries,
-  ...authorsEntries,
-  ...conceptsEntries,
-  ...portfolioEntries,
-  ...termsEntries,
+const collectionNames: CollectionName[] = [
+    "blog",
+    "tutorials",
+    "docs",
+    "about",
+    "authors",
+    "concepts",
+    "portfolio",
+    "terms",
 ];
 
+async function getCollectionEntries(collection: CollectionName) {
+return  getCollection(collection, ({ id }) =>
+    id.startsWith(`${lang}/`),
+)
+}
+
+const allEntries = await Promise.all(
+    collectionNames.map(name => getCollectionEntries(name))
+);
+
+
 const entry = (await getIndex("home", lang)) as HomeEntry;
+const searchList = allEntries.flat() as SearchableEntry[];
 ---
 
 <EntryLayout entry={entry} searchList={searchList} />
