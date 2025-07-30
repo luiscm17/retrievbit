@@ -4,6 +4,7 @@ import { FaRegFolder, FaHashtag } from "react-icons/fa";
 import Button from "@components/common/Button.astro";
 import { ScrollArea } from "@components/common/shortcodes/ScrollArea";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations, getLangFromUrl } from "@i18n/utils";
 
 interface Props {
   tags: string[];
@@ -12,7 +13,8 @@ interface Props {
 }
 
 const { tags, categories, allCategories }: Props = Astro.props;
-const lang = Astro.url.pathname.split('/')[1] || 'en';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <ScrollArea className="h-full" client:only="react">
@@ -22,7 +24,7 @@ const lang = Astro.url.pathname.split('/')[1] || 'en';
       <h4 class="mb-2">
         <a href={getRelativeLocaleUrl(lang, "blog/categories")}>
           <FaRegFolder className={"mr-1 -mt-1.5 inline-block"} />
-           Categories
+          {t("blog.categories")}
         </a>
       </h4>
       <hr class="mb-2 -mt-1" />
@@ -32,12 +34,8 @@ const lang = Astro.url.pathname.split('/')[1] || 'en';
             const count = allCategories.filter((c) => c === category).length;
             return (
               <li>
-                <a
-                  class=""
-                  href={getRelativeLocaleUrl(lang, `blog/categories/${category}`)}
-                >
-                  {upperHumanize(category)}{" "}
-                  <div class="inline-block pl-1">({count})</div>
+                <a class="" href={getRelativeLocaleUrl(lang, `blog/categories/${category}`)}>
+                  {upperHumanize(category)} <div class="inline-block pl-1">({count})</div>
                 </a>
               </li>
             );
@@ -52,7 +50,7 @@ const lang = Astro.url.pathname.split('/')[1] || 'en';
       <h4 class="mb-2">
         <a href={getRelativeLocaleUrl(lang, "blog/tags")}>
           <FaHashtag className={"mr-1 -mt-1.5 inline-block"} />
-           Tags
+          {t("blog.tags")}
         </a>
       </h4>
       <hr class="mb-2 -mt-1" />
