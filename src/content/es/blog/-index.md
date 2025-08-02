@@ -1,4 +1,4 @@
 ---
 title: Publicaciones Blog
-description: Las publicaciones del blog de Jane y John Doe
+description: Las publicaciones del blog de Luis Condori
 ---

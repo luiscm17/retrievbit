@@ -1,4 +1,4 @@
 ---
 title: Conceptos
-description: Los conceptos de Jane
+description: Los conceptos de Luis Condori
 ---

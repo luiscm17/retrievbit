@@ -37,107 +37,116 @@ const currentPath = (() => {
 
 // Generar URLs para cada idioma
 const languageUrls = Object.fromEntries(
-  locales.map(locale => [
-    locale,
-    getRelativeLocaleUrl(locale, currentPath)
-  ])
+  locales.map((locale) => [locale, getRelativeLocaleUrl(locale, currentPath)]),
 );
-
 ---
 
-<div class={`relative inline-block text-left ${className}`} x-data="{ open: false }">
+<div
+  class={`relative inline-block text-left ${className}`}
+  x-data="{ open: false }"
+  @mouseenter="open = true"
+  @mouseleave="open = false"
+  @keydown.escape.window="open = false"
+  x-cloak
+>
   <div>
     <button
       type="button"
-      class="group inline-flex items-center justify-center rounded-lg py-2 font-secondary font-semibold text-txt-p transition hover:text-primary-500 focus:outline-none focus:ring-0 focus:ring-offset-0 dark:text-darkmode-txt-p md:px-2 lg:px-2"
-      @click="open = !open"
-      @keydown.escape="open = false"
+      class="inline-flex items-center justify-center p-2 text-txt-p hover:text-primary-500 dark:text-darkmode-txt-p dark:hover:text-primary-400 transition-colors"
       :aria-expanded="open"
       aria-haspopup="true"
     >
-      <span class="language-button-text transition-colors group-hover:text-primary-500 dark:group-hover:text-primary-400 lg:text-sm xl:text-base">{languageNames[currentLang]}</span>
+      <span
+        class="language-button-text lg:text-sm xl:text-base"
+        >{languageNames[currentLang]}</span
+      >
       <svg
-        class="w-4 h-4 ml-2 transition duration-200 group-hover:text-primary-500 dark:group-hover:text-primary-400 md:w-3 md:h-3 lg:w-4 lg:h-4"
+        class="w-4 h-4 ml-1 transition-colors md:w-3 md:h-3 lg:w-4 lg:h-4"
         :class="{ 'rotate-180': open }"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
+        ></path>
       </svg>
     </button>
   </div>
 
   <div
     x-show="open"
-    @click.away="open = false"
     x-transition:enter="transition ease-out duration-100"
     x-transition:enter-start="transform opacity-0 scale-95"
     x-transition:enter-end="transform opacity-100 scale-100"
     x-transition:leave="transition ease-in duration-75"
-    x-transition:leave-start="transform opacity-100 scale-100"
-    x-transition:leave-end="transform opacity-0 scale-95"
-    class="absolute right-0 z-50 w-full mt-1 origin-top-right rounded-md shadow-lg focus:outline-none bg-bg-p/80 dark:bg-darkmode-bg-p/80 backdrop-blur-sm border border-bg-s/50 dark:border-darkmode-bg-s/30"
+    x-transition:leave-start="transform opacity-100 scale-95"
+    x-transition:leave-end="transform opacity-0 scale-90"
+    class="absolute right-0 z-50 w-full min-w-[120px] mt-1 origin-top-right rounded-md shadow-lg focus:outline-none bg-bg-p/90 dark:bg-darkmode-bg-p/90 backdrop-blur-sm border border-bg-s/50 dark:border-darkmode-bg-s/30"
     role="menu"
-    x-cloak
+    @click.self="open = false"
+    @mouseleave="open = false"
   >
     <div class="py-1" role="none">
-      {locales.map((locale) => {
-        const isActive = currentLang === locale;
-        
-        return (
-          <a
-            href={languageUrls[locale]} data-locale={locale}
-            class={`block px-4 py-2 text-sm rounded ${
-              isActive
-                ? 'bg-bg-s/40 dark:bg-darkmode-bg-s/30 text-primary-600 dark:text-primary-400 font-medium'
-                : 'text-txt-p/90 dark:text-darkmode-txt-p/90 hover:bg-bg-s/40 dark:hover:bg-darkmode-bg-s/30'
-            } transition-colors duration-150 mx-1`}
-            role="menuitem"
-            @click="open = false"
-          >
-            {languageNames[locale]}
-          </a>
-        );
-      })}
+      {
+        locales.map((locale) => {
+          const isActive = currentLang === locale;
+
+          return (
+            <a
+              href={languageUrls[locale]}
+              data-locale={locale}
+              class={`block px-4 py-2 text-sm rounded ${
+                isActive
+                  ? "bg-bg-s/40 dark:bg-darkmode-bg-s/30 text-primary-600 dark:text-primary-400 font-medium"
+                  : "text-txt-p/90 dark:text-darkmode-txt-p/90 hover:bg-bg-s/40 dark:hover:bg-darkmode-bg-s/30"
+              } transition-colors duration-150 mx-1`}
+              role="menuitem"
+              @click="open = false; $event.stopPropagation()"
+            >
+              {languageNames[locale]}
+            </a>
+          );
+        })
+      }
     </div>
   </div>
 
-<script define:vars={{ languageNames, locales }}>
-  function updateLanguageSwitcher() {
-    const currentPathname = window.location.pathname;
-    const currentSearch = window.location.search;
-    const currentHash = window.location.hash;
+  <script define:vars={{ languageNames, locales }}>
+    function updateLanguageSwitcher() {
+      const currentPathname = window.location.pathname;
+      const currentSearch = window.location.search;
+      const currentHash = window.location.hash;
 
-    // 1. Update button text
-    const pathLang = currentPathname.split('/')[1];
-    const currentLang = locales.includes(pathLang) ? pathLang : 'en';
-    const buttonText = document.querySelector('.language-button-text');
-    if (buttonText) {
-      buttonText.innerText = languageNames[currentLang];
-    }
-
-    // 2. Update dropdown links
-    let pathWithoutLocale = '/';
-    if (currentLang !== 'en' || currentPathname.startsWith('/en')) { // Default locale might not have a prefix
-        pathWithoutLocale = currentPathname.substring(currentPathname.indexOf('/', 1));
-    } else {
-        pathWithoutLocale = currentPathname;
-    }
-    
-    const links = document.querySelectorAll('[data-locale]');
-    links.forEach(link => {
-      const targetLocale = link.getAttribute('data-locale');
-      if (targetLocale) {
-        const newPath = `/${targetLocale}${pathWithoutLocale}${currentSearch}${currentHash}`;
-        link.setAttribute('href', newPath);
+      // 1. Update button text
+      const pathLang = currentPathname.split("/")[1];
+      const currentLang = locales.includes(pathLang) ? pathLang : "en";
+      const buttonText = document.querySelector(".language-button-text");
+      if (buttonText) {
+        buttonText.innerText = languageNames[currentLang];
       }
-    });
-  }
 
-  // Update on initial load for client-side scripts
-  document.addEventListener('astro:page-load', updateLanguageSwitcher);
-  // Update after view transitions navigation
-  document.addEventListener('astro:after-swap', updateLanguageSwitcher);
-</script>
+      // 2. Update dropdown links
+      let pathWithoutLocale = "/";
+      if (currentLang !== "en" || currentPathname.startsWith("/en")) {
+        // Default locale might not have a prefix
+        pathWithoutLocale = currentPathname.substring(currentPathname.indexOf("/", 1));
+      } else {
+        pathWithoutLocale = currentPathname;
+      }
+
+      const links = document.querySelectorAll("[data-locale]");
+      links.forEach((link) => {
+        const targetLocale = link.getAttribute("data-locale");
+        if (targetLocale) {
+          const newPath = `/${targetLocale}${pathWithoutLocale}${currentSearch}${currentHash}`;
+          link.setAttribute("href", newPath);
+        }
+      });
+    }
+
+    // Update on initial load for client-side scripts
+    document.addEventListener("astro:page-load", updateLanguageSwitcher);
+    // Update after view transitions navigation
+    document.addEventListener("astro:after-swap", updateLanguageSwitcher);
+  </script>
 </div>

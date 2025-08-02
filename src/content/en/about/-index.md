@@ -1,7 +1,7 @@
 ---
-title: Hey, I'm Jane Doe!
+title: Hey, I'm Luis Condori!
 description: this is meta description
-image: "@assets/profile/jane-doe.jpg"
+image: "@assets/profile/john-doe.jpg"
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Portafolio
-description: Proyectos y programas de Jane Doe.
+description: Proyectos y programas de Luis Condori.
 
 projects:
   - title: "Juego de la Vida de Conway"

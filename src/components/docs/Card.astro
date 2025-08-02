@@ -9,18 +9,19 @@ interface Props {
 
 const { entry } = Astro.props;
 const { title, image, imageAlt } = entry.data;
-const lang = entry.id.split('/')[0];
-const path = entry.id.split('/').slice(1).join('/').replace(/-index$/, '');
+const lang = entry.id.split("/")[0];
+const path = entry.id
+  .split("/")
+  .slice(1)
+  .join("/")
+  .replace(/-index$/, "");
 ---
 
 <div
   class="h-full m-2 pl-0 bg-gradient-to-br gradient rounded-lg intersect:animate-fadeUp opacity-0"
 >
   <div class="glass h-full rounded-lg">
-    <a
-      class="group hover:opacity-100"
-      href={getRelativeLocaleUrl(lang, path)}
-    >
+    <a class="group hover:opacity-100" href={getRelativeLocaleUrl(lang, path)}>
       <div class="relative rounded-lg pb-9/16 overflow-hidden">
         {
           image && (
@@ -35,7 +36,7 @@ const path = entry.id.split('/').slice(1).join('/').replace(/-index$/, '');
           )
         }
         <div
-          class="glass-t absolute text-center rounded-lg px-2 py-1 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+          class="glass absolute text-center rounded-lg px-2 py-1 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
         >
           <h4 class="mb-2 line-clamp-3">
             {title}

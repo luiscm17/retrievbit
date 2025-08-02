@@ -1,4 +1,4 @@
 ---
 title: Concepts
-description: Jane's concepts
+description: Luis Condori's concepts
 ---
