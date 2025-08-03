@@ -123,7 +123,7 @@ const concepts = defineCollection({
 
 const portfolio = defineCollection({
   loader: createLoader("portfolio", PATTERNS.INDEX),
-  schema: searchable.extend({
+  schema: ({ image }) => searchable.extend({
     projects: z.array(
       z.object({
         title: z.string(),
@@ -156,7 +156,7 @@ const tutorials = defineCollection({
 
 const terms = defineCollection({
   loader: createLoader("terms", PATTERNS.INDEX),
-  schema: searchable,
+  schema: ({ image }) => searchable,
 });
 
 // Export collections
