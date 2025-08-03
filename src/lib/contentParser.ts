@@ -25,7 +25,7 @@ export const getEntries = async (
   // Obtener todas las entradas que coincidan con el patrón
   let entries: GenericEntry[] = [];
   try {
-    entries = await getCollection(collection, ({ id }) => {
+    entries = await getCollection(collection, ({ id }: { id: string }) => {
       return id.match(pattern) !== null;
     });
   } catch (error) {
@@ -57,7 +57,7 @@ export const getEntriesBatch = async (
   lang: string,
   sortFunction?: ((array: any[]) => any[]),
   noIndex = true,
-  noDrafts = true
+  noDrafts = true,
 ): Promise<GenericEntry[]> => {
   const allCollections = await Promise.all(
     collections.map(async (collection) => {
@@ -92,7 +92,7 @@ export const getEntriesInGroup = async (
   // Primero obtenemos todas las entradas sin filtrar
   let entries = [];
   try {
-    entries = await getCollection(collection, ({ id }) => {
+    entries = await getCollection(collection, ({ id }: { id: string }) => {
       // Filtramos solo las entradas que pertenecen al idioma y colección correctos
       return id.startsWith(`${lang}/`);
     });
@@ -102,7 +102,7 @@ export const getEntriesInGroup = async (
   }
 
   // Luego filtramos para obtener solo las entradas del grupo específico
-  const filteredEntries = entries.filter((entry) => {
+  const filteredEntries = entries.filter((entry: GenericEntry) => {
     const segments = entry.id.split('/');
     
     // La estructura debe ser: lang/collection/groupSlug/filename

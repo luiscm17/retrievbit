@@ -15,6 +15,7 @@ const pathSegments = Astro.url.pathname
 const getTranslatedLabel = (segment: string): string => {
   const directTranslations: Record<string, string> = {
     blog: t("nav.blog") || "Blog",
+    training: t("nav.training") || "Training",
     categories: t("blog.categories") || "Categorías",
     tags: t("blog.tags") || "Etiquetas",
     page: t("blog.page") || "Página",

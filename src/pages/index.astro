@@ -5,6 +5,6 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 const defaultLocale = 'en';
 
 // Redirigir usando getRelativeLocaleUrl que respeta la configuración de i18n
-const url = getRelativeLocaleUrl(defaultLocale, '/');
-return Astro.redirect(url);
+// const url = getRelativeLocaleUrl(defaultLocale, '/');
+return Astro.redirect('/en/');
 ---

@@ -1,5 +1,5 @@
 ---
-import { getIndex } from "@lib/contentParser";
+import { getEntries, getIndex } from "@lib/contentParser";
 import EntryLayout from "@components/home/EntryLayout.astro";
 import type { HomeEntry, SearchableEntry, TrainingEntry } from "@/types";
 import { getCollection, type CollectionEntry } from "astro:content";
@@ -10,27 +10,21 @@ const lang = Astro.url.pathname.split("/")[1] || "es";
 
 // Obtener entradas tipadas correctamente
 
-type CollectionName = "blog" | "tutorials" | "training" | "about" | "authors" | "concepts" | "portfolio" | "terms";
-
-const collectionNames: CollectionName[] = [
-    "blog",
-    "tutorials",
-    "training",
-    "about",
-    "authors",
-    "concepts",
-    "portfolio",
-    "terms",
-];
-
-async function getCollectionEntries(collection: CollectionName) {
-return  getCollection(collection, ({ id }) =>
-    id.startsWith(`${lang}/`),
-  );
-}
+const searchableCollections = [
+  "about",
+  "authors",
+  "blog",
+  "training",
+  "concepts",
+  "portfolio",
+  "tutorials",
+  "terms",
+] as const;
 
 const allEntries = await Promise.all(
-    collectionNames.map(name => getCollectionEntries(name))
+  searchableCollections.map(collection => 
+    getEntries(collection, lang, undefined, true, true)
+  )
 );
 
 const entry = (await getIndex("home", lang)) as HomeEntry;
