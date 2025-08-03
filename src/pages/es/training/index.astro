@@ -1,0 +1,14 @@
+---
+import CollectionLayout from "@components/training/CollectionLayout.astro";
+import { getIndex, getGroups } from "@lib/contentParser";
+import type { TrainingEntry } from "@/types";
+import { sortByTitle } from "@lib/sortFunctions";
+
+// Obtener el idioma de la URL basado en la estructura de carpetas
+const lang = Astro.url.pathname.split("/")[1] || "es";
+
+const collectionIndex = (await getIndex("training", lang)) as TrainingEntry;
+const groupIndices = (await getGroups("training", lang, sortByTitle)) as TrainingEntry[];
+---
+
+<CollectionLayout entries={groupIndices} collectionIndex={collectionIndex} />

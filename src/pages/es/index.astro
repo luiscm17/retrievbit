@@ -1,7 +1,7 @@
 ---
 import { getIndex } from "@lib/contentParser";
 import EntryLayout from "@components/home/EntryLayout.astro";
-import type { HomeEntry, SearchableEntry, DocsEntry } from "@/types";
+import type { HomeEntry, SearchableEntry, TrainingEntry } from "@/types";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { getGroups } from "@lib/contentParser";
 import { sortByTitle } from "@lib/sortFunctions";
@@ -10,12 +10,12 @@ const lang = Astro.url.pathname.split("/")[1] || "es";
 
 // Obtener entradas tipadas correctamente
 
-type CollectionName = "blog" | "tutorials" | "docs" | "about" | "authors" | "concepts" | "portfolio" | "terms";
+type CollectionName = "blog" | "tutorials" | "training" | "about" | "authors" | "concepts" | "portfolio" | "terms";
 
 const collectionNames: CollectionName[] = [
     "blog",
     "tutorials",
-    "docs",
+    "training",
     "about",
     "authors",
     "concepts",
@@ -35,7 +35,7 @@ const allEntries = await Promise.all(
 
 const entry = (await getIndex("home", lang)) as HomeEntry;
 const searchList = allEntries.flat() as SearchableEntry[];
-const groupIndices = (await getGroups("docs", lang, sortByTitle)) as DocsEntry[];
+const groupIndices = (await getGroups("training", lang, sortByTitle)) as TrainingEntry[];
 ---
 
 <EntryLayout entry={entry} entries={groupIndices} searchList={searchList} />

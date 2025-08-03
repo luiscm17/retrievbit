@@ -71,8 +71,8 @@ const blog = defineCollection({
     }),
 });
 
-const docs = defineCollection({
-  loader: createLoader("docs", PATTERNS.REGULAR),
+const training = defineCollection({
+  loader: createLoader("training", PATTERNS.REGULAR),
   schema: ({ image }) =>
     searchable.extend({
       pubDate: z.date().optional(),
@@ -164,7 +164,7 @@ export const collections = {
   about,
   authors,
   blog,
-  docs,
+  training,
   home,
   indexCards,
   concepts,

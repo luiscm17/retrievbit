@@ -11,7 +11,7 @@ export const ui = {
     en: {
         'nav.home': 'Home',
         'nav.about': 'About',
-        'nav.docs': 'Docs',
+        'nav.training': 'Training',
         'nav.blog': 'Blog',
         'nav.tutorials': 'Tutorials',
         'nav.concepts': 'Concepts',
@@ -37,11 +37,12 @@ export const ui = {
         'blog.page': 'Page',
         'search.title': 'Search',
         'search.description': 'Search for content on this site',
+        'home.presentation': 'Welcome to Retrievbit Dive into this ecosystem of knowledge, where petroleum engineering meets data, visualizations, and digital tools. Here, you can explore complex concepts with clarity, hands-on application, and forward-thinking vision.',
     },
     es: {
         'nav.home': 'Inicio',
         'nav.about': 'Sobre mí',
-        'nav.docs': 'Documentación',
+        'nav.training': 'Formación',
         'nav.blog': 'Blog',
         'nav.tutorials': 'Tutoriales',
         'nav.concepts': 'Conceptos',
@@ -67,6 +68,7 @@ export const ui = {
         'blog.page': 'Página',
         'search.title': 'Buscar',
         'search.description': 'Buscar contenido en este sitio',
+        'home.presentation': 'Bienvenido a Retrievbit. Sumérgete en este ecosistema de conocimiento, donde la ingeniería petrolera se une a los datos, las visualizaciones y las herramientas digitales. Aquí puedes explorar conceptos complejos con claridad, aplicación práctica y visión de futuro.',
     },
 } as const;
 

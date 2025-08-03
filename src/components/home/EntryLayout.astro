@@ -2,18 +2,18 @@
 import BaseLayout from "@components/base/BaseLayout.astro";
 import { markdownify } from "@lib/textConverter";
 import Button from "@components/common/Button.astro";
-import type { HomeEntry, DocsEntry, SearchableEntry } from "@/types";
+import type { HomeEntry, TrainingEntry, SearchableEntry } from "@/types";
 import { Image } from "astro:assets";
 import { useTranslations, getLangFromUrl } from "@i18n/utils";
 import Search from "@components/search/Search.tsx";
-import DocCard from "@components/docs/Card.astro";
+import DocCard from "@components/training/Card.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 interface Props {
   entry: HomeEntry;
-  entries: DocsEntry[];
+  entries: TrainingEntry[];
   searchList: SearchableEntry[];
 }
 
@@ -57,14 +57,14 @@ const labels = {
           <div
             class="rounded-lg glass px-8 py-6 intersect:animate-fadeDown opacity-0 intersect-no-queue"
           >
-            <h3 set:text="Petrolera" />
-            <p set:text="Este es un parrafo de prueba" />
+            <h3 set:text="Petroleum Engineering" />
+            <p set:text={t("home.presentation")} />
           </div>
         </div>
       </div>
       <div class="row">
         {
-          entries.map((entry: DocsEntry) => (
+          entries.map((entry: TrainingEntry) => (
             <div class="md:col-6 lg:col-4 h-min p-2">
               <DocCard entry={entry} />
             </div>
