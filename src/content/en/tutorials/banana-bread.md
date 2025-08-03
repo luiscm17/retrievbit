@@ -1,51 +1,29 @@
 ---
-title: Banana Bread
-description: A moist, flavorful banana bread made with overripe bananas, perfect for breakfast or a snack.
+title: "Banana Bread Recipe"
+description: "A comprehensive guide to making the perfect moist and flavorful banana bread"
 image: "@assets/tutorials/banana-bread.jpg"
-author: jane-doe
-prepTime: 15
-cook_time: 60
-servings: 8
-diet: Vegetarian
+imageAlt: "Freshly baked banana bread with sliced bananas on top"
+author: "jane-doe"
+category: "Baking"
+topics: "Bananas"
+tools: "Oven, Mixing bowl, Spatula"
+tags: "Baking, Recipe"
+draft: false
 
-ingredients:
-  list:
-    - Overripe bananas
-    - All-purpose flour
-    - Baking soda
-    - Salt
-    - Butter
-    - Sugar
-    - Eggs
-    - Vanilla extract
-    - Cinnamon
-    - Walnuts (optional)
-  qty:
-    - 3 (mashed)
-    - 1&frasl;2 cups
-    - 1 tsp
-    - pinch
-    - 1&frasl;2 cup (softened)
-    - 1 cup
-    - 2 large
-    - 1 tsp
-    - 1 tsp
-    - 1&frasl;2 cup (chopped)
+context:
+  3 plátanos medianos muy maduros, 1 taza y media de harina común, 1 cucharadita de bicarbonato de sodio, 1/2 cucharadita de sal, 1/2 taza de mantequilla sin sal, 1/2 taza de azúcar blanca, 1/2 taza de azúcar morena, 2 huevos grandes, 1 cucharadita de extracto de vainilla y 1/2 cucharadita de canela molida.
 
-instructions:
-  - Preheat your oven to 350°F (175°C) and grease a 9x5-inch loaf pan.
-  - In a large bowl, mash the overripe bananas with a fork until smooth.
-  - Stir in the melted butter, sugar, eggs, vanilla extract, and cinnamon.
-  - In a separate bowl, whisk together the flour, baking soda, and salt.
-  - Gradually add the dry ingredients to the banana mixture, stirring just until combined.
-  - If using, fold in the chopped walnuts.
-  - Pour the batter into the prepared loaf pan and smooth the top.
-  - Bake for 55-65 minutes, or until a toothpick inserted into the center comes out clean.
-  - Let the bread cool in the pan for 10 minutes before transferring it to a wire rack to cool completely.
+development:
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
+  
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
 
-notes:
-  - For a healthier version, substitute half of the butter with Greek yogurt or applesauce.
-  - The bread can be stored at room temperature for 2-3 days or in the fridge for up to a week.
-  - This recipe can be easily doubled to make two loaves.
-  - If you prefer a sweeter bread, add 1/2 cup of chocolate chips to the batter.
+application:
+  Curabitur suscipit lorem in turpis rutrum facilisis. Sed risus erat, varius et orci non, elementum lacinia arcu. Duis aliquam convallis nunc. Proin non dui nec lectus ullamcorper tincidunt. Nulla facilisi. Aenean pretium, mauris sed semper tincidunt, nunc nisl fringilla odio, vel aliquam sapien nulla at nunc.
+
+summary:
+  Vestibulum auctor dapibus neque. Maecenas sed nisi in urna semper tincidunt. Nulla facilisi. Nulla facilisi. Donec in libero sit amet nibh vulputate fermentum. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
+
+resources:
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
 ---

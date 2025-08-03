@@ -7,6 +7,7 @@ imageAlt: Profile of Emmy Noether
 categories: [Mathematics]
 author: jane-doe
 tags: [biography, algebra]
+draft: true
 ---
 
 When Albert Einstein called her "the most significant creative mathematical genius thus far produced since the higher education of women began," he wasn’t exaggerating. **Emmy Noether** (1882–1935) revolutionized mathematics and physics with her work in abstract algebra and theoretical physics. Yet, her story is one of persistence in the face of barriers.

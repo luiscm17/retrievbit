@@ -7,6 +7,7 @@ imageAlt: Profile of Kurt Godel
 categories: [Mathematics]
 author: jane-doe
 tags: [biography, logic]
+draft: true
 ---
 
 In the realm of mathematical logic, few figures are as transformative as **Kurt Gödel** (1906–1978). His groundbreaking **incompleteness theorems** altered the way mathematicians and philosophers think about the foundations of mathematics. Yet, Gödel’s story is as enigmatic as his theorems, blending brilliance with fragility.
