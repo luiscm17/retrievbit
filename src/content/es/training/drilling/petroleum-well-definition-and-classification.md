@@ -5,6 +5,8 @@ image: "@assets/training/drilling/petroleum-well-definition-and-classification/c
 imageAlt: "Campos petroleros con múltiples pozos, desde exploratorios hasta de desarrollo, en un paisaje árido, conectados por una red de tuberías"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 5
+module: 1
 ---
 
 Un pozo petrolero o gasífero es mucho más que un simple orificio en la tierra; es un sistema diseñado con precisión para explorar, explotar o gestionar recursos subterráneos. Su propósito y tipo determinan las estrategias de perforación, los equipos utilizados y los riesgos involucrados. Este capítulo define qué es un pozo, explica su propósito en la extracción de hidrocarburos y detalla la clasificación Lahee, que distingue entre pozos exploratorios, de desarrollo y de inyección, entre otros. Al comprender estos conceptos, podrás conectar la geología petrolera con el ciclo de vida del pozo y los equipos de perforación, preparando el terreno para los temas técnicos más avanzados que vendrán.

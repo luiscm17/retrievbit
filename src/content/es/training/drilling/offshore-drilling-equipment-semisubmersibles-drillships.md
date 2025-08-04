@@ -5,6 +5,8 @@ image: "@assets/training/drilling/offshore-drilling-equipment-semisubmersibles-d
 imageAlt: "Dos ilustraciones de las plataformas más avanzadas, el drillship y el semisumergible, en las aguas profundas durante el amanecer"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 10
+module: 1
 ---
 
 La perforación en aguas profundas ha transformado la industria petrolera, permitiendo acceder a yacimientos en profundidades superiores a los 500 metros, donde las plataformas fijas y los *jack-ups* no son viables. Este capítulo se centra en los equipos diseñados para estas condiciones extremas: los semisumergibles y los *drillships*. Exploraremos sus componentes, aplicaciones, y el rol crítico del posicionamiento dinámico (DP) en la estabilidad y precisión de las operaciones. Estos conceptos conectan la geología, los tipos de pozos, y los equipos onshore y offshore con la organización del taladro y las medidas de seguridad.

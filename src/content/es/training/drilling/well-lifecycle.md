@@ -5,6 +5,8 @@ image: "@assets/training/drilling/well-lifecycle/cover.jpg"
 imageAlt: "Un ingeniero con vista a un vasto campo petrolero, observando las múltiples torres de perforación"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 6
+module: 1
 ---
 
 El ciclo de vida de un pozo petrolero es un proceso estructurado que abarca desde la identificación de un yacimiento hasta su cierre definitivo. Cada fase requiere una combinación de conocimientos geológicos, técnicos y regulatorios para garantizar la seguridad, eficiencia y cumplimiento ambiental. Este capítulo detalla las principales fases del ciclo de vida de un pozo—planificación, perforación, completamiento, producción y abandono—con un enfoque en los aspectos técnicos y los requisitos regulatorios, como la Autorización para Gastos (AFE) y los permisos. Comprender este ciclo conecta los conceptos de geología, tipos de pozos y prepara el terreno para los equipos y la organización del taladro.

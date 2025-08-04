@@ -5,6 +5,8 @@ image: "@assets/training/drilling/offshore-drilling-equipment-fixed-jackups/cove
 imageAlt: "Ilustración de una plataforma de perforación semi-sumergible durante el atardecer, vista desde un ángulo bajo para enfatizar su escala"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 9
+module: 1
 ---
 
 La perforación offshore ha permitido a la industria petrolera acceder a yacimientos bajo el lecho marino, abriendo nuevas fronteras en regiones como el Golfo de México, el Mar del Norte y la Cuenca de Santos. Este capítulo se centra en dos tipos clave de equipos offshore: las plataformas fijas y los *jack-ups*, diseñados para operar en aguas poco profundas a moderadas. Exploraremos sus componentes, aplicaciones, y limitaciones en términos de profundidad y estabilidad, conectando los conceptos de geología, tipos de pozos y equipos onshore con los sistemas más avanzados de perforación en aguas profundas y la organización del taladro.

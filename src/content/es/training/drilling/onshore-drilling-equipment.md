@@ -5,6 +5,8 @@ image: "@assets/training/drilling/onshore-drilling-equipment/cover.jpg"
 imageAlt: "Herramientas y torres de perforación de un taladro terrestre, destacando el mástil y el malacate en un entorno árido"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 8
+module: 1
 ---
 
 La perforación onshore es la columna vertebral de la industria petrolera en muchas regiones, utilizando equipos robustos diseñados para operar en entornos terrestres, desde desiertos hasta cuencas sedimentarias. Este capítulo explora los dos tipos principales de equipos de perforación onshore: los taladros convencionales, utilizados para construir pozos nuevos, y las unidades de *workover*, destinadas a mantener o mejorar pozos existentes. Nos centraremos en los componentes clave, como el mástil (*mast*) y el malacate (*drawworks*), que son esenciales para la operación de estos equipos. Comprender estos sistemas conecta los conceptos de geología, tipos de pozos, y el ciclo de vida del pozo con las operaciones offshore y la organización del taladro.

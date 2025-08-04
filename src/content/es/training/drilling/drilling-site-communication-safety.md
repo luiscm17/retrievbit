@@ -5,6 +5,8 @@ image: "@assets/training/drilling/drilling-site-communication-safety/cover.jpg"
 imageAlt: "El equipo de perforación trabajando en perfecta coordinación en la plataforma"
 pubDate: 2025-08-03
 modDate: 2025-08-03
+chapter: 13
+module: 1
 ---
 
 La perforación petrolera, ya sea onshore u offshore, es una operación de alto riesgo donde la seguridad y la comunicación efectiva son fundamentales para proteger al personal, los equipos y el medio ambiente. Este capítulo se centra en los protocolos de Seguridad, Salud y Medio Ambiente (HSE) y las prácticas de comunicación, como las reuniones de seguridad (*pre-job meetings*), que aseguran la coordinación entre los equipos de perforación y soporte. Estos procesos son esenciales para mitigar riesgos como arremetidas (*kicks*), derrames o lesiones, conectando los fundamentos de geología, tipos de pozos, y equipos con los casos de estudio de fallas y las tendencias futuras.

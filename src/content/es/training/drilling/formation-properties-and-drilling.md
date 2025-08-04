@@ -5,6 +5,8 @@ image: "@assets/training/drilling/formation-properties-and-drilling/cover.jpg"
 imageAlt: "Ilustración de capas de rocas sedimentarias, con un pozo de perforación visible, que representa el diálogo entre geología e ingeniería"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 4
+module: 1
 ---
 
 La perforación petrolera es un diálogo constante entre la ingeniería y la geología. Las propiedades de las formaciones geológicas que atraviesa un pozo determinan las estrategias, herramientas y fluidos necesarios para perforar de manera eficiente y segura. Este capítulo se centra en las características clave de las formaciones—dureza, abrasividad y estabilidad—y su impacto en la perforación, con ejemplos como lutitas y areniscas. Además, explora cómo los mapas geológicos de superficie y subsuperficie guían la planificación de pozos. Al comprender estos conceptos, podrás conectar los fundamentos de la geología petrolera con los tipos de pozos y equipos que veremos en capítulos posteriores.
@@ -95,3 +97,4 @@ Las propiedades de las formaciones geológicas—dureza, abrasividad y estabilid
   - SPE (Society of Petroleum Engineers): Recursos sobre geología y perforación. [https://www.spe.org/en/](https://www.spe.org/en/).
   - AAPG (American Association of Petroleum Geologists): Información sobre mapas geológicos. [https://www.aapg.org/](https://www.aapg.org/).
   - PetroSkills: Cursos sobre geología aplicada a la perforación. [https://www.petroskills.com/en/training/courses/petroleum-geology-for-non-geologists---ng](https://www.petroskills.com/en/training/courses/petroleum-geology-for-non-geologists---ng).
+  

@@ -23,3 +23,21 @@ export const sortByRandom = (entries: GenericEntry[]): GenericEntry[] => {
   const sortedEntries = entries.sort(() => Math.random() - 0.5);
   return sortedEntries;
 };
+
+
+// Sort by chapter
+export const sortByChapter = (entries: GenericEntry[]): GenericEntry[] => {
+  const sortedEntries = entries.sort((a: any, b: any) =>
+    a.data.chapter.localeCompare(b.data.chapter),
+  );
+  return sortedEntries;
+};
+
+// Sort by module
+export const sortByModule = (entries: GenericEntry[]): GenericEntry[] => {
+  const sortedEntries = entries.sort((a: any, b: any) =>
+    a.data.module.localeCompare(b.data.module),
+  );
+  return sortedEntries;
+};
+

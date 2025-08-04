@@ -5,6 +5,8 @@ image: "@assets/training/drilling/future-trends-drilling/cover.jpg"
 imageAlt: "Ilustración de una plataforma de perforación offshore, mostrando sus componentes y su conexión con el lecho marino en un mar en calma"
 pubDate: 2025-08-03
 modDate: 2025-08-03
+chapter: 15
+module: 1
 ---
 
 La industria petrolera enfrenta un futuro donde la eficiencia operativa y la sostenibilidad son prioridades clave, impulsadas por la demanda de reducir costos, mejorar la seguridad y minimizar el impacto ambiental. Este capítulo explora las tendencias futuras en la perforación, con un enfoque en los *rigs* autónomos y las estrategias para reducir la huella de carbono. Estas innovaciones integran avances tecnológicos, conocimientos geológicos, diseños de pozos, equipos, y roles, mientras abordan los riesgos operativos para construir una industria más eficiente y sostenible.

@@ -1,0 +1,159 @@
+---
+title: Permeability Darcy Law
+description: An exploration of permeability in petroleum reservoirs, focusing on Darcy’s Law, types of permeability, measurement techniques, and computational tools
+image: "@assets/training/reservoir/cover.png"
+imageAlt: "Core sample showing fluid flow through porous rock"
+pubDate: 2025-08-04
+modDate: 2025-08-04
+chapter: 2
+module: 1
+---
+
+## Introduction
+
+Picture water flowing through a garden hose versus a sponge. The hose lets water rush through easily, while the sponge slows it down. In petroleum reservoirs, **permeability** is the property that controls how easily oil, gas, or water can flow through a rock’s pore spaces. Building on our understanding of porosity from Chapter 1, permeability is the next critical piece of the puzzle, determining whether a reservoir can produce hydrocarbons efficiently. This chapter explores **Darcy’s Law**, the cornerstone of fluid flow, the types of permeability, how we measure it, and how tools like Python’s `FiPy` library bring it to life.
+
+## What is Permeability?
+
+Permeability measures a rock’s ability to allow fluids to pass through its interconnected pores. Think of it as the “flow highway” of a reservoir. High permeability means fluids move easily, like through a sandy beach, while low permeability is like trying to push water through clay—slow and difficult. Permeability is denoted by $$ k $$ and is measured in **darcys ($$D$$)** or **millidarcys ($$mD$$)**, with most reservoir rocks ranging from 1 $$mD$$ to 1000 $$mD$$.
+
+<Notice type="info">Permeability depends on porosity but also on pore size, shape, and connectivity. A rock can be porous but have low permeability if its pores are poorly connected.</Notice>
+
+## Darcy’s Law: The Foundation of Fluid Flow
+
+In 1856, Henry Darcy, a French engineer, discovered a simple yet powerful relationship governing fluid flow through porous media. **Darcy’s Law** describes how fluid flow rate depends on pressure differences, rock permeability, and fluid properties.
+
+### Darcy’s Law Equation
+
+For **linear flow** (e.g., through a core sample in the lab):
+
+```math
+Q = \frac{k \cdot A \cdot \Delta P}{\mu \cdot L}
+```
+
+Where:
+- $$ Q $$: Flow rate ($$cm^3/s$$)
+- $$ k $$: Permeability ($$D$$)
+- $$ A $$: Cross-sectional area ($$cm^2$$)
+- $$ \Delta P $$: Pressure difference across the sample ($$atm$$)
+- $$ \mu $$: Fluid viscosity (centipoise, $$cP$$)
+- $$ L $$: Length of the sample ($$cm$$)
+
+For **radial flow** (e.g., around a well in a reservoir):
+
+```math
+Q = \frac{2 \pi k \cdot h \cdot \Delta P}{\mu \cdot \ln(r_e / r_w)}
+```
+
+Where:
+- $$ h $$: Reservoir thickness ($$cm$$)
+- $$ r_e $$: Drainage radius ($$cm$$)
+- $$ r_w $$: Well radius ($$cm$$)
+
+<Notice type="tip">Darcy’s Law assumes laminar flow and a single fluid phase. For complex cases like gas or multiphase flow, we adjust the equation.</Notice>
+
+### Units: Darcy vs. Millidarcy
+
+- A **darcy** is a large unit, defined so that a rock with 1 darcy permeability allows 1 $$cm^3/s$$ of a 1 $$cP$$ fluid to flow through a 1 $$cm^2$$ area under a 1 $$\frac{atm}{cm}$$ pressure gradient.
+- Most reservoirs have permeabilities in **millidarcys ($$mD$$)**, where 1 $$D$$ = 1000 $$mD$$. For example, a sandstone might have 100 $$mD$$, while a shale might be 0.01 $$mD$$.
+
+## Types of Permeability
+
+Not all permeability is the same. Let’s break it down:
+
+- **Absolute Permeability**: The rock’s ability to conduct a single fluid (e.g., water) when fully saturated. It’s the baseline permeability of the rock.
+- **Effective Permeability**: The ability to conduct one fluid (e.g., oil) in the presence of other fluids (e.g., water, gas). It depends on **fluid saturation**—the fraction of pores filled with each fluid.
+- **Relative Permeability**: The ratio of effective permeability to absolute permeability, expressed as $$ k_r = k_{effective} / k_{absolute} $$. It varies with saturation and is critical for multiphase flow.
+
+| **Type**                | **Definition**                              | **Example**                     |
+|-------------------------|---------------------------------------------|---------------------------------|
+| Absolute Permeability   | Flow of a single fluid                      | Water through a core sample     |
+| Effective Permeability  | Flow of one fluid with others present       | Oil flow with water in pores    |
+| Relative Permeability   | Effective permeability / absolute           | $$ k_{ro} = 0.8 $$ for oil flow |
+
+<Notice type="warning">High water saturation can drastically reduce effective permeability for oil, impacting production rates.</Notice>
+
+## Measuring Permeability
+
+Permeability is measured both in the lab and in the field, each method offering unique insights.
+
+### Core Analysis
+
+Core samples from wells are tested in the lab using:
+
+- **Steady-State Method**: A fluid (e.g., brine) is forced through a core at constant pressure, and the flow rate is measured to calculate $$ k $$ using Darcy’s Law.
+- **Unsteady-State Method**: Pressure is applied in pulses, and the transient response is analyzed to estimate permeability, useful for low-permeability rocks.
+
+### Transient Pressure Tests
+
+In the field, **well tests** like drawdown or build-up tests measure pressure changes over time to estimate permeability. These tests analyze how pressure propagates through the reservoir, revealing $$ k $$ and other properties like skin factor.
+
+<Youtube client:only="react" id="v8Y2eBH4gUc" title="Understanding Darcy’s Law in Petroleum Engineering" lang="en" />
+
+## Computational Tools: Simulating Flow with Python
+
+Modern reservoir engineers use computational tools to model fluid flow. The Python library **`FiPy`** solves partial differential equations for flow in porous media, simulating Darcy’s Law in complex geometries.
+
+Here’s a simple example to calculate permeability using Darcy’s Law in Python:
+
+```python title="permeability.py"
+# Calculate permeability (k) using Darcy’s Law for linear flow
+Q = 10  # Flow rate (cm^3/s)
+A = 20  # Cross-sectional area (cm^2)
+delta_P = 5  # Pressure difference (atm)
+mu = 2   # Viscosity (cP)
+L = 100  # Length (cm)
+
+k = (Q * mu * L) / (A * delta_P)  # Permeability in darcys
+print(f"Permeability: {k:.2f} darcys")
+```
+
+This script computes $$ k $$ for a core sample. For advanced simulations, `FiPy` can model 2D or 3D flow, incorporating permeability variations across a reservoir.
+
+## Practical Applications: Why Permeability Matters
+
+Permeability determines a reservoir’s **productivity**. High-permeability sandstones, like those in the Brent field (North Sea), allow rapid oil flow, while low-permeability shales require fracturing to produce. Engineers use permeability data to:
+- Design well completion strategies (e.g., hydraulic fracturing).
+- Predict production rates.
+- Optimize water or gas injection for enhanced recovery.
+
+<Notice type="info">In the Permian Basin, permeability variations between 10 mD and 500 mD in sandstones guide drilling and stimulation decisions.</Notice>
+
+## Summary
+
+Permeability is the gatekeeper of fluid flow in reservoirs, governed by **Darcy’s Law**, which links flow rate to pressure, permeability, and viscosity. Understanding **absolute**, **effective**, and **relative permeability** helps predict how oil, gas, and water move. Lab techniques like core analysis and field tests like transient pressure tests measure permeability, while tools like Python’s `FiPy` bring these concepts to life. Whether in the Brent field or your next reservoir model, permeability is key to unlocking production potential.
+
+## Cuestionario
+
+1. **What does Darcy’s Law describe?**
+   - a) The volume of pores in a rock
+   - b) The flow of fluids through porous media
+   - c) The compressibility of reservoir fluids
+   - **Correct Answer**: b) The flow of fluids through porous media
+
+2. **How does effective permeability differ from absolute permeability?**
+   - a) It accounts for multiple fluids in the pores
+   - b) It measures only gas flow
+   - c) It is always higher than absolute permeability
+   - **Correct Answer**: a) It accounts for multiple fluids in the pores
+
+3. **Which method is best for measuring permeability in low-permeability rocks?**
+   - a) Steady-state core analysis
+   - b) Unsteady-state core analysis
+   - c) Density logging
+   - **Correct Answer**: b) Unsteady-state core analysis
+
+## Bibliography
+
+### Sources Used
+- *Petroleum Engineering Handbook* (L.W. Lake, SPE, 2017). Chapter 5: Reservoir Characterization.
+- Selley, R. C., & Sonnenberg, S. A. (2014). *Elements of Petroleum Geology* (3rd ed.). Academic Press.
+- *SPE Journal* (2019). Advances in permeability measurement techniques.
+
+### Recommended Reading
+- Hyne, N. J. (2012). *Nontechnical Guide to Petroleum Geology, Exploration, Drilling & Production*. PennWell Books. Available at [https://www.pennwellbooks.com/nontechnical-guide-to-petroleum-geology-exploration-drilling-production/](https://www.pennwellbooks.com/nontechnical-guide-to-petroleum-geology-exploration-drilling-production/).
+- Tiab, D., & Donaldson, E. C. (2015). *Petrophysics: Theory and Practice of Measuring Reservoir Rock and Fluid Transport Properties*. Gulf Professional Publishing.
+
+### Direct Links
+- [SPE Technical Resources](https://www.spe.org/en/): Insights on permeability and reservoir engineering.
+- [AAPG Educational Resources](https://www.aapg.org/learn): Webinars on petrophysical analysis.

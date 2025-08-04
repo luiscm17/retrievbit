@@ -5,6 +5,8 @@ image: "@assets/training/drilling/basic-petroleum-geology/cover.jpg"
 imageAlt: "Cover of the chapter on basic petroleum geology"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 3
+module: 1
 ---
 
 La geología petrolera es la ciencia que guía la exploración y perforación de hidrocarburos, ayudándonos a entender dónde y cómo se acumulan el petróleo y el gas en el subsuelo. En este apartado exploraremos los conceptos fundamentales de las trampas geológicas y las rocas esenciales que forman un sistema petrolero. Las trampas, ya sean estructurales o estratigráficas, son configuraciones que concentran hidrocarburos, mientras que las rocas generadoras y almacén juegan roles complementarios en la formación y almacenamiento de estos recursos. Comprender estos conceptos es crucial para conectar los avances históricos y tecnológicos con las propiedades de las formaciones y los equipos de perforación.
@@ -21,15 +23,15 @@ Las trampas estructurales se forman debido a deformaciones en la corteza terrest
 
 1. **Anticlinales**: Pliegues en forma de arco donde las capas de roca se curvan hacia arriba. El petróleo y el gas, siendo menos densos que el agua, se acumulan en la parte superior del pliegue, atrapados por una roca sello, como lutita. Un ejemplo es el campo Ghawar en Arabia Saudita, el mayor yacimiento petrolero del mundo, que se encuentra en una trampa anticlinal.
 
-![Anticline](@assets/training/drilling/basic-petroleum-geology/anticline.jpg)
+    ![Anticline](../../../../assets/training/drilling/basic-petroleum-geology/anticline.jpg)
 
 2. **Trampas de falla**: Ocurren cuando una fractura en la corteza desplaza capas de roca, creando una barrera que atrapa hidrocarburos contra una roca sello. Estas trampas son comunes en regiones tectónicamente activas, como el Mar del Norte.
 
-![Fault](@assets/training/drilling/basic-petroleum-geology/fault.jpg)
+    ![Fault](../../../../assets/training/drilling/basic-petroleum-geology/fault.jpg)
 
 3. **Cúpulas de sal (Salt domes)**: Formadas por el movimiento de domos de sal que deforman las capas de roca suprayacentes, creando trampas. Estas son frecuentes en el Golfo de México, donde los domos de sal han generado yacimientos prolíficos.
 
-![Salt Dome](@assets/training/drilling/basic-petroleum-geology/salt-dome.jpg)
+    ![Salt Dome](../../../../assets/training/drilling/basic-petroleum-geology/salt-dome.jpg)
 
 ### Trampas Estratigráficas
 
@@ -37,15 +39,15 @@ Las trampas estratigráficas se forman por cambios en las propiedades de las roc
 
 1. **Pinchouts**: Ocurren cuando una capa de roca almacén, como arenisca, se adelgaza gradualmente y es sellada por una roca impermeable, como lutita. Este tipo de trampa es común en cuencas sedimentarias, como la Cuenca de Santos en Brasil.
 
-![Pinchout](@assets/training/drilling/basic-petroleum-geology/pinchout.jpg)
+    ![Pinchout](../../../../assets/training/drilling/basic-petroleum-geology/pinchout.jpg)
 
 2. **Trampas de lente**: Formadas por cuerpos aislados de roca porosa (como areniscas) rodeados por rocas impermeables. Estas trampas son típicas en deltas antiguos o ambientes marinos.
 
-![Lens](@assets/training/drilling/basic-petroleum-geology/lens.jpg)
+    ![Lens](../../../../assets/training/drilling/basic-petroleum-geology/lens.jpg)
 
 3. **Trampas de discordancia**: Se producen cuando una capa impermeable cubre una superficie erosionada, atrapando hidrocarburos debajo. Un ejemplo es el campo East Texas en Estados Unidos.
 
-![Discordance](@assets/training/drilling/basic-petroleum-geology/discordance.jpg)
+    ![Discordance](../../../../assets/training/drilling/basic-petroleum-geology/discordance.jpg)
 
 Las trampas combinadas, que mezclan elementos estructurales y estratigráficos, también son comunes. Por ejemplo, un anticlinal puede estar limitado por un *pinchout*, aumentando la complejidad del yacimiento. La identificación de trampas requiere integrar datos sísmicos, registros de pozos y mapas geológicos, lo que conecta directamente con los conceptos de cartografía.
 

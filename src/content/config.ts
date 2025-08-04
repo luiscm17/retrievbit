@@ -81,6 +81,8 @@ const training = defineCollection({
       imageAlt: z.string().default(""),
       hideToc: z.boolean().default(false),
       hideNav: z.boolean().default(false),
+      chapter: z.number().optional(),
+      module: z.number().optional(),
     }),
 });
 

@@ -5,6 +5,8 @@ image: "@/assets/training/drilling/support-teams-drilling/cover.jpg"
 imageAlt: "Ingeniero de lodos en el área de las zarandas, con una vista más realista del entorno industrial de una torre de perforación"
 pubDate: 2025-08-03
 modDate: 2025-08-03
+chapter: 12
+module: 1
 ---
 
 La perforación de un pozo petrolero es un esfuerzo colaborativo que depende no solo de los equipos principales y la jerarquía operativa, sino también de equipos de soporte especializados que aseguran el éxito técnico y la seguridad. Este capítulo explora los roles críticos de los ingenieros de lodos, los especialistas en cementación y los geólogos de pozo, destacando cómo su colaboración interdisciplinaria optimiza las operaciones de perforación. Estos profesionales integran conocimientos de geología, diseño de pozos y equipos para enfrentar desafíos como formaciones inestables o presiones anómalas, conectando con la seguridad y sostenibilidad.

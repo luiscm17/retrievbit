@@ -140,3 +140,81 @@
 * Ética y consideraciones de seguridad de datos en la industria.
 
 ---
+
+## **Alternativas para Practicar con Datos Petroleros**  
+
+### 1. **Datasets Públicos de la Industria**  
+
+* **[SPE Datasets](https://www.spe.org/datasets/)**  
+  * La Society of Petroleum Engineering ofrece conjuntos de datos anonimizados para proyectos de ML (ej.: registros de pozos, datos de producción).  
+* **[USGS Energy Data](https://www.usgs.gov/energy-and-minerals/energy-resources-program)**  
+  * Datos de producción, formaciones geológicas y reservorios en EE.UU. (útil para comparar con crudos pesados como el Orinoco).  
+
+* **[National Energy Technology Lab (NETL)](https://edx.netl.doe.gov/)**  
+  * Datos de yacimientos no convencionales y EOR (Inyección de vapor aplicable a crudos pesados).  
+
+### 2. **Repositorios Académicos**  
+
+* **[Kaggle: Oil & Gas Datasets](https://www.kaggle.com/datasets?search=oil+and+gas)**  
+  * Datasets sintéticos o procesados (ej.: predicción de ROP, clasificación de facies).  
+
+* **[OpenEI](https://openei.org/wiki/Main_Page)**  
+  * Incluye datos de propiedades PVT y simulaciones de reservorios.  
+
+### 3. **Datos Sintéticos Basados en el Orinoco**  
+
+Puedes generar datos realistas usando:  
+
+* **Python + `Faker`**:  
+
+  ```python
+  import pandas as pd
+  import numpy as np
+  np.random.seed(42)
+  synthetic_data = pd.DataFrame({
+      'Depth': np.arange(1000, 3000, 10),
+      'Porosity': np.random.uniform(0.15, 0.35, 200),
+      'Permeability': np.random.lognormal(1.5, 0.5, 200),
+      'Viscosity': np.random.normal(5000, 1000, 200)  # típico de crudos pesados
+  })
+  ```  
+
+* **Software de Simulación**:  
+  * **CMG (IMEX)**: Crea modelos sintéticos de crudos extrapesados.  
+  * **Petrel (Schlumberger)**: Versión educacional gratuita con ejemplos.  
+
+### 4. **Libros con Datos de Ejemplo**  
+
+* **"Machine Learning Guide for Oil and Gas Using Python" (H. Sun, 2020)**:  
+  * Incluye datasets de registros de pozos y producción.  
+* **"Petrophysics: Theory and Practice" (Djebbar Tiab)**:  
+  * Datos de núcleos y propiedades de roca.  
+
+---
+
+### **Recomendación para Práctica Realista**  
+
+1. **Combina datasets públicos** (ej.: USGS + SPE) para simular un campo como el Orinoco.  
+2. **Aplica técnicas de aumento de datos** (data augmentation) para generar variabilidad.  
+3. **Usa parámetros típicos del Orinoco**:  
+   * Viscosidad: 1,000–10,000 cP.  
+   * API: <15° (crudo extrapesado).  
+   * Relación gas-aceite (GOR) baja (<100 scf/bbl).  
+
+---
+
+### **Ejemplo de Proyecto Práctico**  
+
+**Objetivo**: Predecir la producción de un pozo hipotético en el Orinoco usando datos sintéticos.  
+
+```python
+from sklearn.ensemble import RandomForestRegressor
+X = synthetic_data[['Porosity', 'Permeability']]
+y = synthetic_data['Viscosity']
+model = RandomForestRegressor().fit(X, y)
+```
+
+**Fuentes**:  
+
+* [SPE Data Repository](https://www.spe.org/datasets/)  
+* [USGS Heavy Oil Data](https://www.usgs.gov/centers/energy-resources-science-center/science/heavy-oil-and-natural-bitumen-resources)  

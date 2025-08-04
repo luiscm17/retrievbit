@@ -5,6 +5,8 @@ image: "@assets/training/drilling/drilling-rig-organization/cover.jpg"
 imageAlt: "La imagen captura la energía y el trabajo en equipo de la tripulación en la plataforma"
 pubDate: 2025-08-03
 modDate: 2025-08-03
+chapter: 11
+module: 1
 ---
 
 La operación de un taladro petrolero, ya sea onshore u offshore, es una sinfonía de coordinación entre equipos y personal altamente capacitado. Cada miembro del equipo tiene un rol específico dentro de una jerarquía bien definida, asegurando que la perforación sea segura, eficiente y cumpla con los objetivos del proyecto. Este capítulo detalla la estructura organizacional en el taladro, con un enfoque en los roles clave: el *Company Man*, el *Toolpusher* y el perforador. Exploraremos sus responsabilidades y cómo interactúan para gestionar las operaciones, conectando los fundamentos de geología, tipos de pozos, equipos y el ciclo de vida del pozo con las medidas de seguridad.

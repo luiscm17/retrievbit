@@ -5,6 +5,8 @@ image: "@assets/training/drilling/drilling-failures-case-studies/cover.jpg"
 imageAlt: "Fallas geológicas"
 pubDate: 2025-08-03
 modDate: 2025-08-03
+chapter: 14
+module: 1
 ---
 
 La planificación geológica es la base de una operación de perforación exitosa, ya que las propiedades de las formaciones determinan el diseño del pozo, los equipos utilizados y las estrategias de los equipos de soporte. Sin embargo, errores en la interpretación de datos geológicos o en la planificación pueden llevar a fallas operativas costosas, desde derrumbes de hoyo hasta pérdidas de circulación. Este capítulo analiza casos de estudio reales que ilustran cómo una mala planificación geológica ha causado problemas operativos, destacando lecciones clave para mejorar la seguridad y la sostenibilidad. Al estudiar estos casos, conectamos los fundamentos de geología, el ciclo de vida del pozo y la colaboración interdisciplinaria con las tendencias futuras en perforación.

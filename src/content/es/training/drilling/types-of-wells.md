@@ -5,6 +5,8 @@ image: "@assets/training/drilling/types-of-wells/cover.jpg"
 imageAlt: "Torre de perforación en un paisaje vasto y árido, destacando su imponente estructura"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 7
+module: 1
 ---
 
 Los pozos petroleros son la conexión física entre los yacimientos de hidrocarburos y la superficie, y su diseño depende de la geología, los objetivos del proyecto y las limitaciones del entorno. Este capítulo explora los tipos principales de pozos—verticales, direccionales y multilaterales—detallando sus ventajas y aplicaciones en la exploración y producción de petróleo y gas. Comprender estas categorías es esencial para vincular los fundamentos geológicos, la definición de pozos, y los equipos de perforación, preparando el terreno para temas más avanzados como la organización del taladro y la seguridad.

@@ -5,6 +5,8 @@ image: "@assets/training/drilling/history-of-petroleum-industry/cover.jpg"
 imageAlt: "Un campo petrolero del siglo XIX en plena actividad."
 pubDate: 2024-07-15
 modDate: 2024-08-03
+chapter: 1
+module: 1
 ---
 
 La industria del petróleo y gas ha transformado el mundo, impulsando revoluciones industriales, economías globales y avances tecnológicos. Desde los primeros pozos perforados manualmente hasta las plataformas offshore de alta tecnología, su historia es una crónica de innovación y adaptación a desafíos geológicos, económicos y ambientales. Este capítulo te llevará a través de los orígenes de esta industria, destacando eventos fundacionales como el pozo de Spindletop y el impacto de empresas pioneras como Standard Oil, junto con los hitos tecnológicos que han marcado su evolución. Comprender esta historia es el primer paso para conectar los fundamentos geológicos y técnicos que exploraremos en los capítulos siguientes.

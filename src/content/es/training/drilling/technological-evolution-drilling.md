@@ -5,6 +5,8 @@ image: "@assets/training/drilling/technological-evolution-drilling/cover.jpg"
 iamgeAlt: "La evolución de la perforación, mostrando la transición de la perforación por cable manual en el siglo XIX a la tecnología rotativa moderna y automatizada de hoy en día"
 pubDate: 2025-08-02
 modDate: 2025-08-02
+chapter: 2
+module: 1
 ---
 
 La perforación petrolera ha recorrido un largo camino desde los métodos rudimentarios del siglo XIX hasta las operaciones altamente automatizadas de hoy. Cada avance tecnológico ha permitido perforar pozos más profundos, en entornos más complejos y con mayor seguridad. Este capítulo explora la transición desde las herramientas manuales, como la perforación por cable, hasta la perforación rotativa y las innovaciones modernas, como el *top drive* y los sistemas de medición en tiempo real (MWD). Al comprender esta evolución, estarás preparado para conectar los fundamentos históricos con los conceptos técnicos de geología y equipos que veremos en capítulos posteriores.
