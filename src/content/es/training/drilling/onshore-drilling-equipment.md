@@ -1,5 +1,5 @@
 ---
-title: Equipos de Perforación Onshore, Taladros Convencionales y Workover Rigs
+title: "Equipos de Perforación Onshore: Taladros Convencionales y Workover Rigs"
 description: Una exploración detallada de los equipos de perforación onshore, centrada en los taladros convencionales y las unidades de *workover*, con un análisis de sus componentes clave, como el mástil (*mast*) y el malacate (*drawworks*). Este capítulo conecta los fundamentos de los pozos con las operaciones prácticas de perforación en tierra.
 image: "@assets/training/drilling/onshore-drilling-equipment/cover.jpg"
 imageAlt: "Herramientas y torres de perforación de un taladro terrestre, destacando el mástil y el malacate en un entorno árido"
@@ -95,13 +95,13 @@ La siguiente tabla compara los taladros convencionales y las unidades de *workov
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Los taladros convencionales y las unidades de *workover* son los pilares de la perforación onshore, cada uno con roles específicos en el ciclo de vida del pozo. Los taladros convencionales construyen pozos nuevos, utilizando componentes como el mástil y el malacate para manejar formaciones complejas, mientras que las unidades de *workover* optimizan pozos existentes con intervenciones rápidas. Estos equipos conectan los fundamentos geológicos y los tipos de pozos con las operaciones offshore y la organización del taladro.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que los taladros convencionales son más versátiles que las unidades de *workover*, y cómo afecta esto su uso en un campo petrolero?
 2. **Tarea de investigación**: Investiga un campo onshore (por ejemplo, Vaca Muerta) y escribe un párrafo describiendo cómo se utilizan los taladros convencionales o las unidades de *workover* en sus operaciones.

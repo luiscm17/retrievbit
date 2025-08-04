@@ -1,5 +1,5 @@
 ---
-title: Equipos de Soporte Ingenieros de Lodos, Cementación y Geólogos de Pozo
+title: "Equipos de Soporte: Ingenieros de Lodos, Cementación y Geólogos de Pozo"
 description: Una exploración detallada de los equipos de soporte en la perforación petrolera, centrada en los roles de los ingenieros de lodos, especialistas en cementación y geólogos de pozo, con un enfoque en su colaboración interdisciplinaria. Este capítulo conecta los fundamentos de los pozos, equipos y operaciones con la coordinación técnica en el sitio.
 image: "@/assets/training/drilling/support-teams-drilling/cover.jpg"
 imageAlt: "Ingeniero de lodos en el área de las zarandas, con una vista más realista del entorno industrial de una torre de perforación"
@@ -80,13 +80,13 @@ La siguiente tabla resume los roles y su colaboración:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Los equipos de soporte—ingenieros de lodos, especialistas en cementación y geólogos de pozo—son esenciales para el éxito de la perforación, aportando experiencia técnica que complementa la jerarquía operativa. Su colaboración interdisciplinaria integra datos geológicos, soluciones de ingeniería y cumplimiento regulatorio, optimizando la construcción del pozo y minimizando riesgos. Estos roles conectan los fundamentos de geología, tipos de pozos, equipos y el ciclo de vida del pozo con la seguridad y sostenibilidad.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que la colaboración interdisciplinaria entre el ingeniero de lodos y el geólogo de pozo es crucial para evitar problemas como colapsos del pozo?
 2. **Tarea de investigación**: Investiga un campo petrolero (por ejemplo, Eagle Ford) y escribe un párrafo describiendo cómo los equipos de soporte contribuyen a la perforación de un pozo.

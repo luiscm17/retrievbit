@@ -66,13 +66,13 @@ La siguiente tabla resume los elementos clave de la seguridad y la comunicación
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 La comunicación y la seguridad en la locación de perforación son pilares que integran los aspectos técnicos y humanos de la perforación petrolera. Los protocolos HSE establecen estándares para proteger al personal, los equipos y el medio ambiente, mientras que las *pre-job meetings* aseguran una coordinación efectiva entre roles como el *Company Man*, el *Toolpusher*, el perforador y los equipos de soporte. Estos procesos conectan los fundamentos de geología, tipos de pozos, equipos y el ciclo de vida del pozo con los casos de estudio de fallas y las tendencias futuras.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que las *pre-job meetings* son esenciales para prevenir accidentes en un taladro, y cómo podrían mejorar la eficiencia operativa?
 2. **Tarea de investigación**: Investiga un incidente en perforación (por ejemplo, el accidente de Deepwater Horizon) y escribe un párrafo (5-7 líneas) describiendo cómo una mejor comunicación o protocolos HSE podrían haberlo evitado.

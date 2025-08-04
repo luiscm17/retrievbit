@@ -1,5 +1,5 @@
 ---
-title: Evolución Tecnológica en Perforación, De las Herramientas Manuales a la Automatización
+title: "Evolución Tecnológica en Perforación: De las Herramientas Manuales a la Automatización"
 description: Un análisis detallado de cómo las tecnologías de perforación han evolucionado desde las herramientas manuales hasta los sistemas automatizados modernos. Este capítulo compara la perforación por cable con la perforación rotativa y destaca innovaciones clave como el top drive y las herramientas de medición en tiempo real (MWD).
 image: "@assets/training/drilling/technological-evolution-drilling/cover.jpg"
 iamgeAlt: "La evolución de la perforación, mostrando la transición de la perforación por cable manual en el siglo XIX a la tecnología rotativa moderna y automatizada de hoy en día"
@@ -75,13 +75,13 @@ La siguiente tabla compara la perforación por cable, la perforación rotativa y
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 La evolución tecnológica de la perforación ha transformado la industria petrolera, pasando de la lenta perforación por cable a la versátil perforación rotativa, y de allí a sistemas avanzados como el *top drive* y MWD. Estas innovaciones han permitido perforar pozos más profundos, en entornos más complejos, con mayor precisión y seguridad. La perforación rotativa marcó el inicio de la exploración a gran escala, mientras que el *top drive* y MWD han optimizado las operaciones en yacimientos no convencionales y offshore. Estos avances sientan las bases para los temas de geología y equipos de perforación que exploraremos a continuación.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que la introducción del *top drive* ha cambiado la forma en que se diseñan y operan los pozos direccionales?
 2. **Tarea de investigación**: Investiga el desarrollo de las herramientas MWD y escribe un párrafo explicando cómo han mejorado la perforación en un yacimiento específico, como Vaca Muerta.

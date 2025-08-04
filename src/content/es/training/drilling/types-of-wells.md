@@ -1,5 +1,5 @@
 ---
-title: Tipos de Pozos, Verticales, Direccionales y Multilaterales
+title: "Tipos de Pozos: Verticales, Direccionales y Multilaterales"
 description: Una exploración detallada de los principales tipos de pozos petroleros—verticales, direccionales y multilaterales—enfocada en sus ventajas, aplicaciones y desafíos. Este capítulo conecta la geología y los propósitos de los pozos con las estrategias de perforación y los equipos utilizados.
 image: "@assets/training/drilling/types-of-wells/cover.jpg"
 imageAlt: "Torre de perforación en un paisaje vasto y árido, destacando su imponente estructura"
@@ -81,13 +81,13 @@ La siguiente tabla compara los tipos de pozos:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Los pozos verticales, direccionales y multilaterales responden a las necesidades específicas de cada yacimiento, desde la simplicidad de los pozos verticales en campos convencionales hasta la alta exposición de los multilaterales en yacimientos complejos. Cada tipo tiene ventajas únicas, como costos bajos o mayor contacto con la roca almacén, pero también desafíos que requieren tecnologías avanzadas y planificación geológica precisa. Estos conceptos conectan con la geología petrolera, el propósito de los pozos y los equipos de perforación, preparando el terreno para entender la organización del taladro y las operaciones avanzadas.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que la elección de un pozo direccional frente a uno vertical afecta la rentabilidad de un proyecto en un yacimiento no convencional?
 2. **Tarea de investigación**: Investiga un campo petrolero (por ejemplo, Eagle Ford en EE. UU.) y escribe un párrafo describiendo qué tipo de pozo (vertical, direccional o multilateral) se utiliza predominantemente y por qué.

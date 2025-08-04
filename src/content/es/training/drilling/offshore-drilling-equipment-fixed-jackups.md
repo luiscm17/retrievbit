@@ -1,5 +1,5 @@
 ---
-title: Equipos Offshore I Plataformas Fijas y Jack-ups
+title: "Equipos Offshore I: Plataformas Fijas y Jack-ups"
 description: Una exploración detallada de los equipos de perforación offshore, centrada en las plataformas fijas y los *jack-ups*, con un análisis de sus limitaciones de profundidad y estabilidad. Este capítulo conecta los fundamentos de los pozos y equipos onshore con las operaciones en entornos marinos.
 image: "@assets/training/drilling/offshore-drilling-equipment-fixed-jackups/cover.jpg"
 imageAlt: "Ilustración de una plataforma de perforación semi-sumergible durante el atardecer, vista desde un ángulo bajo para enfatizar su escala"
@@ -84,13 +84,13 @@ La siguiente tabla compara las plataformas fijas y los *jack-ups*:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Las plataformas fijas y los *jack-ups* son fundamentales para la perforación offshore en aguas poco profundas a moderadas, cada una con ventajas y limitaciones específicas. Las plataformas fijas ofrecen estabilidad para producción a largo plazo, mientras que los *jack-ups* destacan por su movilidad en exploración. Sus limitaciones de profundidad y estabilidad las distinguen de los equipos para aguas profundas, conectando los fundamentos de geología, tipos de pozos y equipos onshore con las operaciones marinas y la organización del taladro.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que la movilidad de los *jack-ups* los hace ideales para la exploración, y cómo afecta esto los costos de un proyecto offshore?
 2. **Tarea de investigación**: Investiga un campo offshore (por ejemplo, Golfo de México) y escribe un párrafo describiendo si se utilizan plataformas fijas o *jack-ups* y por qué.

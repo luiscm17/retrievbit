@@ -103,7 +103,7 @@ Las tendencias de automatización y sostenibilidad están redefiniendo la perfor
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que la automatización de *rigs* puede mejorar la seguridad en comparación con las operaciones tradicionales, y qué desafíos podría enfrentar en su adopción?
 2. **Tarea de investigación**: Investiga un proyecto reciente de perforación sostenible (por ejemplo, en el Mar del Norte) y escribe un párrafo describiendo cómo se implementó la electrificación o los lodos sostenibles.

@@ -1,6 +1,6 @@
 ---
-title: Historia del Petróleo y Gas, Desde los Primeros Pozos hasta la Era Moderna
-description: Un recorrido por los orígenes de la industria del petróleo y gas, desde los primeros pozos comerciales hasta los avances tecnológicos que han definido la era moderna. Este capítulo explora hitos clave como Spindletop, el impacto de empresas como Standard Oil y la evolución hacia la perforación offshore.
+title: "Historia del Petróleo y Gas: Desde los Primeros Pozos hasta la Era Moderna"
+description: "Un recorrido por los orígenes de la industria del petróleo y gas, desde los primeros pozos comerciales hasta los avances tecnológicos que han definido la era moderna. Este capítulo explora hitos clave como Spindletop, el impacto de empresas como Standard Oil y la evolución hacia la perforación offshore."
 image: "@assets/training/drilling/history-of-petroleum-industry/cover.jpg"
 imageAlt: "Un campo petrolero del siglo XIX en plena actividad."
 pubDate: 2024-07-15
@@ -58,16 +58,16 @@ La siguiente tabla resume los hitos tecnológicos clave:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
-La industria del petróleo y gas comenzó con el pozo de Edwin Drake en 1859, evolucionando desde métodos manuales hasta tecnologías avanzadas que permiten perforar en aguas ultraprofundas y yacimientos no convencionales. Hitos como Spindletop, la perforación rotativa y el desarrollo offshore han ampliado los límites de la exploración, mientras que empresas como Standard Oil sentaron las bases para la industria moderna. Estos avances históricos preparan el escenario para los temas técnicos del curso, como la geología petrolera (Capítulo 3) y los equipos de perforación (Capítulos 8-10).
+La industria del petróleo y gas comenzó con el pozo de Edwin Drake en 1859, evolucionando desde métodos manuales hasta tecnologías avanzadas que permiten perforar en aguas ultraprofundas y yacimientos no convencionales. Hitos como Spindletop, la perforación rotativa y el desarrollo offshore han ampliado los límites de la exploración, mientras que empresas como Standard Oil sentaron las bases para la industria moderna. Estos avances históricos preparan el escenario para los temas técnicos del curso, como la geología petrolera y los equipos de perforación.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que el descubrimiento de Spindletop cambió la percepción global de la importancia del petróleo como recurso energético?
-2. **Tarea de investigación**: Investiga el impacto de Standard Oil en la industria petrolera y escribe un párrafo (5-7 líneas) explicando cómo su modelo de negocio influyó en las petroleras modernas.
+2. **Tarea de investigación**: Investiga el impacto de Standard Oil en la industria petrolera y escribe un párrafo explicando cómo su modelo de negocio influyó en las petroleras modernas.
 3. **Pregunta técnica**: Describe cómo la introducción de la perforación rotativa mejoró la eficiencia en comparación con la perforación por cable.
 
 ---

@@ -79,13 +79,13 @@ La siguiente tabla compara las características de las rocas generadoras y almac
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 La geología petrolera es la base para identificar y explotar yacimientos de hidrocarburos. Las trampas estructurales, como anticlinales, y las estratigráficas, como *pinchouts*, concentran petróleo y gas, mientras que las rocas generadoras producen estos recursos y las rocas almacén los contienen. La roca sello completa el sistema, asegurando que los hidrocarburos permanezcan atrapados. Estos conceptos son fundamentales para entender cómo planificar la perforación y cómo las propiedades de las formaciones afectan las operaciones de los taladros.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que las trampas estructurales son más fáciles de detectar que las trampas estratigráficas, y cómo podría esto afectar la planificación de un pozo?
 2. **Tarea de investigación**: Investiga un yacimiento conocido (por ejemplo, Permian Basin en EE. UU.) y escribe un párrafo describiendo el tipo de trampa y las rocas generadora y almacén involucradas.

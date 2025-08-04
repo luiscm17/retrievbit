@@ -4,6 +4,7 @@ import { markdownify } from "@lib/textConverter";
 import Button from "@components/common/Button.astro";
 import type { HomeEntry, TrainingEntry, SearchableEntry } from "@/types";
 import { Image } from "astro:assets";
+import imgHero from "@assets/hero.png"
 import { useTranslations, getLangFromUrl } from "@i18n/utils";
 import Search from "@components/search/Search.tsx";
 import DocCard from "@components/training/Card.astro";
@@ -31,12 +32,12 @@ const labels = {
   <section class="section">
     <div class="container">
       <div class="row justify-center">
-        <div class="text-center lg:col-10">
+        <div class="text-center lg:col-10 animate-fadeUp opacity-0">
           {
             image && (
               <div class="blur-[0px]">
                 <Image
-                  class="mb-6 w-64"
+                  class="mb-6 w-96"
                   src={image}
                   alt={imageAlt}
                   width={1024}
@@ -46,20 +47,50 @@ const labels = {
               </div>
             )
           }
-          <h1 set:html={markdownify(title)} class="mb-4" />
+          <!-- <h1 set:html={markdownify(title)} class="mb-4" /> -->
           <p set:html={markdownify(content)} class="mb-8" />
           {button && <Button label={button.label} link={button.link} newtab hoverInvert color="" />}
           {searchList.length > 0 && <Search client:load searchList={searchList} labels={labels} />}
         </div>
       </div>
-      <div class="container text-center m-2">
-        <div class="rounded-lg p-0 bg-gradient-to-t gradient">
-          <div
-            class="rounded-lg glass px-8 py-6 intersect:animate-fadeDown opacity-0 intersect-no-queue"
-          >
-            <h3 set:text="Petroleum Engineering" />
-            <p set:text={t("home.presentation")} />
+      <div class="relative rounded-lg w-full h-[500px] mb-12 overflow-hidden animate-fadeUp opacity-0">
+        <img 
+          src={imgHero.src} 
+          alt="Petroleum Engineering" 
+          class="w-full h-full object-cover object-center"
+          width={imgHero.width} 
+          height={imgHero.height} 
+          loading="eager" 
+        />
+        <div class="absolute inset-0 flex items-center justify-start">
+          {/* Versión escritorio (igual que antes) */}
+          <div class="hidden md:flex h-full w-1/3 p-12 flex-col justify-center bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm">
+            <h1 class="text-4xl font-bold mb-6 text-left" style="color: white !important;">
+              {t("home.hero.title")}
+            </h1>
+            <p class="text-lg text-left" style="color: white !important;">
+              {t("home.hero.content")}
+            </p>
           </div>
+          
+          {/* Versión móvil/tablet */}
+          <div class="flex md:hidden w-full h-full p-8 flex-col justify-center bg-black/50 backdrop-blur-sm text-center">
+            <h1 class="text-3xl font-bold mb-4" style="color: white !important;">
+              {t("home.hero.title")}
+            </h1>
+            <p class="text-base" style="color: white !important;">
+              {t("home.hero.content")}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container my-12">
+        <div class="glass p-8 rounded-xl text-center max-w-4xl mx-auto animate-fadeUp opacity-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">{t("home.overview.title")}</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-sky-500 to-blue-500 mx-auto mb-8 rounded-full"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            {t("home.overview.content")}
+          </p>
         </div>
       </div>
       <div class="row">

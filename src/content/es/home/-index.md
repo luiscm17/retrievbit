@@ -1,5 +1,5 @@
 ---
-image: "@assets/retrievbit-star.svg"
+image: "@assets/retrievbit-home.svg"
 imageAlt: Retrievbit logo
 title: Retrievbit
 content: Plataforma de conocimiento especializada en ingeniería petrolera y ciencia de datos, con documentación técnica y recursos educativos

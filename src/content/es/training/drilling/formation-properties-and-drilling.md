@@ -65,13 +65,13 @@ La integración de mapas de superficie y subsuperficie permite a los ingenieros 
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Las propiedades de las formaciones geológicas—dureza, abrasividad y estabilidad—determinan las decisiones técnicas en la perforación, desde la selección de la barrena hasta el diseño del fluido de perforación. Las lutitas reactivas y las areniscas abrasivas presentan desafíos únicos que requieren soluciones específicas, como lodos base aceite o barrenas PDC. Los mapas geológicos, tanto de superficie como de subsuperficie, convierten los datos geológicos en herramientas prácticas para planificar pozos con precisión. Estos conceptos conectan la geología petrolera con el diseño de pozos y los equipos de perforación.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que la estabilidad de una formación afecta la seguridad de una operación de perforación, y por qué es importante anticiparla?
 2. **Tarea de investigación**: Investiga un yacimiento conocido (por ejemplo, Eagle Ford en EE. UU.) y escribe un párrafo describiendo cómo las propiedades de sus formaciones, como dureza o estabilidad, influyen en las estrategias de perforación.

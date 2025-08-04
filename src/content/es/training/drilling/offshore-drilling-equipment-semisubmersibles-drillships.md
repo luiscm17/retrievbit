@@ -1,5 +1,5 @@
 ---
-title: Equipos Offshore II Semisumergibles y Drillships
+title: "Equipos Offshore II: Semisumergibles y Drillships"
 description: Una exploración detallada de los equipos de perforación offshore en aguas profundas, centrada en los semisumergibles y los *drillships*, con un enfoque en el posicionamiento dinámico (DP) y las operaciones en entornos extremos. Este capítulo conecta los fundamentos de los pozos y equipos offshore con las operaciones avanzadas en alta mar.
 image: "@assets/training/drilling/offshore-drilling-equipment-semisubmersibles-drillships/cover.jpg"
 imageAlt: "Dos ilustraciones de las plataformas más avanzadas, el drillship y el semisumergible, en las aguas profundas durante el amanecer"
@@ -104,13 +104,13 @@ La siguiente tabla compara semisumergibles y *drillships*:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Los semisumergibles y *drillships* son los equipos más avanzados para la perforación offshore en aguas profundas, superando las limitaciones de profundidad de las plataformas fijas y *jack-ups*. El posicionamiento dinámico (DP) es crucial para su operación, permitiendo precisión en entornos extremos. Estos equipos conectan los fundamentos de geología, tipos de pozos, y equipos onshore/offshore con la organización del taladro y las medidas de seguridad.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que el posicionamiento dinámico (DP) impacta la viabilidad económica de un proyecto en aguas ultraprofundas?
 2. **Tarea de investigación**: Investiga un campo en aguas profundas (por ejemplo, Cuenca de Santos) y escribe un párrafo describiendo si se utilizan semisumergibles o *drillships* y por qué.

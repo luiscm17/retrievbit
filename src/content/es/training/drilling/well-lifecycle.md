@@ -1,5 +1,5 @@
 ---
-title: Ciclo de Vida de un Pozo, Desde la Planificación hasta el Abandono
+title: "Ciclo de Vida de un Pozo: Desde la Planificación hasta el Abandono"
 description: Una exploración detallada de las fases del ciclo de vida de un pozo petrolero, desde la planificación inicial hasta el abandono, incluyendo aspectos técnicos y regulatorios como la Autorización para Gastos (AFE) y los permisos. Este capítulo conecta los fundamentos geológicos y los tipos de pozos con las operaciones prácticas de perforación.
 image: "@assets/training/drilling/well-lifecycle/cover.jpg"
 imageAlt: "Un ingeniero con vista a un vasto campo petrolero, observando las múltiples torres de perforación"
@@ -114,13 +114,13 @@ La siguiente tabla resume las fases del ciclo de vida:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 El ciclo de vida de un pozo petrolero abarca desde la planificación, donde se integran datos geológicos y regulatorios, hasta el abandono, que asegura la seguridad ambiental. Cada fase—planificación, perforación, completamiento, producción y abandono—requiere decisiones técnicas precisas y cumplimiento de regulaciones, como el AFE y los permisos. Estos conceptos conectan con la geología, los tipos de pozos y preparan el terreno para los equipos y la organización del taladro.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que la planificación es una fase crítica en el ciclo de vida de un pozo, y cómo puede afectar las fases posteriores?
 2. **Tarea de investigación**: Investiga un campo petrolero (por ejemplo, Permian Basin) y escribe un párrafo describiendo cómo se aplican las fases de perforación y completamiento en sus pozos.

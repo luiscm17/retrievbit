@@ -88,7 +88,7 @@ La estructura organizacional en un taladro es una jerarquía bien definida que a
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que la comunicación efectiva entre el *Company Man*, el *Toolpusher* y el perforador es crucial para la seguridad en un taladro?
 2. **Tarea de investigación**: Investiga un campo petrolero (por ejemplo, Permian Basin) y escribe un párrafo describiendo cómo los roles del *Company Man* y el *Toolpusher* contribuyen a la operación de un pozo.

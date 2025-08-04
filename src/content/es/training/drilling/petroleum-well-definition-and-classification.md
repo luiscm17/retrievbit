@@ -67,13 +67,13 @@ La siguiente tabla resume la clasificación Lahee:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Un pozo petrolero es un sistema diseñado para explorar, extraer o gestionar hidrocarburos, con propósitos que van desde la confirmación de yacimientos hasta el control de emergencias. La clasificación Lahee organiza los pozos en exploratorios, de desarrollo y de inyección, reflejando su riesgo y objetivo. Estos conceptos conectan la geología petrolera con las fases del ciclo de vida del pozo y los tipos de pozos, proporcionando una base para entender cómo se planifican y ejecutan las operaciones de perforación.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Por qué crees que los pozos exploratorios tienen un riesgo tan alto, y cómo podría esto influir en la decisión de perforar uno?
 2. **Tarea de investigación**: Investiga un campo petrolero conocido (por ejemplo, Permian Basin) y escribe un párrafo describiendo qué tipos de pozos (exploratorios, de desarrollo o inyección) se utilizan y su propósito.

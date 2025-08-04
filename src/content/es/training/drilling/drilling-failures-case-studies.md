@@ -1,6 +1,6 @@
 ---
-title: Casos de Estudio Fallas, Operativas por Mala Planificación Geológica
-description: Una exploración detallada de fallas operativas en la perforación petrolera causadas por una planificación geológica deficiente, con ejemplos reales como derrumbes de hoyo por lutitas inestables. Este capítulo conecta los fundamentos geológicos, equipos y roles con las lecciones aprendidas para mejorar la planificación y ejecución.
+title: "Casos de Estudio Fallas: Operativas por Mala Planificación Geológica"
+description: "Una exploración detallada de fallas operativas en la perforación petrolera causadas por una planificación geológica deficiente, con ejemplos reales como derrumbes de hoyo por lutitas inestables. Este capítulo conecta los fundamentos geológicos, equipos y roles con las lecciones aprendidas para mejorar la planificación y ejecución."
 image: "@assets/training/drilling/drilling-failures-case-studies/cover.jpg"
 imageAlt: "Fallas geológicas"
 pubDate: 2025-08-03
@@ -98,13 +98,13 @@ La siguiente tabla resume los casos de estudio:
 
 ---
 
-## Resumen y Reflexión
+## Resumen
 
 Los casos de estudio muestran que una planificación geológica deficiente puede causar derrumbes, pérdidas de circulación y arremetidas, con impactos económicos, operativos y de seguridad. La integración de datos geológicos precisos, la colaboración interdisciplinaria y una comunicación efectiva en *pre-job meetings* son esenciales para mitigar estos riesgos. Estos casos conectan los fundamentos de geología, tipos de pozos, equipos y roles con las tendencias futuras en automatización y sostenibilidad.
 
 ---
 
-## Ejercicio Práctico y Preguntas de Repaso
+## Ejercicio Práctico
 
 1. **Pregunta de reflexión**: ¿Cómo crees que una mejor planificación geológica podría haber evitado el derrumbe de hoyo en Vaca Muerta, y qué rol juega la comunicación en este proceso?
 2. **Tarea de investigación**: Investiga un incidente de perforación (por ejemplo, Macondo en el Golfo de México) y escribe un párrafo describiendo cómo una mala planificación geológica contribuyó al problema.
