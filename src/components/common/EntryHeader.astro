@@ -30,6 +30,8 @@ interface EntryData {
   categories?: string[];
   tags?: string[];
   complexity?: number;
+  chapter?: number;
+  module?: number;
 }
 
 interface Props {
@@ -44,6 +46,8 @@ interface Props {
   showReadingTime?: boolean;
   showCategories?: boolean;
   showTags?: boolean;
+  showChapter?: boolean;
+  showModule?: boolean;
 }
 
 const lang = Astro.url.pathname.split('/')[1] || 'en';
@@ -59,6 +63,8 @@ const {
   showReadingTime = false,
   showCategories = false,
   showTags = false,
+  showChapter = false,
+  showModule = false,
 }: Props = Astro.props;
 
 const {
@@ -72,6 +78,8 @@ const {
   pubDate,
   modDate,
   complexity,
+  chapter,
+  module,
 } = entry.data as EntryData;
 
 categories?.sort((a: string, b: string) => a.localeCompare(b));

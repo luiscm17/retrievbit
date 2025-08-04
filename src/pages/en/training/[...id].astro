@@ -3,7 +3,7 @@ import type { TrainingEntry, MenuItem } from "@/types";
 import EntryLayout from "@components/training/EntryLayout.astro";
 import CollectionLayout from "@components/training/CollectionLayout.astro";
 import { getEntries, getEntriesInGroup, getGroups } from "@lib/contentParser";
-import { sortByTitle } from "@lib/sortFunctions";
+import { sortByChapter } from "@lib/sortFunctions";
 import { getCollection as getAstroCollection } from "astro:content";
 
 // Usar "en" directamente ya que estamos en la carpeta /en/docs/
@@ -41,12 +41,12 @@ const groupName = segments[2];
 
 let groupEntries: TrainingEntry[] = [];
 if (isGroup) {
-  groupEntries = (await getEntriesInGroup("training", lang, groupName, sortByTitle)) as TrainingEntry[];
+  groupEntries = (await getEntriesInGroup("training", lang, groupName, sortByChapter)) as TrainingEntry[];
 }
 
 // Construir menú del navegador
 const browserMenu: MenuItem[] = [];
-const groups = (await getGroups("training", lang, sortByTitle)) as TrainingEntry[];
+const groups = (await getGroups("training", lang, sortByChapter)) as TrainingEntry[];
 
 for (const group of groups) {
   const groupSlug = group.id.split("/").pop() || "";
@@ -55,7 +55,7 @@ for (const group of groups) {
     "training",
     lang,
     groupSlug,
-    sortByTitle,
+    sortByChapter,
   )) as TrainingEntry[];
 
   browserMenu.push({

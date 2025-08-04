@@ -1,4 +1,4 @@
-import type { GenericEntry } from "@/types";
+import type { TrainingEntry, BlogEntry, GenericEntry } from "@/types";
 
 // Sort by date
 export const sortByDate = (entries: GenericEntry[]): GenericEntry[] => {
@@ -24,20 +24,20 @@ export const sortByRandom = (entries: GenericEntry[]): GenericEntry[] => {
   return sortedEntries;
 };
 
-
-// Sort by chapter
-export const sortByChapter = (entries: GenericEntry[]): GenericEntry[] => {
-  const sortedEntries = entries.sort((a: any, b: any) =>
-    a.data.chapter.localeCompare(b.data.chapter),
-  );
-  return sortedEntries;
+// Sort by chapter (specific to Training entries)
+export const sortByChapter = (entries: TrainingEntry[]): TrainingEntry[] => {
+  return [...entries].sort((a, b) => {
+    const chapterA = a.data.chapter ?? Number.MAX_SAFE_INTEGER;
+    const chapterB = b.data.chapter ?? Number.MAX_SAFE_INTEGER;
+    return chapterA - chapterB;
+  });
 };
 
-// Sort by module
-export const sortByModule = (entries: GenericEntry[]): GenericEntry[] => {
-  const sortedEntries = entries.sort((a: any, b: any) =>
-    a.data.module.localeCompare(b.data.module),
-  );
-  return sortedEntries;
+// Sort by module (specific to Training entries)
+export const sortByModule = (entries: TrainingEntry[]): TrainingEntry[] => {
+  return [...entries].sort((a, b) => {
+    const moduleA = a.data.module ?? Number.MAX_SAFE_INTEGER;
+    const moduleB = b.data.module ?? Number.MAX_SAFE_INTEGER;
+    return moduleA - moduleB;
+  });
 };
-
