@@ -1,15 +1,13 @@
 ---
 title: Rock Cycle Igneous Sedimentary Metamorphic
 description: An exploration of the rock cycle focusing on igneous sedimentary and metamorphic rocks and their role in petroleum geology particularly in forming reservoirs source rocks and seals
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/rock-cycle-igneous-sedimentary-metamorphic/cover.jpg"
 imageAlt: "Diagram of the rock cycle"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 7
 module: 1
 ---
-
-## Introduction
 
 Rocks tell the story of Earths dynamic history transforming through the rock cycle a continuous process driven by heat pressure and surface activity. Igneous sedimentary and metamorphic rocks each play unique roles in petroleum geology shaping the basins where hydrocarbons form and accumulate. This exploration dives into how these rocks form and why they matter for finding oil and gas using real-world examples and modern tools.
 

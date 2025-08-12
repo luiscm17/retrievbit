@@ -1,7 +1,7 @@
 ---
 title: Impacto de la Mineralogía en la Perforación y Propiedades Petrofísicas
 description: Una exploración de cómo la mineralogía influye en las operaciones de perforación y las propiedades petrofísicas en la geología del petróleo, enfocándose en la calidad del reservorio, la estabilidad del pozo y la evaluación de hidrocarburos.
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/mineralogy-impact-drilling-petrophysical-properties/cover.jpg"
 imageAlt: "Muestra de núcleo bajo análisis petrográfico"
 pubDate: 2025-08-03
 modDate: 2025-08-03

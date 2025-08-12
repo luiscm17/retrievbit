@@ -1,15 +1,13 @@
 ---
 title: "Minerales en la Geología del Petróleo: Cuarzo, Feldespatos y Arcillas"
 description: "Una exploración de cómo el cuarzo, los feldespatos y las arcillas influyen en la geología del petróleo, enfocándose en sus propiedades y roles en la formación de reservorios, rocas madre y sellos."
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/minerals-petroleum-geology-quartz-feldspars-clays/cover.jpg"
 imageAlt: "Vista microscópica de minerales de cuarzo y arcilla"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 8
 module: 1
 ---
-
-## Introducción
 
 Los minerales moldean las rocas que forman la corteza terrestre y juegan un rol vital en la geología del petróleo. El cuarzo, los feldespatos y las arcillas son componentes esenciales de las rocas sedimentarias, influyendo en la calidad del reservorio (reservoir), el potencial de la roca madre (source rock) y la integridad del sello (seal). Esta exploración profundiza en sus propiedades y cómo impactan la exploración de hidrocarburos, utilizando ejemplos prácticos y herramientas analíticas modernas.
 

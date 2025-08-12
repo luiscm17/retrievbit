@@ -47,6 +47,7 @@ export const ui = {
         'training.intelligence': 'Artificial Intelligence',
         'training.geology': 'Geology',
         'training.reservoir': 'Reservoir',
+        'footer.terms': 'Terms & Conditions',
     },
     es: {
         'nav.home': 'Inicio',
@@ -87,6 +88,7 @@ export const ui = {
         'training.intelligence': 'Inteligencia Artificial',
         'training.geology': 'Geología',
         'training.reservoir': 'Reservorios',
+        'footer.terms': 'Términos y Condiciones',
     },
 } as const;
 

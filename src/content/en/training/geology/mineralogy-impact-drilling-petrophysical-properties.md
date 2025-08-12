@@ -1,7 +1,7 @@
 ---
 title: Mineralogy Impact Drilling Petrophysical Properties
 description: An exploration of how mineralogy influences drilling operations and petrophysical properties in petroleum geology focusing on reservoir quality well stability and hydrocarbon evaluation
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/mineralogy-impact-drilling-petrophysical-properties/cover.jpg"
 imageAlt: "Core sample under petrographic analysis"
 pubDate: 2025-08-03
 modDate: 2025-08-03

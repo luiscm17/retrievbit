@@ -1,15 +1,13 @@
 ---
 title: Plate Boundaries Divergent Convergent Transform
 description: An exploration of divergent convergent and transform plate boundaries detailing their geological processes and significance in forming sedimentary basins critical for hydrocarbon exploration
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/plate-boundaries-divergent-convergent-transform/cover.jpg"
 imageAlt: "Diagram of plate boundaries"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 5
 module: 1
 ---
-
-## Introduction
 
 Earths lithospheric plates interact at boundaries where their movement shapes the planets surface through processes like rifting subduction and faulting. These interactions create geological features such as basins mountains and faults which are critical for hydrocarbon exploration. Understanding divergent convergent and transform boundaries allows geologists to identify sedimentary basins and traps where oil and gas accumulate.
 

@@ -24,6 +24,8 @@ The organizational structure of a drilling rig is designed to optimize communica
 3. **Driller**: Operates the rig controls on the floor, executing drilling tasks.
 4. **Support Personnel**: Includes *roughnecks*, mud technicians, wellsite geologists, and safety specialists, each with specific tasks.
 
+ ![General Hierarchy](../../../../assets/training/drilling/drilling-rig-organization/general-hierarchy.jpg)
+
 Communication flows bidirectionally: the *Company Man* sets objectives based on the well plan, the *Toolpusher* organizes the team to meet them, and the *Driller* executes operations, reporting real-time data. This structure ensures that technical decisions, such as adjusting the weight on bit (WOB) for hard formations, are implemented quickly.
 
 ---

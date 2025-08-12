@@ -1,15 +1,13 @@
 ---
 title: "Composición de la Tierra: Corteza, Manto y Núcleo"
 description: Una exploración de la estructura interna de la Tierra, enfocándose en la corteza, el manto y el núcleo, y su importancia en la geología del petróleo, incluyendo cómo estas capas influyen en la formación de cuencas y la exploración de hidrocarburos.
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/earth-composition-crust-mantle-core/cover.jpg"
 imageAlt: "Sección transversal de las capas de la Tierra"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 3
 module: 1
 ---
-
-## Introducción
 
 Comprender la estructura interna de la Tierra es fundamental para la geología del petróleo. La corteza (crust), el manto (mantle) y el núcleo (core) moldean los procesos geológicos que forman cuencas sedimentarias donde se acumulan los hidrocarburos. Esta exploración detalla las propiedades de estas capas, sus interacciones y su papel en la creación de ambientes para la exploración de petróleo y gas.
 
@@ -101,22 +99,22 @@ La crust, el mantle y el core de la Tierra moldean los procesos geológicos que 
 ## Cuestionario
 
 1. **¿Cuál es el papel principal de la crust en la geología del petróleo?**
-   - a) Impulsa procesos tectónicos
-   - b) Alberga cuencas sedimentarias y reservorios
-   - c) Genera el campo magnético de la Tierra
-   - **Respuesta Correcta**: b) Alberga cuencas sedimentarias y reservorios
+   <br/> a) Impulsa procesos tectónicos
+   <br/> b) Alberga cuencas sedimentarias y reservorios
+   <br/> c) Genera el campo magnético de la Tierra
+   <br/> **Respuesta Correcta**: b) Alberga cuencas sedimentarias y reservorios
 
 2. **¿Cómo contribuye el mantle a la formación de cuencas?**
-   - a) Proporciona calor para la maduración de rocas madre
-   - b) Impulsa la convección que lleva al rift y la subducción
-   - c) Forma directamente reservorios de hidrocarburos
-   - **Respuesta Correcta**: b) Impulsa la convección que lleva al rift y la subducción
+   <br/> a) Proporciona calor para la maduración de rocas madre
+   <br/> b) Impulsa la convección que lleva al rift y la subducción
+   <br/> c) Forma directamente reservorios de hidrocarburos
+   <br/> **Respuesta Correcta**: b) Impulsa la convección que lleva al rift y la subducción
 
 3. **¿Qué tipo de cuenca está asociado con la subsidencia post-rift?**
-   - a) Rift Basin
-   - b) Foreland Basin
-   - c) Passive Margin Basin
-   - **Respuesta Correcta**: c) Passive Margin Basin
+   <br/> a) Rift Basin
+   <br/> b) Foreland Basin
+   <br/> c) Passive Margin Basin
+   <br/> **Respuesta Correcta**: c) Passive Margin Basin
 
 ## Bibliografía
 

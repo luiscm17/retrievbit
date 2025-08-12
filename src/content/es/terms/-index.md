@@ -4,69 +4,73 @@ title: Términos y Condiciones
 
 ## Copyright
 
-&copy; 2025 Jane Doe. Todos los derechos reservados.
+&copy; 2025 Luis Condori para Retrievbit. Todos los derechos reservados.
 
-## Reuse
+## Términos de Uso
 
-### Source Code
+1. Esta plataforma proporciona contenido educativo relacionado con ingeniería de petróleo, geociencias y tecnologías energéticas. Todo el material se proporciona únicamente con fines informativos.
+2. Aunque nos esforzamos por mantener nuestro contenido preciso y actualizado, no podemos garantizar la integridad o confiabilidad de la información proporcionada.
+3. Al utilizar este sitio web, acepta que es el único responsable de cómo utiliza la información presentada aquí.
+4. Nos reservamos el derecho de modificar estos términos en cualquier momento sin previo aviso.
 
-El código fuente para janedoe.com está protegido por la Licencia MIT. En resumen, puedes hacer lo que desees, siempre y cuando incluyas la notificación de derechos de autor original en cualquier copia del software.
+## Información de Licencias
+
+### 1. Licencia del Código Fuente
+
+El código fuente de Retrievbit está disponible bajo la **Licencia MIT**:
 
 ```md
-The MIT License (MIT)
+Licencia MIT
 
-Copyright (c) 2025 Jane Doe
+Copyright (c) 2025 Retrievbit
 
-Se concede permiso, de forma gratuita, a cualquier persona que adquiera una copia
-software y los archivos de documentación asociados (el "Software"), para tratar
-el Software sin restricción, incluyendo sin limitación los derechos
-to usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender
-copias del Software, y permitir a las personas a las que se les proporcione el Software
-darlo a conocer, sujeta a las siguientes condiciones:
-La notificación de derechos de autor original y esta notificación de permiso se incluirán en todas
-las copias o secciones sustanciales del Software.
-El Software se proporciona "tal cual", sin garantía de ningún tipo, expresas o implícitas,
-IMPLÍCITAS, INCLUIDAS PERO NO LIMITADAS A LAS GARANTÍAS DE COMERCIALIZACIÓN,
-APTITUD PARA UN FIN ESPECÍFICO Y NO INFRINGIMIENTO. EN NINGÚN CASO LOS
-AUTORES O TITULARES DEL DERECHO DE AUTOR SERÁN RESPONSABLES POR CUALQUIER RECLAMACIÓN, DAÑOS O OTROS
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia
+de este software y archivos de documentación asociados (el "Software"), para operar
+con el Software sin restricción, incluyendo sin limitación los derechos
+de uso, copia, modificación, fusión, publicación, distribución, sublicencia y/o venta
+de copias del Software, y para permitir a las personas a quienes se les proporcione el Software
+hacerlo, sujeto a las siguientes condiciones:
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todas
+las copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS DE COMERCIALIZACIÓN,
+IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS
+AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTROS
+RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, DERIVADA DE,
+FUERA O EN RELACIÓN CON EL SOFTWARE O EL USO U OTROS ACUERDOS EN EL
 SOFTWARE.
 ```
 
-### Contenido
+### 2. Licencia del Contenido
 
-No está permitido reflejar o re-publicar el contenido de este sitio web. Eso incluye, por ejemplo, las palabras y las imágenes mostradas en él. Escribe tu propio blog.
+Todo el contenido educativo, incluyendo artículos, tutoriales y documentación, está licenciado bajo una **Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional** (CC BY-NC-ND 4.0).
 
-## Términos
+#### Usted es libre de
 
-1. Este sitio incluye materias de opinión y especulación. Todo el material se proporciona solo con fines informativos.
-2. Mientras que intento mantener los materiales actualizados y precisos, la fecha, precisión y completitud de mi trabajo no pueden ser garantizadas.
-3. Usted es responsable de todo lo que suceda como resultado de leer o usar materiales de este sitio.
-4. Estos términos y condiciones pueden ser modificados en cualquier momento en el futuro.
+- **Compartir** — copiar y redistribuir el material en cualquier medio o formato
 
-## Atribuciones
+#### Bajo los siguientes términos
 
-Este código fuente es derivado de [Astrogon](https://github.com/astrogon/astrogon) por [Reed Nelson](https://github.com/reednel), que utiliza la licencia abajo.
+- **Atribución** — Debe dar crédito de manera adecuada, proporcionar un enlace a la licencia, e indicar si se han realizado cambios.
+- **NoComercial** — No puede utilizar el material para fines comerciales.
+- **SinDerivadas** — Si remezcla, transforma o crea a partir del material, no podrá distribuir el material modificado.
 
-```md
-The MIT License (MIT)
+Para ver los términos completos de la licencia, visite: [https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es)
 
-Copyright (c) 2025 Reed Nelson
+### 3. Componentes de Terceros
 
-Se concede permiso, de forma gratuita, a cualquier persona que adquiera una copia
-software y los archivos de documentación asociados (el "Software"), para tratar
-el Software sin restricción, incluyendo sin limitación los derechos
-to usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender
-copias del Software, y permitir a las personas a las que se les proporcione el Software
-darlo a conocer, sujeta a las siguientes condiciones:
-La notificación de derechos de autor original y esta notificación de permiso se incluirán en todas
-las copias o secciones sustanciales del Software.
-El Software se proporciona "tal cual", sin garantía de ningún tipo, expresas o implícitas,
-IMPLÍCITAS, INCLUIDAS PERO NO LIMITADAS A LAS GARANTÍAS DE COMERCIALIZACIÓN,
-APTITUD PARA UN FIN ESPECÍFICO Y NO INFRINGIMIENTO. EN NINGÚN CASO LOS
-AUTORES O TITULARES DEL DERECHO DE AUTOR SERÁN RESPONSABLES POR CUALQUIER RECLAMACIÓN, DAÑOS O OTROS
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+Este proyecto incorpora los siguientes componentes de terceros:
+
+- **Astrogon** por Reed Nelson (Licencia MIT) - Utilizado como plantilla base
+- Otras bibliotecas y recursos de código abierto con sus respectivas licencias
+
+## Política de Uso del Contenido
+
+- **Uso Educativo**: Se le anima a utilizar nuestros materiales con fines de aprendizaje y educación.
+- **Atribución Requerida**: Al compartir nuestro contenido, debe proporcionar la atribución adecuada a Retrievbit.
+- **Sin Uso Comercial**: El contenido no puede ser utilizado con fines comerciales sin permiso explícito.
+- **Sin Obras Derivadas**: No se pueden distribuir versiones modificadas de nuestro contenido.
+
+Para cualquier pregunta sobre estos términos o licencias, por favor contáctenos a través de nuestros canales oficiales.

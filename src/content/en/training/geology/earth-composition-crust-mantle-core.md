@@ -1,15 +1,13 @@
 ---
 title: Earth Composition Crust Mantle Core
 description: An exploration of Earths internal structure focusing on the crust mantle and core and their significance in petroleum geology including how these layers influence basin formation and hydrocarbon exploration
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/earth-composition-crust-mantle-core/cover.jpg"
 imageAlt: "Cross section of Earths layers"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 3
 module: 1
 ---
-
-## Introduction
 
 Understanding Earths internal structure is fundamental to petroleum geology. The crust mantle and core shape the geological processes that form sedimentary basins where hydrocarbons accumulate. This exploration details the properties of these layers their interactions and their role in creating environments for oil and gas exploration.
 
@@ -101,22 +99,22 @@ Earths crust mantle and core shape the geological processes that form sedimentar
 ## Cuestionario
 
 1. **What is the primary role of the crust in petroleum geology?**
-   - a) Drives tectonic processes
-   - b) Hosts sedimentary basins and reservoirs
-   - c) Generates Earths magnetic field
-   - **Correct Answer** b) Hosts sedimentary basins and reservoirs
+   <br/> a) Drives tectonic processes
+   <br/> b) Hosts sedimentary basins and reservoirs
+   <br/> c) Generates Earths magnetic field
+   <br/> **Correct Answer** b) Hosts sedimentary basins and reservoirs
 
 2. **How does the mantle contribute to basin formation?**
-   - a) Provides heat for source rock maturation
-   - b) Drives convection leading to rifting and subduction
-   - c) Directly forms hydrocarbon reservoirs
-   - **Correct Answer** b) Drives convection leading to rifting and subduction
+   <br/> a) Provides heat for source rock maturation
+   <br/> b) Drives convection leading to rifting and subduction
+   <br/> c) Directly forms hydrocarbon reservoirs
+   <br/> **Correct Answer** b) Drives convection leading to rifting and subduction
 
 3. **Which basin type is associated with post-rift subsidence?**
-   - a) Rift Basin
-   - b) Foreland Basin
-   - c) Passive Margin Basin
-   - **Correct Answer** c) Passive Margin Basin
+   <br/> a) Rift Basin
+   <br/> b) Foreland Basin
+   <br/> c) Passive Margin Basin
+   <br/> **Correct Answer** c) Passive Margin Basin
 
 ## Bibliography
 

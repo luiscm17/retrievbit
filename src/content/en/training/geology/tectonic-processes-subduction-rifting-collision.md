@@ -1,15 +1,13 @@
 ---
 title: Tectonic Processes Subduction Rifting Collision
 description: An exploration of tectonic processes subduction rifting and collision detailing their role in shaping Earths surface and forming sedimentary basins critical for hydrocarbon exploration
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/tectonic-processes-subduction-rifting-collision/cover.jpg"
 imageAlt: "Diagram of tectonic processes"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 6
 module: 1
 ---
-
-## Introduction
 
 Tectonic processes drive the movement of Earths lithospheric plates shaping the planets surface through the creation of basins mountains and faults. Subduction rifting and collision are fundamental mechanisms that form sedimentary basins where hydrocarbons accumulate. This exploration explains these processes and their significance in identifying oil and gas resources using a combination of geological analysis and advanced technologies.
 

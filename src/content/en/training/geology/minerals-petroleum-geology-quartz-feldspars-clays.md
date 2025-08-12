@@ -1,15 +1,13 @@
 ---
 title: Minerals Petroleum Geology Quartz Feldspars Clays
 description: An exploration of quartz feldspars and clays in petroleum geology focusing on their properties and roles in forming reservoirs source rocks and seals
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/minerals-petroleum-geology-quartz-feldspars-clays/cover.jpg"
 imageAlt: "Microscopic view of quartz and clay minerals"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 8
 module: 1
 ---
-
-## Introduction
 
 Minerals shape the rocks that form Earths crust and play a vital role in petroleum geology. Quartz feldspars and clays are essential components of sedimentary rocks influencing reservoir quality source rock potential and seal integrity. This exploration dives into their properties and how they impact hydrocarbon exploration using practical examples and modern analytical tools.
 

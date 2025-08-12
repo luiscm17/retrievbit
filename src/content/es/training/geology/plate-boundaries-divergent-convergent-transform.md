@@ -1,15 +1,13 @@
 ---
 title: "Límites de Placas: Divergentes, Convergentes y Transformantes"
 description: "Una exploración de los límites de placas divergentes, convergentes y transformantes, detallando sus procesos geológicos y su importancia en la formación de cuencas sedimentarias críticas para la exploración de hidrocarburos."
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/plate-boundaries-divergent-convergent-transform/cover.jpg"
 imageAlt: "Diagrama de límites de placas"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 5
 module: 1
 ---
-
-## Introducción
 
 Las placas litosféricas de la Tierra interactúan en límites donde su movimiento moldea la superficie del planeta a través de procesos como rift (rift), subducción y fallamiento. Estas interacciones crean características geológicas como cuencas, montañas y fallas, que son críticas para la exploración de hidrocarburos. Comprender los límites divergentes, convergentes y transformantes permite a los geólogos identificar cuencas sedimentarias y trampas donde se acumulan petróleo y gas.
 

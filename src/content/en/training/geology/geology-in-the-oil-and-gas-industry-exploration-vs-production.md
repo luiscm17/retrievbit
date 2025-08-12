@@ -1,7 +1,7 @@
 ---
 title: "Geology in the Oil and Gas Industry: Exploration vs. Production"
 description: A detailed exploration of the role of geology in the exploration and production phases of hydrocarbons, highlighting the importance of geoscientists in the value chain, multidisciplinary integration, and their impact on the efficiency and sustainability of petroleum operations.
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/geology-in-the-oil-and-gas-industry-exploration-vs-production/cover.jpg"
 imageAlt: "Geologists analyzing seismic data"
 pubDate: 2025-08-03
 modDate: 2025-08-03

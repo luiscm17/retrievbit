@@ -21,6 +21,8 @@ The drilling site is a dynamic environment where risks are inherent: high reserv
 
 Health, Safety, and Environment (HSE) protocols are standards designed to protect personnel, prevent environmental damage, and comply with local and international regulations, such as those from the API (American Petroleum Institute) or the BSEE (*Bureau of Safety and Environmental Enforcement*). These protocols cover all phases of the well lifecycle.
 
+  ![HSE Protocols](../../../../assets/training/drilling/drilling-site-communication-safety/hse-protocols.jpg)
+
 **Key components of HSE protocols**:
 
 1. **Personnel safety**: Mandatory use of personal protective equipment (PPE), such as helmets, fire-resistant gloves, and steel-toe boots. For example, in a rig in the Permian Basin, workers use masks to protect against gases like H₂S.

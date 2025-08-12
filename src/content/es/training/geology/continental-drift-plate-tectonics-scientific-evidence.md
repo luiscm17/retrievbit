@@ -1,15 +1,13 @@
 ---
 title: "Deriva Continental y Tectónica de Placas: Evidencia Científica"
 description: Una exploración de la evidencia científica que respalda la deriva continental y la tectónica de placas, destacando su papel en la formación de la superficie terrestre y la creación de cuencas sedimentarias críticas para la exploración de hidrocarburos.
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/continental-drift-plate-tectonics-scientific-evidence/cover.jpg"
 imageAlt: "Mapa que muestra la deriva continental"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 4
 module: 1
 ---
-
-## Introducción
 
 El movimiento de los continentes y la dinámica de las placas litosféricas de la Tierra forman la base de la geología moderna. La deriva continental y la tectónica de placas explican cómo evoluciona la superficie terrestre, creando cuencas sedimentarias esenciales para la acumulación de hidrocarburos. Esta exploración detalla la evidencia científica detrás de estas teorías y su importancia en la geología del petróleo.
 

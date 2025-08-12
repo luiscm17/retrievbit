@@ -1,15 +1,13 @@
 ---
 title: "Ciclo de las Rocas: Ígneas, Sedimentarias y Metamórficas"
 description: "Una exploración del ciclo de las rocas, enfocándose en rocas ígneas, sedimentarias y metamórficas, y su rol en la geología del petróleo, particularmente en la formación de reservorios, rocas madre y sellos."
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/rock-cycle-igneous-sedimentary-metamorphic/cover.jpg"
 imageAlt: "Diagrama del ciclo de las rocas"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 7
 module: 1
 ---
-
-## Introducción
 
 Las rocas cuentan la historia de la dinámica historia de la Tierra, transformándose a través del ciclo de las rocas, un proceso continuo impulsado por el calor, la presión y la actividad superficial. Las rocas ígneas, sedimentarias y metamórficas juegan roles únicos en la geología del petróleo, moldeando las cuencas donde se forman y acumulan los hidrocarburos. Esta exploración profundiza en cómo se forman estas rocas y por qué importan para encontrar petróleo y gas, utilizando ejemplos del mundo real y herramientas modernas.
 

@@ -1,7 +1,7 @@
 ---
 title: "Multidisciplinary Integration: Geologists, Engineers, Data Scientists"
 description: A detailed exploration of the collaboration between geologists, engineers, and data scientists in the oil and gas industry, highlighting how the integration of their expertise optimizes exploration, production, and sustainability of petroleum operations.
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/multidisciplinary-integration-geologists-engineers-data-scientists/cover.jpg"
 imageAlt: "Multidisciplinary team analyzing data"
 pubDate: 2025-08-03
 modDate: 2025-08-03

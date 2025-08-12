@@ -21,6 +21,8 @@ La locación de perforación es un entorno dinámico donde los riesgos son inher
 
 Los protocolos de Seguridad, Salud y Medio Ambiente (HSE) son estándares diseñados para proteger al personal, prevenir daños ambientales y cumplir con regulaciones locales e internacionales, como las del API (American Petroleum Institute) o el BSEE (*Bureau of Safety and Environmental Enforcement*). Estos protocolos cubren todas las fases del ciclo de vida del pozo.
 
+![HSE Protocols](../../../../assets/training/drilling/drilling-site-communication-safety/hse-protocols.jpg)
+
 **Componentes clave de los protocolos HSE**:
 
 1. **Seguridad del personal**: Uso obligatorio de equipos de protección personal (EPP), como cascos, guantes ignífugos y botas con punta de acero. Por ejemplo, en un taladro en el Permian Basin, los trabajadores usan máscaras para protegerse de gases como el H₂S.

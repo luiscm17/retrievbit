@@ -1,15 +1,13 @@
 ---
 title: "Procesos Tectónicos: Subducción, Rift y Colisión"
 description: "Una exploración de los procesos tectónicos de subducción, rift y colisión, detallando su rol en la formación de la superficie terrestre y la creación de cuencas sedimentarias críticas para la exploración de hidrocarburos."
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/tectonic-processes-subduction-rifting-collision/cover.jpg"
 imageAlt: "Diagrama de procesos tectónicos"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 6
 module: 1
 ---
-
-## Introducción
 
 Los procesos tectónicos impulsan el movimiento de las placas litosféricas de la Tierra, moldeando la superficie del planeta a través de la creación de cuencas, montañas y fallas. La subducción, el rift y la colisión son mecanismos fundamentales que forman cuencas sedimentarias donde se acumulan hidrocarburos. Esta exploración explica estos procesos y su importancia para identificar recursos de petróleo y gas, utilizando una combinación de análisis geológico y tecnologías avanzadas.
 

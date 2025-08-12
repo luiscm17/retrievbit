@@ -1,0 +1,8 @@
+# Mark content files as documentation for GitHub's linguist
+src/content/**/*.md*    linguist-documentation
+src/content/**/*.mdx*   linguist-documentation
+
+# Ensure consistent line endings
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf

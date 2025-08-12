@@ -1,0 +1,46 @@
+# NOTICE
+
+## Retrievbit - Modern Multilingual Content Platform
+
+Copyright 2025 RetrievBit. All rights reserved.
+
+---
+
+## License Information
+
+This project is distributed under multiple licenses:
+
+### 1. Source Code
+
+- **License**: [MIT License](LICENSE)
+- **Applies to**: All project code except the `/src/content/` directory
+- **Permissions**:
+  - Commercial use
+  - Modification
+  - Distribution
+  - Private use
+
+### 2. Content
+
+- **License**: [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](LICENSE-CONTENT) (CC BY-NC-ND 4.0)
+- **Applies to**: All material in the `/src/content/` directory including:
+  - Articles
+  - Tutorials
+  - Documentation
+  - Any other creative works
+- **Key Restrictions**:
+  - Non-commercial use only
+  - No derivatives allowed
+  - Attribution required
+
+## Third-Party Components
+
+Portions of this software are based on:
+
+- **Astrogon** (<https://github.com/astrogon/astrogon>)
+  - Created by: reednel and contributors
+  - License: [MIT License](https://github.com/astrogon/astrogon/blob/main/LICENSE)
+
+---
+
+*This notice must be included in all copies or substantial portions of the software.*

@@ -24,6 +24,8 @@ La estructura organizacional en un taladro está diseñada para optimizar la com
 3. **Driller (Perforador)**: Opera los controles del taladro en el piso, ejecutando la perforación.
 4. **Personal de Soporte**: Incluye *roughnecks*, técnicos de lodo, geólogos de pozo, y especialistas en seguridad, cada uno con tareas específicas.
 
+ ![Jerarquía General](../../../../assets/training/drilling/drilling-rig-organization/general-hierarchy.jpg)
+
 La comunicación fluye de manera bidireccional: el *Company Man* establece los objetivos basados en el plan del pozo, el *Toolpusher* organiza al equipo para cumplirlos, y el perforador ejecuta las operaciones, reportando datos en tiempo real. Esta estructura asegura que las decisiones técnicas, como ajustar el peso sobre la barrena (WOB) para formaciones duras, se implementen rápidamente.
 
 ---

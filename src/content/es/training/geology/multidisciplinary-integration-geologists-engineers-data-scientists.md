@@ -1,7 +1,7 @@
 ---
 title: "Integracion Multidisciplinaria: Geologos, Ingenieros y DataScientists"
 description: "Una exploracion detallada de la colaboracion entre geologos ingenieros y data scientists en la industria del petroleo y gas destacando como la integracion de sus conocimientos optimiza la exploracion produccion y sostenibilidad de las operaciones petroleras"
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/multidisciplinary-integration-geologists-engineers-data-scientists/cover.jpg"
 imageAlt: "Equipo multidisciplinario analizando datos"
 pubDate: 2025-08-03
 modDate: 2025-08-03

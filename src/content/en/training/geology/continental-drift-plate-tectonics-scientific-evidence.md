@@ -1,15 +1,13 @@
 ---
 title: Continental Drift Plate Tectonics Scientific Evidence
 description: An exploration of the scientific evidence supporting continental drift and plate tectonics highlighting their role in shaping Earths surface and influencing sedimentary basin formation critical for hydrocarbon exploration
-image: "@assets/training/geology/cover.png"
+image: "@assets/training/geology/continental-drift-plate-tectonics-scientific-evidence/cover.jpg"
 imageAlt: "Map showing continental drift"
 pubDate: 2025-08-03
 modDate: 2025-08-03
 chapter: 4
 module: 1
 ---
-
-## Introduction
 
 The movement of continents and the dynamics of Earths lithospheric plates form the foundation of modern geology. Continental drift and plate tectonics explain how Earths surface evolves creating sedimentary basins essential for hydrocarbon accumulation. This exploration details the scientific evidence behind these theories and their significance in petroleum geology.
 
