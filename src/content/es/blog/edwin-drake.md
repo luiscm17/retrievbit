@@ -7,6 +7,7 @@ imageAlt: Perfil de Edwin L. Drake
 categories: [Industria Petrolera]
 author: Luis Condori
 tags: [biografía, industria petrolera]
+draft: false
 ---
 
 Cuando Edwin L. Drake encontró petróleo en Titusville, Pensilvania, en 1859, no solo descubrió un recurso: desencadenó una industria global. **Edwin L. Drake** (1819–1880) es reconocido como el "padre de la industria petrolera moderna" por perforar el primer pozo de petróleo comercial en Estados Unidos. Su historia es un relato de ingenio, perseverancia e impacto transformador.

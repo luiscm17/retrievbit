@@ -23,15 +23,15 @@ Structural traps are formed by deformations in the Earth's crust, such as folds 
 
 1. **Anticlines**: Arch-shaped folds where rock layers curve upwards. Oil and gas, being less dense than water, accumulate at the top of the fold, trapped by a seal rock, such as shale. An example is the Ghawar field in Saudi Arabia, the world's largest oil field, which is located in an anticlinal trap.
 
-    ![Anticline](../../../../assets/training/drilling/basic-petroleum-geology/anticline.jpg)
+    ![Anticline](../../../../assets/training/drilling/basic-petroleum-geology/anticline.png)
 
 2. **Fault traps**: Occur when a fracture in the crust displaces rock layers, creating a barrier that traps hydrocarbons against a seal rock. These traps are common in tectonically active regions, such as the North Sea.
 
-    ![Fault](../../../../assets/training/drilling/basic-petroleum-geology/fault.jpg)
+    ![Fault](../../../../assets/training/drilling/basic-petroleum-geology/fault.png)
 
 3. **Salt domes**: Formed by the movement of salt domes that deform the overlying rock layers, creating traps. These are common in the Gulf of Mexico, where salt domes have generated prolific reservoirs.
 
-    ![Salt Dome](../../../../assets/training/drilling/basic-petroleum-geology/salt-dome.jpg)
+    ![Salt Dome](../../../../assets/training/drilling/basic-petroleum-geology/salt-dome.png)
 
 ### Stratigraphic Traps
 
@@ -39,15 +39,15 @@ Stratigraphic traps are formed by changes in rock properties, such as porosity o
 
 1. **Pinchouts**: Occur when a reservoir rock layer, such as sandstone, gradually thins out and is sealed by an impermeable rock, such as shale. This type of trap is common in sedimentary basins, such as the Santos Basin in Brazil.
 
-    ![Pinchout](../../../../assets/training/drilling/basic-petroleum-geology/pinchout.jpg)
+    ![Pinchout](../../../../assets/training/drilling/basic-petroleum-geology/pinch-out.png)
 
 2. **Lens traps**: Formed by isolated bodies of porous rock (like sandstones) surrounded by impermeable rocks. These traps are typical in ancient deltas or marine environments.
 
-    ![Lens](../../../../assets/training/drilling/basic-petroleum-geology/lens.jpg)
+    ![Lens](../../../../assets/training/drilling/basic-petroleum-geology/lens.png)
 
 3. **Unconformity traps**: Occur when an impermeable layer covers an eroded surface, trapping hydrocarbons underneath. An example is the East Texas field in the United States.
 
-    ![Discordance](../../../../assets/training/drilling/basic-petroleum-geology/discordance.jpg)
+    ![Discordance](../../../../assets/training/drilling/basic-petroleum-geology/discordance.png)
 
 Combined traps, which mix structural and stratigraphic elements, are also common. For example, an anticline may be limited by a pinchout, increasing the complexity of the reservoir. The identification of traps requires integrating seismic data, well logs, and geological maps, which directly connects to mapping concepts.
 

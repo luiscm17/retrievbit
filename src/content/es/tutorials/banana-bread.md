@@ -8,7 +8,7 @@ category: "Baking"
 topics: "Bananas"
 tools: "Oven, Mixing bowl, Spatula"
 tags: "Baking, Recipe"
-draft: false
+draft: true
 
 context:
   3 plátanos medianos muy maduros, 1 taza y media de harina común, 1 cucharadita de bicarbonato de sodio, 1/2 cucharadita de sal, 1/2 taza de mantequilla sin sal, 1/2 taza de azúcar blanca, 1/2 taza de azúcar morena, 2 huevos grandes, 1 cucharadita de extracto de vainilla y 1/2 cucharadita de canela molida.
