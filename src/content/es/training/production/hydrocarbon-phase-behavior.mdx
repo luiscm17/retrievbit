@@ -1,0 +1,167 @@
+---
+title: Comportamiento de Fase de Hidrocarburos  
+description: Una exploración atractiva del comportamiento de fase de hidrocarburos, enfocándose en diagramas P-T y P-V, puntos críticos, regiones de líquido/gas, y sus aplicaciones en la separación en superficie, con comparaciones entre yacimientos de gas condensado y petróleo negro.  
+image: "@assets/training/production/cover.png"  
+imageAlt: "Ingeniero analizando un diagrama de fase"  
+pubDate: 2025-08-04  
+modDate: 2025-08-04  
+chapter: 3  
+module: 1  
+---
+
+Imagina los hidrocarburos como actores en un escenario, cambiando sus roles de líquido a gas dependiendo de la presión y temperatura a su alrededor. Entender el **comportamiento de fase de hidrocarburos** (hydrocarbon phase behavior) es como leer el guion de esta representación: nos dice cómo se comportan el petróleo y el gas en el yacimiento y en la superficie, guiando decisiones críticas en la ingeniería de producción. En este capítulo, exploraremos los diagramas **P-T (presión-temperatura)** y **P-V (presión-volumen)**, identificaremos puntos críticos, y veremos cómo estos conceptos se aplican a la separación en superficie. Compararemos yacimientos de **gas condensado** (gas condensate) y **petróleo negro** (black oil) para dar vida a la teoría, utilizando ejemplos del mundo real y algo de matemáticas para hacerlo cristalino.
+
+## ¿Qué es el Comportamiento de Fase de Hidrocarburos?
+
+El comportamiento de fase de hidrocarburos describe cómo el petróleo y el gas cambian entre fases líquida y gaseosa bajo condiciones variables de presión y temperatura. En un yacimiento, los hidrocarburos existen como una mezcla de líquido (petróleo), gas, y a veces agua, y su comportamiento depende de su composición (por ejemplo, metano, etano, hidrocarburos más pesados) y del entorno en el que se encuentran.
+
+Piensa en ello como cocinar: así como el agua hierve o se congela a temperaturas y presiones específicas, los hidrocarburos cambian de fase de maneras predecibles. Los ingenieros de producción utilizan este conocimiento para diseñar pozos, separadores y ductos que manejen estos fluidos de manera eficiente.
+
+### Conceptos Clave
+
+- **Fases**: Los hidrocarburos pueden ser líquidos, gaseosos, o una mezcla de ambos, dependiendo de la presión y temperatura.
+- **Diagramas de Fase**: Herramientas como los diagramas P-T y P-V mapean estos cambios, mostrando dónde los hidrocarburos son líquidos, gaseosos, o una mezcla de dos fases.
+- **Aplicaciones**: El comportamiento de fase guía la separación en superficie (dividiendo petróleo, gas y agua) y ayuda a predecir el rendimiento del yacimiento.
+
+## Diagramas P-T: Mapeando los Cambios de Fase
+
+Un **diagrama P-T** grafica la presión contra la temperatura para mostrar las condiciones bajo las cuales los hidrocarburos existen como líquido, gas, o ambos. Es un mapa de ruta para entender las transiciones de fase en yacimientos y instalaciones de superficie.
+
+### Características Clave de un Diagrama P-T
+
+- **Curva de Punto de Burbuja** (Bubble Point Curve): El límite donde un líquido comienza a formar burbujas de gas a medida que la presión disminuye.
+- **Curva de Punto de Rocío** (Dew Point Curve): El límite donde un gas comienza a condensarse en líquido a medida que la presión disminuye o la temperatura cambia.
+- **Punto Crítico** (Critical Point): La presión y temperatura donde las fases líquida y gaseosa se vuelven indistinguibles (sin límite claro).
+- **Región de Dos Fases** (Two-Phase Region): Dentro de las curvas de punto de burbuja y punto de rocío, donde coexisten líquido y gas.
+
+<Notice type="info">**¿Sabías?** El punto crítico es único para cada mezcla de hidrocarburos, dependiendo de su composición. Por ejemplo, un gas rico en metano tiene una temperatura crítica más baja que el petróleo pesado.</Notice>
+
+### Ejemplo de Diagrama P-T
+
+![P-T Diagram](../../../../assets/training/production/hydrocarbon-phase-behavior/p-t-diagram.jpg "P-T diagram showing bubble point, dew point, and critical point")
+
+En este diagrama, imagina un yacimiento a alta presión y temperatura (punto A). A medida que los fluidos fluyen a la superficie, la presión y temperatura disminuyen (punto B), entrando en la región de dos fases donde coexisten gas y líquido. Esto es crítico para diseñar separadores que manejen ambas fases.
+
+### Perspectiva Matemática: Presión de Punto de Burbuja
+
+La presión de punto de burbuja $P_b$ es donde el gas comienza a formarse en un líquido. Se puede estimar usando correlaciones como la ecuación de Standing para petróleo:
+
+```math
+P_b = 18.2 \cdot \bigg[ \bigg(\frac{R_s}{\gamma}\bigg)^{0.83} \cdot 10^{(0.00091 \cdot T - 0.0125 \cdot \text{API})} - 1.4 \bigg]
+```
+
+Donde:
+- $P_b$: Presión de punto de burbuja (psia)
+- $R_s$: Relación gas-petróleo (SCF/STB)
+- $\gamma$: Gravedad específica del gas
+- $T$: Temperatura (°F)
+- $\text{API}$: Gravedad API del petróleo
+
+Esta ecuación ayuda a los ingenieros de producción a predecir cuándo el gas se separará del petróleo, impactando el diseño de separadores.
+
+## Diagramas P-V: Cambios de Volumen Bajo Presión
+
+Un **diagrama P-V** grafica la presión contra el volumen específico (volumen por unidad de masa) a temperatura constante, mostrando cómo los hidrocarburos se comprimen o expanden.
+
+### Características Clave de un Diagrama P-V
+
+- **Región Líquida** (Liquid Region): Alta presión, bajo volumen, donde los hidrocarburos son incompresibles.
+- **Región Gaseosa** (Gas Region): Baja presión, alto volumen, donde los hidrocarburos son altamente compresibles.
+- **Región de Dos Fases** (Two-Phase Region): Donde coexisten líquido y gas, con el volumen cambiando significativamente a medida que la presión disminuye.
+- **Punto Crítico** (Critical Point): El punto donde las propiedades de líquido y gas se fusionan.
+
+<Notice type="tip">**Consejo Profesional**: Los diagramas P-V son cruciales para diseñar ductos, ya que muestran cuánto se expande el gas a medida que la presión disminuye, afectando las tasas de flujo y el dimensionamiento de tuberías.</Notice>
+
+### Perspectiva Matemática: Factor de Volumen de Formación de Gas
+
+El factor de volumen de formación de gas $B_g$ relaciona el volumen de gas en condiciones de yacimiento con condiciones de superficie:
+
+```math
+B_g = \frac{0.00504 \cdot z \cdot T}{P}
+```
+
+Donde:
+- $B_g$: Factor de volumen de formación de gas (ft³/SCF)
+- $z$: Factor de compresibilidad del gas
+- $T$: Temperatura (°R, donde °R = °F + 460)
+- $P$: Presión (psia)
+
+Este factor se utiliza para calcular cuánto se expande el gas del yacimiento a la superficie, crítico para el diseño de líneas de flujo.
+
+## Aplicaciones en la Separación en Superficie
+
+El comportamiento de fase impacta directamente la **separación en superficie** (surface separation), donde se dividen el petróleo, gas y agua para su procesamiento. Los ingenieros de producción utilizan diagramas P-T para:
+
+- **Diseñar Separadores**: Establecer condiciones de presión y temperatura para maximizar la recuperación de líquido. Por ejemplo, operar cerca del punto de burbuja asegura que la mayoría del gas permanezca disuelto en el petróleo hasta la separación.
+- **Prevenir Problemas**: Evitar condiciones donde se formen hidratos o parafinas, que pueden obstruir el equipo.
+- **Optimizar la Eficiencia**: Ajustar etapas de separadores (por ejemplo, separadores de alta presión y baja presión) para capturar más gas o petróleo.
+
+Por ejemplo, en el Mar del Norte, los ingenieros utilizan diagramas P-T para diseñar separadores multi-etapa para petróleos volátiles, asegurando la máxima recuperación de líquido.
+
+## Estudio de Caso: Yacimientos de Gas Condensado vs. Petróleo Negro
+
+Comparemos dos tipos de yacimientos para ver el comportamiento de fase en acción:
+
+| **Aspecto**                | **Gas Condensado** (Gas Condensate)                              | **Petróleo Negro** (Black Oil)                                  |
+|---------------------------|-----------------------------------------------|-----------------------------------------------|
+| **Composición**           | Alto en hidrocarburos ligeros (metano, etano)  | Alto en hidrocarburos más pesados                   |
+| **Diagrama P-T**           | Gran región de dos fases, cerca del punto de rocío        | Región de dos fases más pequeña, cerca del punto de burbuja   |
+| **Comportamiento**              | Gas en el yacimiento, líquido se condensa en la superficie | Líquido en el yacimiento, gas se forma en la superficie     |
+| **Ejemplo**               | North Field (Qatar)                          | Ghawar (Arabia Saudita)                         |
+
+- **Gas Condensado (North Field)**: En condiciones de yacimiento, el fluido es un gas. A medida que llega a la superficie, la presión cae por debajo del punto de rocío, causando que se forme líquido (condensado). Los ingenieros diseñan separadores para capturar este valioso líquido.
+- **Petróleo Negro (Ghawar)**: El fluido es líquido en el yacimiento. A medida que la presión disminuye durante la producción, se forman burbujas de gas por debajo del punto de burbuja. Los ingenieros optimizan separadores para manejar altas relaciones gas-petróleo.
+
+<Notice type="warning">**Precaución**: Juzgar mal el comportamiento de fase puede llevar a una separación ineficiente o daño en el equipo, como bloqueo de gas en bombas. ¡Siempre usa datos P-T precisos!</Notice>
+
+## Poniéndolo en Práctica
+
+Imagina que eres un ingeniero de producción en el North Field. Analizas un diagrama P-T y ves que el yacimiento está cerca del punto de rocío. Diseñas un separador para operar a una presión que maximice la recuperación de condensado. Usando la ecuación de Standing, calculas el punto de burbuja para asegurar que el separador maneje correctamente la transición gas-líquido. Mientras tanto, en Ghawar, ajustas las condiciones del separador para manejar la alta producción de gas de un yacimiento de petróleo negro, previniendo bloqueos en ductos.
+
+## Resumen
+
+El comportamiento de fase de hidrocarburos, mapeado a través de diagramas P-T y P-V, es la base para entender cómo el petróleo y el gas se mueven del yacimiento a la superficie. Al identificar puntos críticos, puntos de burbuja y puntos de rocío, los ingenieros de producción diseñan sistemas de separación eficientes y optimizan la producción. Comparar yacimientos de gas condensado y petróleo negro resalta cómo el comportamiento de fase moldea operaciones del mundo real, desde el North Field en Qatar hasta Ghawar en Arabia Saudita.
+
+## Cuestionario
+
+1. **¿Qué representa el punto de burbuja en un diagrama P-T?**  
+  - a) El punto donde las fases gas y líquido se fusionan.  
+  - b) La presión donde el gas comienza a formarse en un líquido.  
+  - c) La temperatura donde los hidrocarburos se convierten en gas.  
+  - **Respuesta**: b) La presión donde el gas comienza a formarse en un líquido.
+
+2. **¿Por qué son importantes los diagramas P-V para la ingeniería de producción?**  
+  - a) Predicen cambios de presión en el yacimiento.  
+  - b) Muestran cómo cambia el volumen de hidrocarburos con la presión.  
+  - c) Calculan el punto crítico del agua.  
+  - **Respuesta**: b) Muestran cómo cambia el volumen de hidrocarburos con la presión.
+
+3. **¿Cómo difiere un yacimiento de gas condensado de uno de petróleo negro?**  
+  - a) El gas condensado es líquido en el yacimiento, el petróleo negro es gas.  
+  - b) El gas condensado forma líquido en la superficie, el petróleo negro forma gas.  
+  - c) Ambos son idénticos en comportamiento de fase.  
+  - **Respuesta**: b) El gas condensado forma líquido en la superficie, el petróleo negro forma gas.
+
+## Bibliografía
+
+### Sources Used
+
+- Whitson, C. H., & Brule, M. R. (2000). *Phase Behavior*. Society of Petroleum Engineers.  
+  Comprehensive guide to hydrocarbon phase behavior and P-T diagrams.
+- Guo, B., Liu, X., & Tan, X. (2016). *Petroleum Production Engineering: A Computer-Assisted Approach*. Gulf Professional Publishing.  
+  Covers phase behavior applications in production.
+- SPE Paper 19638 (1989). *Correlations for Predicting Oil and Gas Properties*. Society of Petroleum Engineers.  
+  Details empirical correlations like Standing’s for bubble point.
+
+### Recommended Reading
+
+- McCain, W. D. (2017). *The Properties of Petroleum Fluids* (3rd ed.). PennWell Books.  
+  In-depth resource on phase behavior and fluid properties.
+- Economides, M. J., Hill, A. D., Ehlig-Economides, C., & Zhu, D. (2013). *Petroleum Production Systems* (2nd ed.). Prentice Hall.  
+  Practical applications of phase behavior in production engineering.
+
+### Direct Links
+
+- [SPE (Society of Petroleum Engineers)](https://www.spe.org/en/) – Webinars and papers on phase behavior.  
+- [PennWell Books](https://www.pennwellbooks.com/the-properties-of-petroleum-fluids/) – Source for McCain’s book.  
+- [AAPG Resources](https://www.aapg.org/learn) – Educational content on petroleum engineering and phase behavior.
