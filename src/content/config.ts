@@ -68,6 +68,7 @@ const blog = defineCollection({
       tags: z.array(z.string()).optional(),
       complexity: z.number().default(1),
       hideToc: z.boolean().default(false),
+      draft: z.boolean().default(false),
     }),
 });
 
@@ -83,6 +84,7 @@ const training = defineCollection({
       hideNav: z.boolean().default(false),
       chapter: z.number().optional(),
       module: z.number().optional(),
+      draft: z.boolean().default(false),
     }),
 });
 
@@ -120,6 +122,7 @@ const concepts = defineCollection({
       image: image().optional(),
       imageAlt: z.string().default(""),
       author: reference("authors").optional(),
+      draft: z.boolean().default(false),
     }),
 });
 
@@ -153,6 +156,7 @@ const tutorials = defineCollection({
       application: z.string().optional(),
       summary: z.string().optional(),
       resources: z.string().optional(),
+      draft: z.boolean().default(false),
     }),
 });
 

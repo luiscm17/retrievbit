@@ -21,8 +21,10 @@ const descriptionLenth = 200; // the max length in characters for the auto-gener
 const globalHideToc = false; // set true to always hide the table of contents (right side menu)
 const tocDepth = 3; // maximum depth for the table of contents 1 = h1, etc
 
+import type { MarkdownHeading } from 'astro';
+
 const actuallyHideToc =
-  hideToc || globalHideToc || headings.filter((heading) => heading.depth <= tocDepth).length === 0;
+  hideToc || globalHideToc || headings.filter((heading: MarkdownHeading) => heading.depth <= tocDepth).length === 0;
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 

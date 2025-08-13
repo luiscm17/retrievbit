@@ -14,7 +14,7 @@ export const getEntries = async (
   lang: string,
   sortFunction?: ((array: any[]) => any[]),
   noIndex = true,
-  noDrafts = true
+  noDrafts = true,
 ): Promise<GenericEntry[]> => {
   // Convertir el nombre de la colección a formato kebab-case
   const collectionName = collection.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -71,9 +71,10 @@ export const getEntriesBatch = async (
 export const getGroups = async (
   collection: CollectionKey,
   lang: string,
-  sortFunction?: ((array: any[]) => any[])
+  sortFunction?: ((array: any[]) => any[]),
+  noDrafts = true,
 ): Promise<GenericEntry[]> => {
-  let entries = await getEntries(collection, lang, sortFunction, false);
+  let entries = await getEntries(collection, lang, sortFunction, false, noDrafts);
   entries = entries.filter((entry: GenericEntry) => {
     const segments = entry.id.split("/");
     // La estructura esperada es: /lang/collection/grupo/-index
@@ -88,6 +89,7 @@ export const getEntriesInGroup = async (
   lang: string,
   groupSlug: string,
   sortFunction?: ((array: any[]) => any[]),
+  noDrafts = true,
 ): Promise<GenericEntry[]> => {
   // Primero obtenemos todas las entradas sin filtrar
   let entries = [];
