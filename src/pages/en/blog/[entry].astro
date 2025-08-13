@@ -6,24 +6,35 @@ import EntryLayout from "@components/blog/EntryLayout.astro";
 import { getEntries } from "@lib/contentParser";
 import similerItems from "@lib/similarItems";
 
-export async function getStaticPaths() {
-  const lang = "en";
-  const entries = (await getEntries("blog", "en", sortByDate)) as BlogEntry[];
-  const paths = entries.map((entry) => {
-    // Extraer el slug de la entrada (sin el prefijo de idioma)
-    const entrySlug = entry.id.split("/").slice(2).join("/");
+interface Props {
+  entry: BlogEntry;
+  entries: BlogEntry[];
+}
+
+export const getStaticPaths = (async () => {
+  const lang = "en"; // Extraer de la ruta si es necesario
+  const entries = (await getEntries("blog", lang, sortByDate)) as BlogEntry[];
+  
+  return entries.map((entry) => {
+    // Extraer el slug de la entrada de manera segura
+    const segments = entry.id.split("/");
+    const entrySlug = segments.length > 2 
+      ? segments.slice(2).join("/") 
+      : entry.id; // Fallback al ID completo si no hay suficientes segmentos
 
     return {
       params: {
-        entry: entrySlug, // Usar solo el slug sin el prefijo de idioma
+        entry: entrySlug,
       },
-      props: { entry, entries },
+      props: { 
+        entry, 
+        entries 
+      },
     };
   });
-  return paths;
-}
+}) satisfies GetStaticPaths;
 
-const { entry, entries } = Astro.props;
+const { entry, entries } = Astro.props as Props;
 const relatedEntries = similerItems(entry, entries, entry.id);
 ---
 

@@ -10,7 +10,6 @@ interface Props {
 }
 
 const { menu, currentPage } = Astro.props;
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -31,19 +30,21 @@ const cleanId = (id: string) => id.replace(/-index$/, '');
               >
                 {item.title}
               </a>
-              {item.children.length > 0 && (
-                <ul class="list-none m-0">
+              {item.children?.length > 0 ? (
+                <ul class="list-disc m-0 text-sm">
                   {item.children.map((child) => (
                     <li class="ml-4">
                       <a
                         href={getRelativeLocaleUrl(lang, `/training/${cleanId(item.id)}/${cleanId(child.id)}`)}
-                        class={`w-full leading-none no-underline ${child.id === currentPage ? "font-bold" : ""}`}
+                        class={`w-full leading-tight no-underline ${child.id === currentPage ? "font-bold" : ""}`}
                       >
                         {child.title}
                       </a>
                     </li>
                   ))}
                 </ul>
+              ) : (
+                <div style="display: none;">No children to display for {item.id}</div>
               )}
             </li>
           ))}

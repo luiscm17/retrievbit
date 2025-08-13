@@ -49,23 +49,28 @@ const browserMenu: MenuItem[] = [];
 const groups = (await getGroups("training", lang, sortByChapter)) as TrainingEntry[];
 
 for (const group of groups) {
-  const groupSlug = group.id.split("/").pop() || "";
+  const groupSlug = group.id.split("/").slice(2, -1).join("/") || "";
+  const groupName = groupSlug.split("/").pop() || "";
 
   const groupEntries = (await getEntriesInGroup(
     "training",
     lang,
-    groupSlug,
+    groupName,
     sortByChapter,
   )) as TrainingEntry[];
 
   browserMenu.push({
     title: group.data.title,
-    id: groupSlug,
-    children: groupEntries.map((entry) => ({
-      title: entry.data.title,
-      id: entry.id.split("/").pop() || "",
-      children: [],
-    })),
+    id: groupName, // Usar solo el nombre del grupo
+    children: groupEntries.map((entry) => {
+      // Extraer solo el nombre del archivo sin la ruta completa
+      const entryId = entry.id.split("/").pop()?.replace(/\.mdx?$/, '') || "";
+      return {
+        title: entry.data.title,
+        id: entryId,
+        children: [],
+      };
+    }),
   });
 }
 ---
