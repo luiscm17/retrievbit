@@ -11,6 +11,8 @@
 @layer components {
   @include meta.load-css("prose");
   @include meta.load-css("glass");
+  @include meta.load-css("math");
+  @include meta.load-css("table");
 }
 
 @layer utilities {

@@ -1,0 +1,165 @@
+---
+title: Permeabilidad y Ley de Darcy
+description: Una exploración de la permeabilidad en reservorios de petróleo, enfocándose en la Ley de Darcy, tipos de permeabilidad, técnicas de medición y herramientas computacionales.
+image: "@assets/training/reservoir/permeability-darcy-law/cover.jpg"
+imageAlt: "Muestra de núcleo mostrando el flujo de fluidos a través de roca porosa"
+pubDate: 2025-08-04
+modDate: 2025-08-04
+chapter: 2
+module: 1
+---
+
+## Introducción
+
+Imagina agua fluyendo a través de una manguera de jardín versus una esponja. La manguera permite que el agua pase fácilmente, mientras que la esponja lo ralentiza. En reservorios de petróleo, la **permeability (permeabilidad)** es la propiedad que controla cuán fácilmente el petróleo, gas o agua pueden fluir a través de los espacios porosos de una roca. Basándose en nuestra comprensión de la porosidad del Capítulo 1, la permeabilidad es la siguiente pieza crítica del rompecabezas, determinando si un reservorio puede producir hidrocarburos eficientemente. Este capítulo explora la **Darcy’s Law (Ley de Darcy)**, la piedra angular del flujo de fluidos, los tipos de permeabilidad, cómo se mide y cómo herramientas como la biblioteca `FiPy` de Python le dan vida.
+
+## ¿Qué es la Permeabilidad?
+
+La permeabilidad mide la capacidad de una roca para permitir que los fluidos pasen a través de sus poros interconectados. Piensa en ella como la “autopista de flujo” de un reservorio. Una alta permeabilidad significa que los fluidos se mueven fácilmente, como a través de una playa de arena, mientras que una baja permeabilidad es como intentar empujar agua a través de arcilla—lento y difícil. La permeabilidad se denota por $$ k $$ y se mide en **darcys ($$D$$)** o **millidarcys ($$mD$$)**, con la mayoría de las rocas de reservorio variando de 1 $$mD$$ a 1000 $$mD$$.
+
+<Notice type="info">La permeabilidad depende de la porosidad, pero también del tamaño, forma y conectividad de los poros. Una roca puede ser porosa pero tener baja permeabilidad si sus poros están mal conectados.</Notice>
+
+## Ley de Darcy: La Base del Flujo de Fluidos
+
+En 1856, Henry Darcy, un ingeniero francés, descubrió una relación simple pero poderosa que gobierna el flujo de fluidos a través de medios porosos. La **Darcy’s Law (Ley de Darcy)** describe cómo la tasa de flujo de fluido depende de las diferencias de presión, la permeabilidad de la roca y las propiedades del fluido.
+
+### Ecuación de la Ley de Darcy
+
+Para **linear flow (flujo lineal)** (por ejemplo, a través de una muestra de núcleo en el laboratorio):
+
+<div class="math-wrapper">
+```math
+Q = \frac{k \cdot A \cdot \Delta P}{\mu \cdot L}
+```
+</div>
+
+Donde:
+- $$ Q $$: Tasa de flujo ($$cm^3/s$$)
+- $$ k $$: Permeabilidad ($$D$$)
+- $$ A $$: Área de la sección transversal ($$cm^2$$)
+- $$ \Delta P $$: Diferencia de presión a través de la muestra ($$atm$$)
+- $$ \mu $$: Viscosidad del fluido (centipoise, $$cP$$)
+- $$ L $$: Longitud de la muestra ($$cm$$)
+
+Para **radial flow (flujo radial)** (por ejemplo, alrededor de un pozo en un reservorio):
+
+<div class="math-wrapper">
+```math
+Q = \frac{2 \pi k \cdot h \cdot \Delta P}{\mu \cdot \ln(r_e / r_w)}
+```
+</div>
+
+Donde:
+- $$ h $$: Espesor del reservorio ($$cm$$)
+- $$ r_e $$: Radio de drenaje ($$cm$$)
+- $$ r_w $$: Radio del pozo ($$cm$$)
+
+<Notice type="tip">La Ley de Darcy asume flujo laminar y una sola fase de fluido. Para casos complejos como gas o flujo multifásico, ajustamos la ecuación.</Notice>
+
+### Unidades: Darcy vs. Millidarcy
+
+- Un **darcy** es una unidad grande, definida para que una roca con 1 darcy de permeabilidad permita 1 $$cm^3/s$$ de un fluido de 1 $$cP$$ fluir a través de un área de 1 $$cm^2$$ bajo un gradiente de presión de 1 $$\frac{atm}{cm}$$.
+- La mayoría de los reservorios tienen permeabilidades en **millidarcys ($$mD$$)**, donde 1 $$D$$ = 1000 $$mD$$. Por ejemplo, una arenisca podría tener 100 $$mD$$, mientras que una lutita podría ser 0.01 $$mD$$.
+
+## Tipos de Permeabilidad
+
+No toda la permeabilidad es igual. Vamos a desglosarla:
+
+- **Absolute Permeability (permeabilidad absoluta)**: La capacidad de la roca para conducir un solo fluido (por ejemplo, agua) cuando está completamente saturada. Es la permeabilidad base de la roca.
+- **Effective Permeability (permeabilidad efectiva)**: La capacidad para conducir un fluido (por ejemplo, petróleo) en presencia de otros fluidos (por ejemplo, agua, gas). Depende de la **fluid saturation (saturación de fluidos)**—la fracción de poros llenos con cada fluido.
+- **Relative Permeability (permeabilidad relativa)**: La relación entre la permeabilidad efectiva y la absoluta, expresada como $$ k_r = k_{effective} / k_{absolute} $$. Varía con la saturación y es crítica para el flujo multifásico.
+
+<div class="table-wrapper">
+| Tipo                | Definición                              | Ejemplo                     |
+|-------------------------|---------------------------------------------|---------------------------------|
+| Permeabilidad Absoluta   | Flujo de un solo fluido                     | Agua a través de una muestra de núcleo     |
+| Permeabilidad Efectiva  | Flujo de un fluido con otros presentes       | Flujo de petróleo con agua en los poros    |
+| Permeabilidad Relativa   | Permeabilidad efectiva / absoluta           | $$ k_{ro} = 0.8 $$ para flujo de petróleo |
+</div>
+
+<Notice type="warning">Una alta saturación de agua puede reducir drásticamente la permeabilidad efectiva para el petróleo, impactando las tasas de producción.</Notice>
+
+## Medición de la Permeabilidad
+
+La permeabilidad se mide tanto en el laboratorio como en el campo, cada método ofreciendo perspectivas únicas.
+
+### Análisis de Núcleo
+
+Muestras de núcleo de pozos se prueban en el laboratorio usando:
+
+- **Steady-State Method (método de estado estacionario)**: Un fluido (por ejemplo, salmuera) se fuerza a través de un núcleo a presión constante, y se mide la tasa de flujo para calcular $$ k $$ usando la Ley de Darcy.
+- **Unsteady-State Method (método de estado no estacionario)**: Se aplican pulsos de presión, y la respuesta transitoria se analiza para estimar la permeabilidad, útil para rocas de baja permeabilidad.
+
+### Pruebas de Presión Transitoria
+
+En el campo, **well tests (pruebas de pozo)** como pruebas de drawdown o build-up miden cambios de presión con el tiempo para estimar la permeabilidad. Estas pruebas analizan cómo la presión se propaga a través del reservorio, revelando $$ k $$ y otras propiedades como el factor de piel.
+
+<Youtube client:only="react" id="v8Y2eBH4gUc" title="Entendiendo la Ley de Darcy en Ingeniería de Petróleo" lang="es" />
+
+## Herramientas Computacionales: Simulando Flujo con Python
+
+Los ingenieros de reservorios modernos usan herramientas computacionales para modelar el flujo de fluidos. La biblioteca de Python **`FiPy`** resuelve ecuaciones diferenciales parciales para flujo en medios porosos, simulando la Ley de Darcy en geometrías complejas.
+
+Aquí hay un ejemplo simple para calcular permeabilidad usando la Ley de Darcy en Python:
+
+```python title="permeabilidad.py"
+# Calculate permeability (k) using Darcy’s Law for linear flow
+Q = 10  # Flow rate (cm^3/s)
+A = 20  # Cross-sectional area (cm^2)
+delta_P = 5  # Pressure difference (atm)
+mu = 2   # Viscosity (cP)
+L = 100  # Length (cm)
+
+k = (Q * mu * L) / (A * delta_P)  # Permeability in darcys
+print(f"Permeability: {k:.2f} darcys")
+```
+
+Este script calcula $$ k $$ para una muestra de núcleo. Para simulaciones avanzadas, `FiPy` puede modelar flujo 2D o 3D, incorporando variaciones de permeabilidad a través de un reservorio.
+
+## Aplicaciones Prácticas: Por Qué Importa la Permeabilidad
+
+La permeabilidad determina la **productivity (productividad)** de un reservorio. Arenisca de alta permeabilidad, como las del campo Brent (Mar del Norte), permite un flujo rápido de petróleo, mientras que lutitas de baja permeabilidad requieren fracturamiento para producir. Los ingenieros usan datos de permeabilidad para:
+- Diseñar estrategias de completamiento de pozos (por ejemplo, **hydraulic fracturing (fracturamiento hidráulico)**).
+- Predecir tasas de producción.
+- Optimizar la inyección de agua o gas para recuperación mejorada.
+
+<Notice type="info">En la Cuenca del Pérmico, las variaciones de permeabilidad entre 10 mD y 500 mD en areniscas guían las decisiones de perforación y estimulación.</Notice>
+
+## Resumen
+
+La permeabilidad es el guardián del flujo de fluidos en reservorios, gobernado por la **Darcy’s Law (Ley de Darcy)**, que relaciona la tasa de flujo con la presión, permeabilidad y viscosidad. Entender la **absolute permeability (permeabilidad absoluta)**, **effective permeability (permeabilidad efectiva)** y **relative permeability (permeabilidad relativa)** ayuda a predecir cómo se mueven el petróleo, gas y agua. Técnicas de laboratorio como análisis de núcleo y pruebas de campo como pruebas de presión transitoria miden la permeabilidad, mientras que herramientas como `FiPy` de Python dan vida a estos conceptos. Ya sea en el campo Brent o en tu próximo modelo de reservorio, la permeabilidad es clave para desbloquear el potencial de producción.
+
+## Cuestionario
+
+1. **¿Qué describe la Ley de Darcy?**
+   <br/> a) El volumen de poros en una roca
+   <br/> b) El flujo de fluidos a través de medios porosos
+   <br/> c) La compresibilidad de fluidos de reservorio
+   <br/> **Respuesta Correcta**: b) El flujo de fluidos a través de medios porosos
+
+2. **¿Cómo difiere la permeabilidad efectiva de la permeabilidad absoluta?**
+   <br/> a) Tiene en cuenta múltiples fluidos en los poros
+   <br/> b) Mide solo el flujo de gas
+   <br/> c) Siempre es mayor que la permeabilidad absoluta
+   <br/> **Respuesta Correcta**: a) Tiene en cuenta múltiples fluidos en los poros
+
+3. **¿Qué método es mejor para medir la permeabilidad en rocas de baja permeabilidad?**
+   <br/> a) Análisis de núcleo en estado estacionario
+   <br/> b) Análisis de núcleo en estado no estacionario
+   <br/> c) Registro de densidad
+   <br/> **Respuesta Correcta**: b) Análisis de núcleo en estado no estacionario
+
+## Bibliografía
+
+### Fuentes Utilizadas
+- *Petroleum Engineering Handbook* (L.W. Lake, SPE, 2017). Capítulo 5: Caracterización de Reservorios.
+- Selley, R. C., & Sonnenberg, S. A. (2014). *Elements of Petroleum Geology* (3rd ed.). Academic Press.
+- *SPE Journal* (2019). Avances en técnicas de medición de permeabilidad.
+
+### Lecturas Recomendadas
+- Hyne, N. J. (2012). *Nontechnical Guide to Petroleum Geology, Exploration, Drilling & Production*. PennWell Books. Disponible en [https://www.pennwellbooks.com/nontechnical-guide-to-petroleum-geology-exploration-drilling-production/](https://www.pennwellbooks.com/nontechnical-guide-to-petroleum-geology-exploration-drilling-production/).
+- Tiab, D., & Donaldson, E. C. (2015). *Petrophysics: Theory and Practice of Measuring Reservoir Rock and Fluid Transport Properties*. Gulf Professional Publishing.
+
+### Enlaces Directos
+- [SPE Recursos Técnicos](https://www.spe.org/en/): Perspectivas sobre permeabilidad e ingeniería de reservorios.
+- [AAPG Recursos Educativos](https://www.aapg.org/learn): Webinars sobre análisis petrofísico.

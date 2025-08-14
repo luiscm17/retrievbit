@@ -1,7 +1,7 @@
 ---
 title: Introducción a la Ingeniería de Producción de Petróleo
 description: Una introducción atractiva al rol de la ingeniería de producción de petróleo, sus objetivos y sus interacciones críticas con la ingeniería de reservorios y la perforación en el ciclo de vida de un campo de petróleo y gas.
-image: "@assets/training/production/cover.png"
+image: "@assets/training/production/introduction-to-petroleum-production-engineering/cover.jpg"
 imageAlt: "Ingeniero de producción de petróleo analizando datos de pozo"
 pubDate: 2025-08-04
 modDate: 2025-08-04
@@ -63,22 +63,22 @@ La ingeniería de producción de petróleo es esencial para convertir recursos s
 ## Cuestionario
 
 1. **¿Cuál es un objetivo primario de la ingeniería de producción de petróleo?**  
-   - a) Perforar pozos de exploración para encontrar nuevos reservorios.  
-   - b) Maximizar la recuperación de hidrocarburos mientras se optimizan operaciones.  
-   - c) Realizar encuestas sísmicas para mapear estructuras subterráneas.  
-   - **Respuesta**: b) Maximizar la recuperación de hidrocarburos mientras se optimizan operaciones.
+  <br/>a) Perforar pozos de exploración para encontrar nuevos reservorios.  
+  <br/>b) Maximizar la recuperación de hidrocarburos mientras se optimizan operaciones.  
+  <br/>c) Realizar encuestas sísmicas para mapear estructuras subterráneas.  
+  <br/>**Respuesta**: b) Maximizar la recuperación de hidrocarburos mientras se optimizan operaciones.
 
 2. **¿En qué fase del ciclo de vida de un campo de petróleo y gas es más activa la ingeniería de producción?**  
-   - a) Exploración  
-   - b) Producción  
-   - c) Abandono  
-   - **Respuesta**: b) Producción
+  <br/>a) Exploración  
+  <br/>b) Producción  
+  <br/>c) Abandono  
+  <br/>**Respuesta**: b) Producción
 
 3. **¿Cómo interactúa la ingeniería de producción con la ingeniería de reservorios?**  
-   - a) Diseñando la torre de perforación para la construcción del pozo.  
-   - b) Usando datos de reservorio para diseñar completamientos de pozos y predecir tasas de producción.  
-   - c) Gestionando el transporte de hidrocarburos procesados.  
-   - **Respuesta**: b) Usando datos de reservorio para diseñar completamientos de pozos y predecir tasas de producción.
+  <br/>a) Diseñando la torre de perforación para la construcción del pozo.  
+  <br/>b) Usando datos de reservorio para diseñar completamientos de pozos y predecir tasas de producción.  
+  <br/>c) Gestionando el transporte de hidrocarburos procesados.  
+  <br/>**Respuesta**: b) Usando datos de reservorio para diseñar completamientos de pozos y predecir tasas de producción.
 
 ## Bibliografía
 

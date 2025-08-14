@@ -1,7 +1,7 @@
 ---
 title: Permeability Darcy Law
 description: An exploration of permeability in petroleum reservoirs, focusing on Darcy’s Law, types of permeability, measurement techniques, and computational tools
-image: "@assets/training/reservoir/cover.png"
+image: "@assets/training/reservoir/permeability-darcy-law/cover.jpg"
 imageAlt: "Core sample showing fluid flow through porous rock"
 pubDate: 2025-08-04
 modDate: 2025-08-04
@@ -27,28 +27,32 @@ In 1856, Henry Darcy, a French engineer, discovered a simple yet powerful relati
 
 For **linear flow** (e.g., through a core sample in the lab):
 
+<div class="math-wrapper">
 ```math
 Q = \frac{k \cdot A \cdot \Delta P}{\mu \cdot L}
 ```
+</div>
 
 Where:
-- $$ Q $$: Flow rate ($$cm^3/s$$)
-- $$ k $$: Permeability ($$D$$)
-- $$ A $$: Cross-sectional area ($$cm^2$$)
-- $$ \Delta P $$: Pressure difference across the sample ($$atm$$)
-- $$ \mu $$: Fluid viscosity (centipoise, $$cP$$)
-- $$ L $$: Length of the sample ($$cm$$)
+- $$Q$$: Flow rate ($$cm^3/s$$)
+- $$k$$: Permeability ($$D$$)
+- $$A$$: Cross-sectional area ($$cm^2$$)
+- $$\Delta P$$: Pressure difference across the sample ($$atm$$)
+- $$\mu$$: Fluid viscosity (centipoise, $$cP$$)
+- $$L$$: Length of the sample ($$cm$$)
 
 For **radial flow** (e.g., around a well in a reservoir):
 
+<div class="math-wrapper">
 ```math
 Q = \frac{2 \pi k \cdot h \cdot \Delta P}{\mu \cdot \ln(r_e / r_w)}
 ```
+</div>
 
 Where:
-- $$ h $$: Reservoir thickness ($$cm$$)
-- $$ r_e $$: Drainage radius ($$cm$$)
-- $$ r_w $$: Well radius ($$cm$$)
+- $$h$$: Reservoir thickness ($$cm$$)
+- $$r_e$$: Drainage radius ($$cm$$)
+- $$r_w$$: Well radius ($$cm$$)
 
 <Notice type="tip">Darcy’s Law assumes laminar flow and a single fluid phase. For complex cases like gas or multiphase flow, we adjust the equation.</Notice>
 
@@ -63,13 +67,15 @@ Not all permeability is the same. Let’s break it down:
 
 - **Absolute Permeability**: The rock’s ability to conduct a single fluid (e.g., water) when fully saturated. It’s the baseline permeability of the rock.
 - **Effective Permeability**: The ability to conduct one fluid (e.g., oil) in the presence of other fluids (e.g., water, gas). It depends on **fluid saturation**—the fraction of pores filled with each fluid.
-- **Relative Permeability**: The ratio of effective permeability to absolute permeability, expressed as $$ k_r = k_{effective} / k_{absolute} $$. It varies with saturation and is critical for multiphase flow.
+- **Relative Permeability**: The ratio of effective permeability to absolute permeability, expressed as $$k_r = k_{effective} / k_{absolute} $$. It varies with saturation and is critical for multiphase flow.
 
-| **Type**                | **Definition**                              | **Example**                     |
+<div class="table-wrapper">
+| Type                | Definition                              | Example                     |
 |-------------------------|---------------------------------------------|---------------------------------|
 | Absolute Permeability   | Flow of a single fluid                      | Water through a core sample     |
 | Effective Permeability  | Flow of one fluid with others present       | Oil flow with water in pores    |
-| Relative Permeability   | Effective permeability / absolute           | $$ k_{ro} = 0.8 $$ for oil flow |
+| Relative Permeability   | Effective permeability / absolute           | $$k_{ro} = 0.8$$ for oil flow |
+</div>
 
 <Notice type="warning">High water saturation can drastically reduce effective permeability for oil, impacting production rates.</Notice>
 
@@ -81,12 +87,12 @@ Permeability is measured both in the lab and in the field, each method offering 
 
 Core samples from wells are tested in the lab using:
 
-- **Steady-State Method**: A fluid (e.g., brine) is forced through a core at constant pressure, and the flow rate is measured to calculate $$ k $$ using Darcy’s Law.
+- **Steady-State Method**: A fluid (e.g., brine) is forced through a core at constant pressure, and the flow rate is measured to calculate $$k$$ using Darcy’s Law.
 - **Unsteady-State Method**: Pressure is applied in pulses, and the transient response is analyzed to estimate permeability, useful for low-permeability rocks.
 
 ### Transient Pressure Tests
 
-In the field, **well tests** like drawdown or build-up tests measure pressure changes over time to estimate permeability. These tests analyze how pressure propagates through the reservoir, revealing $$ k $$ and other properties like skin factor.
+In the field, **well tests** like drawdown or build-up tests measure pressure changes over time to estimate permeability. These tests analyze how pressure propagates through the reservoir, revealing $$k$$ and other properties like skin factor.
 
 <Youtube client:only="react" id="v8Y2eBH4gUc" title="Understanding Darcy’s Law in Petroleum Engineering" lang="en" />
 
@@ -108,7 +114,7 @@ k = (Q * mu * L) / (A * delta_P)  # Permeability in darcys
 print(f"Permeability: {k:.2f} darcys")
 ```
 
-This script computes $$ k $$ for a core sample. For advanced simulations, `FiPy` can model 2D or 3D flow, incorporating permeability variations across a reservoir.
+This script computes $$k$$ for a core sample. For advanced simulations, `FiPy` can model 2D or 3D flow, incorporating permeability variations across a reservoir.
 
 ## Practical Applications: Why Permeability Matters
 

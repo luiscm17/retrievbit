@@ -1,5 +1,5 @@
 ---
-title: Documentación
-description: Documentación técnica y recursos educativos
+title: Formación
+description: Formación técnica y recursos educativos
 draft: false
 ---

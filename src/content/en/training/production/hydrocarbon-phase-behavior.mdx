@@ -1,7 +1,7 @@
 ---
 title: Hydrocarbon Phase Behavior  
 description: An engaging exploration of hydrocarbon phase behavior, focusing on P-T and P-V diagrams, critical points, liquid/gas regions, and their applications in surface separation, with comparisons between gas condensate and black oil reservoirs.  
-image: "@assets/training/production/cover.png"  
+image: "@assets/training/production/hydrocarbon-phase-behavior/cover.jpg"  
 imageAlt: "Engineer analyzing a phase diagram"  
 pubDate: 2025-08-04  
 modDate: 2025-08-04  
@@ -44,18 +44,20 @@ In this diagram, imagine a reservoir at high pressure and temperature (point A).
 
 ### Math Insight: Bubble Point Pressure
 
-The bubble point pressure $P_b$ is where gas starts to form in a liquid. It can be estimated using correlations like Standing's equation for oil:
+The bubble point pressure $$P_b$$ is where gas starts to form in a liquid. It can be estimated using correlations like Standing's equation for oil:
 
+<div class="math-wrapper">
 ```math
 P_b = 18.2 \cdot \bigg[ \bigg(\frac{R_s}{\gamma}\bigg)^{0.83} \cdot 10^{(0.00091 \cdot T - 0.0125 \cdot \text{API})} - 1.4 \bigg]
 ```
+</div>
 
 Where:
-- $P_b$: Bubble point pressure (psia)
-- $R_s$: Gas-oil ratio (SCF/STB)
-- $\gamma$: Gas specific gravity
-- $T$: Temperature (°F)
-- $\text{API}$: Oil API gravity
+- $$P_b$$: Bubble point pressure (psia)
+- $$R_s$$: Gas-oil ratio (SCF/STB)
+- $$\gamma$$: Gas specific gravity
+- $$T$$: Temperature (°F)
+- $$\text{API}$$: Oil API gravity
 
 This equation helps production engineers predict when gas will separate from oil, impacting separator design.
 
@@ -74,17 +76,19 @@ A **P-V diagram** plots pressure against specific volume (volume per unit mass) 
 
 ### Math Insight: Gas Formation Volume Factor
 
-The gas formation volume factor $B_g$ relates gas volume at reservoir conditions to surface conditions:
+The gas formation volume factor $$B_g$$ relates gas volume at reservoir conditions to surface conditions:
 
+<div class="math-wrapper">
 ```math
 B_g = \frac{0.00504 \cdot z \cdot T}{P}
 ```
+</div>
 
 Where:
-- $B_g$: Gas formation volume factor (ft³/SCF)
-- $z$: Gas compressibility factor
-- $T$: Temperature (°R, where °R = °F + 460)
-- $P$: Pressure (psia)
+- $$B_g$$: Gas formation volume factor (ft³/SCF)
+- $$z$$: Gas compressibility factor
+- $$T$$: Temperature (°R, where °R = °F + 460)
+- $$P$$: Pressure (psia)
 
 This factor is used to calculate how much gas expands from reservoir to surface, critical for flowline design.
 
@@ -102,12 +106,14 @@ For example, in the North Sea, engineers use P-T diagrams to design multi-stage 
 
 Let’s compare two types of reservoirs to see phase behavior in action:
 
-| **Aspect**                | **Gas Condensate**                              | **Black Oil**                                  |
-|---------------------------|-----------------------------------------------|-----------------------------------------------|
-| **Composition**           | High in light hydrocarbons (methane, ethane)  | High in heavier hydrocarbons                   |
-| **P-T Diagram**           | Large two-phase region, near dew point        | Smaller two-phase region, near bubble point   |
-| **Behavior**              | Gas at reservoir, liquid condenses at surface | Liquid at reservoir, gas forms at surface     |
-| **Example**               | North Field (Qatar)                          | Ghawar (Saudi Arabia)                         |
+<div class="table-wrapper">
+| Aspect                | Gas Condensate                              | Black Oil                                  |
+|-----------------------|---------------------------------------------|--------------------------------------------|
+| Composition           | High in light hydrocarbons (methane, ethane) | High in heavier hydrocarbons                 |
+| P-T Diagram           | Large two-phase region, near dew point      | Smaller two-phase region, near bubble point |
+| Behavior              | Gas at reservoir, liquid condenses at surface | Liquid at reservoir, gas forms at surface   |
+| Example               | North Field (Qatar)                         | Ghawar (Saudi Arabia)                       |
+</div>
 
 - **Gas Condensate (North Field)**: At reservoir conditions, the fluid is a gas. As it reaches the surface, pressure drops below the dew point, causing liquid (condensate) to form. Engineers design separators to capture this valuable liquid.
 - **Black Oil (Ghawar)**: The fluid is liquid in the reservoir. As pressure drops during production, gas bubbles form below the bubble point. Engineers optimize separators to handle high gas-oil ratios.

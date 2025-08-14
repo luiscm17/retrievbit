@@ -1,7 +1,7 @@
 ---
 title: PVT Properties Volume Factors  
 description: A clear and engaging exploration of key PVT properties, focusing on volume factors (Bo, Bg, Bw), their role in reserve calculations and facility design, and typical values for light and heavy crudes.  
-image: "@assets/training/production/cover.png"  
+image: "@assets/training/production/pvt-properties-volume-factors/cover.jpg"  
 imageAlt: "Diagram of PVT properties in a laboratory setting"  
 pubDate: 2025-08-04  
 modDate: 2025-08-04  
@@ -33,9 +33,11 @@ Volume factors describe how the volume of oil ($$B_o$$), gas ($$B_g$$), or water
 
 Volume factors are central to estimating **Original Oil in Place (OOIP)** and **Original Gas in Place (OGIP)**, which are the total hydrocarbons in a reservoir before production. The basic volumetric equation for oil is:
 
+<div class="math-container">
 $$
 N = \frac{1}{B_o} \cdot A \cdot h \cdot \phi \cdot S_o \cdot (1 - S_w)
 $$
+</div>
 
 Where:
 - $$N$$: Original oil in place ($$\text{STB}$$)
@@ -48,9 +50,11 @@ Where:
 
 For gas, the equation is similar:
 
+<div class="math-container">
 $$
 G = \frac{1}{B_g} \cdot A \cdot h \cdot \phi \cdot S_g
 $$
+</div>
 
 Where:
 - $$G$$: Original gas in place ($$\text{SCF}$$)
@@ -63,9 +67,11 @@ Where:
 
 In the Ghawar field (Saudi Arabia), a light crude reservoir has $$B_o = 1.4 \, \text{bbl/STB}$$, meaning 1.4 barrels of oil in the reservoir shrink to 1 barrel at the surface due to gas coming out of solution. If the reservoir has 1 billion barrels in place, the recoverable oil (after applying $$B_o$$) is:
 
-$$
+<div class="math-container">
+```math
 N_{surface} = \frac{1000000000}{1.4} \approx 714285714 \, \text{STB}
-$$
+```
+</div>
 
 This shows why $$B_o$$ is crucial for realistic reserve estimates.
 
@@ -83,10 +89,12 @@ For instance, in the Permian Basin (USA), engineers use $$B_g$$ to design flowli
 
 The value of volume factors depends on the fluid type (light vs. heavy crude) and reservoir conditions. Here’s a comparison:
 
-| **Fluid Type** | **$$B_o$$ (bbl/STB)** | **$$B_g$$ (ft³/SCF)** | **$$B_w$$ (bbl/STB)** | **Characteristics** |
-|----------------|---------------------|---------------------|---------------------|---------------------|
-| **Light Crude** | $$1.2 - 2.0$$ | $$0.005 - 0.02$$ | $$1.0 - 1.1$$ | High API gravity $$(< 30°)$$, low viscosity, high gas content |
-| **Heavy Crude** | $$1.0 - 1.3$$ | $$0.01 - 0.05$$ | $$1.0 - 1.1$$ | Low API gravity   $$(< 20°)$$, high viscosity, low gas content |
+<div class="table-wrapper">
+| Fluid Type | $$B_o$$ (bbl/STB) | $$B_g$$ (ft³/SCF) | $$B_w$$ (bbl/STB) | Characteristics |
+|:---------------|:---------------------:|:---------------------:|:---------------------:|:--------------------:|
+| Light Crude | $$1.2 - 2.0$$ | $$0.005 - 0.02$$ | $$1.0 - 1.1$$ | High API gravity $$(< 30°)$$, low viscosity, high gas content |
+| Heavy Crude | $$1.0 - 1.3$$ | $$0.01 - 0.05$$ | $$1.0 - 1.1$$ | Low API gravity   $$(< 20°)$$, high viscosity, low gas content |
+</div>
 
 - **Light Crude (e.g., Brent, North Sea)**: Higher $$B_o$$ due to dissolved gas, which expands significantly at the surface. $$B_g$$ is lower because gas is less compressed in the reservoir.
 - **Heavy Crude (e.g., Orinoco Belt, Venezuela)**: Lower $$B_o$$ because heavy oil has less dissolved gas, and $$B_g$$ is higher due to lower gas solubility.
@@ -97,9 +105,11 @@ The value of volume factors depends on the fluid type (light vs. heavy crude) an
 
 The gas formation volume factor is calculated as:
 
+<div class="math-container">
 ```math
 B_g = 0.00504 \cdot \frac{z \cdot T}{P}
 ```
+</div>
 
 Where:
 - $$B_g$$: Gas formation volume factor ($$\text{ft}^3/\text{SCF}$$)
@@ -109,9 +119,11 @@ Where:
 
 For a gas reservoir at 3000 psia and 200$$^\circ$$F ($$T = 660 \, \text{R}$$) with $$z = 0.9$$, the $$B_g$$ is:
 
+<div class="math-container">
 ```math
 B_g = 0.00504 \cdot \frac{0.9 \cdot 660}{3000} \approx 0.01 \, \text{ft}^3/\text{SCF}
 ```
+</div>
 
 This means 0.01 cubic feet of gas in the reservoir becomes 1 $$\text{SCF}$$ at the surface, guiding pipeline sizing.
 
@@ -126,22 +138,22 @@ Volume factors ($$B_o$$, $$B_g$$, $$B_w$$) are essential PVT properties that tra
 ## Questionnaire
 
 1. **What does the oil formation volume factor ($$B_o$$) represent?**  
-  - a) The volume of gas at reservoir conditions.  
-  - b) The ratio of oil volume at reservoir conditions to surface conditions.  
-  - c) The compressibility of water in the reservoir.  
-  - **Answer**: b) The ratio of oil volume at reservoir conditions to surface conditions.
+  <br/> a) The volume of gas at reservoir conditions.  
+  <br/> b) The ratio of oil volume at reservoir conditions to surface conditions.  
+  <br/> c) The compressibility of water in the reservoir.  
+  <br/> **Answer**: b) The ratio of oil volume at reservoir conditions to surface conditions.
 
 2. **Why is $$B_g$$ important for pipeline design?**  
-  - a) It predicts how much gas expands from reservoir to surface.  
-  - b) It calculates the reservoir’s porosity.  
-  - c) It determines the water cut in production.  
-  - **Answer**: a) It predicts how much gas expands from reservoir to surface.
+  <br/> a) It predicts how much gas expands from reservoir to surface.  
+  <br/> b) It calculates the reservoir’s porosity.  
+  <br/> c) It determines the water cut in production.  
+  <br/> **Answer**: a) It predicts how much gas expands from reservoir to surface.
 
 3. **How does $$B_o$$ typically differ between light and heavy crudes?**  
-  - a) Light crudes have a lower $$B_o$$ than heavy crudes.  
-  - b) Light crudes have a higher $$B_o$$ due to more dissolved gas.  
-  - c) Both have the same $$B_o$$ regardless of crude type.  
-  - **Answer**: b) Light crudes have a higher $$B_o$$ due to more dissolved gas.
+  <br/> a) Light crudes have a lower $$B_o$$ than heavy crudes.  
+  <br/> b) Light crudes have a higher $$B_o$$ due to more dissolved gas.  
+  <br/> c) Both have the same $$B_o$$ regardless of crude type.  
+  <br/> **Answer**: b) Light crudes have a higher $$B_o$$ due to more dissolved gas.
 
 ## Bibliography
 
@@ -163,6 +175,6 @@ Volume factors ($$B_o$$, $$B_g$$, $$B_w$$) are essential PVT properties that tra
 
 ### Direct Links
 
-- [SPE (Society of Petroleum Engineers)](https://www.spe.org/en/) – Webinars and papers on PVT properties.  
-- [PennWell Books](https://www.pennwellbooks.com/the-properties-of-petroleum-fluids/) – Source for McCain’s book.  
-- [AAPG Resources](https://www.aapg.org/learn) – Educational content on petroleum engineering.
+- [SPE (Society of Petroleum Engineers)](https://www.spe.org/en/) - Webinars and papers on PVT properties.  
+- [PennWell Books](https://www.pennwellbooks.com/the-properties-of-petroleum-fluids/) - Source for McCain’s book.  
+- [AAPG Resources](https://www.aapg.org/learn) - Educational content on petroleum engineering.

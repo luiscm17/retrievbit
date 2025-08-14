@@ -1,0 +1,46 @@
+// Scroll horizontal solo para móviles
+@media (max-width: 768px) {
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1rem 0;
+        padding: 0.5rem 0;
+        display: block;
+
+        // Forzar aceleración por hardware en iOS
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+
+        // Asegurar que el scroll sea suave
+        scroll-behavior: smooth;
+    }
+
+    // Ancho mínimo para forzar el scroll en móviles
+    table {
+        min-width: 640px;
+    }
+}
+
+// // Modo oscuro
+// .dark {
+//   .table-wrapper {
+//     &::-webkit-scrollbar-thumb {
+//       background-color: rgba(82, 82, 91, 0.7);
+//     }
+
+//     &::-webkit-scrollbar-track {
+//       background-color: rgba(39, 39, 42, 0.3);
+//     }
+//   }
+
+//   table {
+//     th, td {
+//       border-color: #374151;
+//     }
+
+//     th {
+//       background-color: #1f2937;
+//     }
+//   }
+// }

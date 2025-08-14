@@ -25,6 +25,25 @@
   @apply rounded-[16px];
 }
 
+// Scroll horizontal para tablas y ecuaciones en móviles
+.scroll-table-wrapper {
+  @apply overflow-x-auto -mx-4 px-4 w-[calc(100%+2rem)] md:mx-0 md:px-0 md:w-full;
+  
+  table {
+    @apply min-w-full;
+  }
+}
+
+// Para ecuaciones matemáticas que puedan desbordar
+.math-wrapper {
+  @apply overflow-x-auto overflow-y-hidden py-2 -mx-4 px-4 w-[calc(100%+2rem)] md:mx-0 md:px-0 md:w-full;
+  
+  // Asegurar que las ecuaciones no se corten
+  .math-display {
+    @apply min-w-max;
+  }
+}
+
 // Header Conditionals
 input#nav-toggle:checked + label #show-button {
   @apply hidden;

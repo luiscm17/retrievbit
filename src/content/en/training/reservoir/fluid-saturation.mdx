@@ -1,7 +1,7 @@
 ---
 title: Fluid Saturation
 description: An exploration of fluid saturation in petroleum reservoirs, covering key definitions, laboratory and geophysical measurement techniques, and practical applications in gas condensate reservoirs
-image: "@assets/training/reservoir/cover.png"
+image: "@assets/training/reservoir/fluid-saturation/cover.jpg"
 imageAlt: "Core sample showing fluid distribution in pores"
 pubDate: 2025-08-04
 modDate: 2025-08-04
@@ -17,14 +17,16 @@ Imagine slicing open a sponge soaked with water, oil, and air. How much of each 
 
 Fluid saturation is the fraction of a rock’s pore volume occupied by a specific fluid—water, oil, or gas. It’s expressed as a percentage or fraction and always sums to 1:
 
+<div class="math-wrapper">
 $$
 S_w + S_o + S_g = 1
 $$
+</div>
 
 Where:
-- $$ S_w $$: Water saturation
-- $$ S_o $$: Oil saturation
-- $$ S_g $$: Gas saturation
+- $$S_w$$: Water saturation
+- $$S_o$$: Oil saturation
+- $$S_g$$: Gas saturation
 
 Saturation tells us not just *how much* fluid is present but also *how it behaves* in the reservoir. Some fluids are tightly bound to the rock, while others flow freely, impacting how much hydrocarbon we can extract.
 
@@ -34,23 +36,25 @@ Saturation tells us not just *how much* fluid is present but also *how it behave
 
 Let’s meet the critical saturation terms that every reservoir engineer needs to know:
 
-- **Irreducible Water Saturation ($$ S_{wi} $$)**: The minimum water content that remains trapped in the pores, held by capillary forces or adsorbed onto rock surfaces. It’s like water clinging to a sponge even after you squeeze it hard. Typical values range from 10% to 50% depending on the rock type.
-- **Residual Oil Saturation ($$ S_{or} $$)**: The oil left behind after water or gas displacement (e.g., during waterflooding). This oil is trapped in small pores or sticks to the rock, resisting flow. Values often range from 20% to 40%.
-- **Critical Gas Saturation ($$ S_{gc} $$)**: The minimum gas saturation needed for gas to start flowing as a continuous phase. Below this threshold, gas bubbles are trapped and immobile, typically 5–10% in gas reservoirs.
+- **Irreducible Water Saturation ($$S_{wi}$$)**: The minimum water content that remains trapped in the pores, held by capillary forces or adsorbed onto rock surfaces. It’s like water clinging to a sponge even after you squeeze it hard. Typical values range from 10% to 50% depending on the rock type.
+- **Residual Oil Saturation ($$S_{or}$$)**: The oil left behind after water or gas displacement (e.g., during waterflooding). This oil is trapped in small pores or sticks to the rock, resisting flow. Values often range from 20% to 40%.
+- **Critical Gas Saturation ($$S_{gc}$$)**: The minimum gas saturation needed for gas to start flowing as a continuous phase. Below this threshold, gas bubbles are trapped and immobile, typically 5-10% in gas reservoirs.
 
-| **Term**                     | **Definition**                              | **Typical Range** |
-|------------------------------|---------------------------------------------|-------------------|
-| Irreducible Water ($$ S_{wi} $$) | Water trapped by capillary forces           | 10–50%            |
-| Residual Oil ($$ S_{or} $$)     | Oil left after displacement                 | 20–40%            |
-| Critical Gas ($$ S_{gc} $$)     | Minimum gas for continuous flow             | 5–10%             |
+<div class="table-wrapper">
+| Term                     | Definition                              | Typical Range |
+|--------------------------|-----------------------------------------|---------------|
+| Irreducible Water ($$S_{wi}$$) | Water trapped by capillary forces       | 10 % - 50 %   |
+| Residual Oil ($$S_{or}$$)     | Oil left after displacement              | 20 % - 40 %   |
+| Critical Gas ($$S_{gc}$$)     | Minimum gas for continuous flow          | 5 % - 10 %    |
+</div>
 
-<Notice type="warning">High $$ S_{wi} $$ reduces the space for hydrocarbons, while high $$ S_{or} $$ limits recovery. Understanding these helps predict a reservoir’s potential.</Notice>
+<Notice type="warning">High $$S_{wi}$$ reduces the space for hydrocarbons, while high $$S_{or}$$ limits recovery. Understanding these helps predict a reservoir’s potential.</Notice>
 
 ## Measuring Saturation: Laboratory Techniques
 
 To know how much water, oil, or gas is in a rock, we start with core samples—small rock cylinders drilled from a well. These are analyzed in the lab using precise methods:
 
-- **Centrifugation**: A core sample is spun at high speeds in a centrifuge, forcing fluids out of the pores. By measuring the volume of fluid displaced (e.g., oil or water), we calculate saturation. This method is great for determining $$ S_{wi} $$ and $$ S_{or} $$.
+- **Centrifugation**: A core sample is spun at high speeds in a centrifuge, forcing fluids out of the pores. By measuring the volume of fluid displaced (e.g., oil or water), we calculate saturation. This method is great for determining $$S_{wi}$$ and $$S_{or}$$.
 - **Nuclear Magnetic Resonance (NMR) Spectroscopy**: NMR detects hydrogen atoms in fluids within the pores. It distinguishes between movable fluids (e.g., oil that can flow) and bound fluids (e.g., irreducible water). NMR is non-destructive and provides detailed saturation profiles.
 
 <Notice type="tip">NMR is especially useful for complex reservoirs like carbonates, where pore sizes vary widely.</Notice>
@@ -63,20 +67,22 @@ In the field, we use **well logs** to estimate saturation without pulling cores.
 
 Developed by Gus Archie in the 1940s, this equation is a cornerstone of petrophysics:
 
+<div class="math-wrapper">
 ```math
 S_w = \big(\frac{a \cdot R_w}{\phi^m \cdot R_t}\big)^{1/n}
 ```
+</div>
 
 Where:
-- $$ S_w $$: Water saturation
-- $$ R_w $$: Resistivity of formation water ($$ohm-m$$)
-- $$ R_t $$: True formation resistivity (from logs, $$ohm-m$$)
-- $$ \phi $$: Porosity (fraction)
-- $$ a $$: Tortuosity factor (typically 0.6–1.0)
-- $$ m $$: Cementation exponent (1.8–2.5, depending on rock type)
-- $$ n $$: Saturation exponent (usually ~2)
+- $$S_w$$: Water saturation
+- $$R_w$$: Resistivity of formation water ($$ohm-m$$)
+- $$R_t$$: True formation resistivity (from logs, $$ohm-m$$)
+- $$\phi$$: Porosity (fraction)
+- $$a$$: Tortuosity factor (typically 0.6–1.0)
+- $$m$$: Cementation exponent (1.8–2.5, depending on rock type)
+- $$n$$: Saturation exponent (usually ~2)
 
-**How it works**: Rocks with high water saturation conduct electricity well (low resistivity), while oil or gas (non-conductive) increases resistivity. By measuring $$ R_t $$ and knowing $$ \phi $$, we solve for $$ S_w $$. Oil or gas saturation is then $$ S_o + S_g = 1 - S_w $$. 
+**How it works**: Rocks with high water saturation conduct electricity well (low resistivity), while oil or gas (non-conductive) increases resistivity. By measuring $$R_t$$ and knowing $$\phi$$, we solve for $$S_w$$. Oil or gas saturation is then $$S_o + S_g = 1 - S_w$$. 
 
 <Notice type="info">Archie’s Equation works best in clean sandstones with low clay content. For shales or carbonates, we use modified versions like the Simandoux or Waxman-Smits models.</Notice>
 
@@ -84,30 +90,30 @@ Where:
 
 Gas condensate reservoirs, like the North Field in Qatar, are fascinating because they contain gas that can condense into liquid hydrocarbons as pressure drops. Let’s see how saturation plays out:
 
-- **Initial Conditions**: The reservoir starts with high gas saturation ($$ S_g \approx 70–80% $$) and low irreducible water ($$ S_{wi} \approx 20–30% $$). Oil saturation ($$ S_o $$) is negligible.
-- **Production Challenges**: As pressure decreases, liquid hydrocarbons (condensate) form, increasing $$ S_o $$ and reducing $$ S_g $$. If $$ S_g $$ falls below $$ S_{gc} $$, gas flow stops, trapping valuable hydrocarbons.
-- **Saturation Analysis**: Using NMR, engineers measure $$ S_{wi} $$ to estimate producible gas. Resistivity logs with Archie’s Equation track changes in $$ S_w $$ as water encroaches during production.
+- **Initial Conditions**: The reservoir starts with high gas saturation ($$S_g \approx 70–80%$$) and low irreducible water ($$S_{wi} \approx 20–30%$$). Oil saturation ($$S_o$$) is negligible.
+- **Production Challenges**: As pressure decreases, liquid hydrocarbons (condensate) form, increasing $$S_o$$ and reducing $$S_g$$. If $$S_g$$ falls below $$S_{gc}$$, gas flow stops, trapping valuable hydrocarbons.
+- **Saturation Analysis**: Using NMR, engineers measure $$S_{wi}$$ to estimate producible gas. Resistivity logs with Archie’s Equation track changes in $$S_w$$ as water encroaches during production.
 
-In the North Field, low $$ S_{wi} $$ (e.g., 20%) in high-porosity sandstones ensures ample space for gas, while monitoring saturation helps optimize production to avoid condensate buildup.
+In the North Field, low $$S_{wi}$$ (e.g., 20%) in high-porosity sandstones ensures ample space for gas, while monitoring saturation helps optimize production to avoid condensate buildup.
 
 <Youtube client:only="react" id="X2mG5c3z6vM" title="Fluid Saturation in Gas Condensate Reservoirs" lang="en" />
 
 ## Why Saturation Matters
 
-Saturation determines how much hydrocarbon is available and how easily it can be produced. High $$ S_{wi} $$ means less room for oil or gas, while high $$ S_{or} $$ limits recovery. By combining lab measurements (centrifugation, $$NMR$$) with field data (Archie’s Equation), engineers estimate:
-- **Recoverable Reserves**: Low $$ S_{wi} $$ and $$ S_{or} $$ indicate more producible hydrocarbons.
-- **Production Strategies**: Knowing $$ S_{gc} $$ helps manage gas reservoirs to prevent flow stoppage.
+Saturation determines how much hydrocarbon is available and how easily it can be produced. High $$S_{wi}$$ means less room for oil or gas, while high $$S_{or}$$ limits recovery. By combining lab measurements (centrifugation, $$NMR$$) with field data (Archie’s Equation), engineers estimate:
+- **Recoverable Reserves**: Low $$S_{wi}$$ and $$S_{or}$$ indicate more producible hydrocarbons.
+- **Production Strategies**: Knowing $$S_{gc}$$ helps manage gas reservoirs to prevent flow stoppage.
 - **Enhanced Recovery**: Saturation data guides waterflooding or gas injection to displace residual oil.
 
-<Notice type="warning">In gas condensate reservoirs, failing to account for $$ S_{gc} $$ can lead to underestimating trapped gas, reducing recovery.</Notice>
+<Notice type="warning">In gas condensate reservoirs, failing to account for $$S_{gc}$$ can lead to underestimating trapped gas, reducing recovery.</Notice>
 
 ## Summary
 
-Fluid saturation ($$ S_w $$, $$ S_o $$, $$ S_g $$) defines how water, oil, and gas occupy a rock’s pores, with critical thresholds like irreducible water ($$ S_{wi} $$), residual oil ($$ S_{or} $$), and critical gas ($$ S_{gc} $$) shaping production potential. Laboratory methods like centrifugation and $$NMR$$, paired with geophysical logs using Archie’s Equation, provide accurate saturation estimates. In gas condensate reservoirs like the North Field, saturation data is vital for maximizing recovery. Understanding saturation unlocks the secrets of how fluids behave in a reservoir, setting the stage for deeper reservoir analysis.
+Fluid saturation ($$S_w$$, $$S_o$$, $$S_g$$) defines how water, oil, and gas occupy a rock’s pores, with critical thresholds like irreducible water ($$S_{wi}$$), residual oil ($$S_{or}$$), and critical gas ($$S_{gc}$$) shaping production potential. Laboratory methods like centrifugation and $$NMR$$, paired with geophysical logs using Archie’s Equation, provide accurate saturation estimates. In gas condensate reservoirs like the North Field, saturation data is vital for maximizing recovery. Understanding saturation unlocks the secrets of how fluids behave in a reservoir, setting the stage for deeper reservoir analysis.
 
 ## Cuestionario
 
-1. **What does irreducible water saturation ($$ S_{wi} $$) represent?**
+1. **What does irreducible water saturation ($$S_{wi}$$) represent?**
    <br/> a) Water that flows freely during production
    <br/> b) Water trapped by capillary forces in the pores
    <br/> c) Water injected during enhanced recovery
@@ -119,7 +125,7 @@ Fluid saturation ($$ S_w $$, $$ S_o $$, $$ S_g $$) defines how water, oil, and g
    <br/> c) NMR spectroscopy
    <br/> **Correct Answer**: c) NMR spectroscopy
 
-3. **In a gas condensate reservoir, what happens if gas saturation falls below $$ S_{gc} $$?**
+3. **In a gas condensate reservoir, what happens if gas saturation falls below $$S_{gc}$$?**
    <br/> a) Gas flow increases
    <br/> b) Gas becomes trapped and immobile
    <br/> c) Oil saturation decreases

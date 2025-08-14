@@ -20,8 +20,40 @@
   @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-8 prose-blockquote:px-4 prose-blockquote:py-0 prose-blockquote:font-secondary prose-blockquote:text-2xl prose-blockquote:not-italic;
   @apply prose-blockquote:glass-t-borderless prose-blockquote:border-border prose-blockquote:dark:border-darkmode-border prose-blockquote:text-txt-s prose-blockquote:dark:text-darkmode-txt-s;
   @apply prose-blockquote:prose-p:m-0;
-  // Table
-  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-lg prose-table:before:rounded-lg prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:border prose-table:before:content-[""] prose-table:before:dark:border-darkmode-border;
+  // Estilos de tablas con Tailwind
+  .table-wrapper {
+    @apply my-6 overflow-x-auto;
+    -webkit-overflow-scrolling: touch;
+    
+    table {
+      @apply w-full min-w-[640px] border-collapse;
+      
+      th, td {
+        @apply px-4 py-3 border border-border dark:border-darkmode-border align-top;
+      }
+      
+      th {
+        @apply font-semibold text-left;
+      }
+      
+      thead th {
+        @apply sticky top-0 z-10;
+      }
+    }
+    
+    // Scrollbar personalizada (necesita CSS puro)
+    &::-webkit-scrollbar {
+      @apply h-1.5;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-300 rounded-full dark:bg-gray-600;
+    }
+    
+    &::-webkit-scrollbar-track {
+      @apply bg-gray-100 dark:bg-gray-800;
+    }
+  }
   @apply prose-thead:border-border prose-thead:dark:border-darkmode-border prose-thead:dark:bg-darkmode-bg-t prose-thead:bg-bg-t prose-thead:bg-opacity-40 prose-thead:dark:bg-opacity-40 backdrop-blur-lg;
   @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-2 prose-th:text-txt-p prose-th:dark:text-darkmode-txt-p;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;

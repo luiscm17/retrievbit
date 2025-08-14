@@ -1,0 +1,128 @@
+---
+title: Saturación de Fluidos
+description: Una exploración del saturación de fluidos en reservorios de petróleo, cubriendo definiciones clave, técnicas de medición en laboratorio y geofísicas, y aplicaciones prácticas en reservorios de condensado de gas.
+image: "@assets/training/reservoir/fluid-saturation/cover.jpg"
+imageAlt: "Muestra de núcleo mostrando distribución de fluidos en poros"
+pubDate: 2025-08-04
+modDate: 2025-08-04
+chapter: 3
+module: 1
+---
+
+## Introducción
+
+Imagina cortando un esponja empapada con agua, petróleo y aire. ¿Cuánto de cada uno está atrapado adentro, y cuán firmemente se sostiene? En reservorios de petróleo, **fluid saturation (saturación de fluidos)** nos dice la proporción del espacio poroso ocupado por agua, petróleo o gas. Este capítulo se basa en porosidad (el capacidad de almacenamiento) y permeabilidad (el capacidad de flujo) para explorar cómo se distribuyen los fluidos en una roca y por qué esto importa para la producción de hidrocarburos. Profundizaremos en conceptos críticos como agua irreducible o petróleo residual, aprenderemos cómo medir saturación en el laboratorio y el campo, y lo veremos en acción en un reservorio de condensado de gas. ¡Descubramos cómo la saturación moldea la vida de un reservorio!
+
+## ¿Qué es la Saturación de Fluidos?
+
+La saturación de fluidos es la fracción del volumen poroso de una roca ocupado por un fluido específico—agua, petróleo o gas. Se expresa como un porcentaje o fracción y siempre suma 1:
+
+<div class="math-wrapper">
+$$
+S_w + S_o + S_g = 1
+$$
+</div>
+
+Donde:
+- $$S_w$$: Saturación de agua
+- $$S_o$$: Saturación de petróleo
+- $$S_g$$: Saturación de gas
+
+La saturación nos dice no solo *cuánto* fluido está presente, sino también *cómo se comporta* en el reservorio. Algunos fluidos están fuertemente unidos a la roca, mientras que otros fluyen libremente, impactando cuánto hidrocarburo podemos extraer.
+
+<Notice type="info">La saturación es dinámica cambia a medida que se produce un reservorio, con agua o gas desplazando petróleo con el tiempo.</Notice>
+
+## Definiciones Clave
+
+Conozcamos los términos de saturación críticos que todo ingeniero de reservorios necesita saber:
+
+- **Irreducible Water Saturation ($$S_{wi}$$)** (saturación de agua irreducible): El contenido mínimo de agua que permanece atrapado en los poros, sostenido por fuerzas capilares o adsorbido en superficies de roca. Es como agua aferrándose a un esponja—nunca se drena completamente.
+- **Residual Oil Saturation ($$S_{or}$$)** (saturación de petróleo residual): El petróleo que queda después de la producción primaria o secundaria, atrapado por fuerzas capilares. Representa lo que no se puede recuperar fácilmente.
+- **Critical Gas Saturation ($$S_{gc}$$)** (saturación crítica de gas): El mínimo gas requerido para que comience a fluir. Por debajo de esto, el gas está inmóvil, atrapado como burbujas.
+
+Estos valores varían por tipo de roca y fluido: en areniscas porosas, $$S_{wi}$$ podría ser 10-20%, mientras que en carbonatos apretados, podría llegar al 30%.
+
+<div class="table-wrapper">
+| Término                     | Definición                              | Rango típico |
+|:---------------------------|:-------------------------------------------:|:----------------:|
+| Saturación de agua irreducible ($$ S_{wi} $$) | Agua atrapada por fuerzas capilares           | 10–50%           |
+| Saturación de petróleo residual ($$ S_{or} $$)     | Petróleo que queda después de la producción | 20–40%           |
+| Saturación crítica de gas ($$ S_{gc} $$)     | Mínimo gas para fluir continuamente         | 5–10%            |
+</div>
+
+## Técnicas de Medición en Laboratorio
+
+Los geólogos e ingenieros miden saturación en muestras de núcleo para entender la distribución de fluidos. Métodos comunes incluyen:
+
+- **Centrifugation (centrifugación)**: Gira el núcleo para forzar fluidos fuera, midiendo saturación residual. Ideal para $$S_{wi}$$ y $$S_{or}$$.
+- **Retort Method (método de retorta)**: Calienta el núcleo para vaporizar fluidos y mide volúmenes. Rápido pero destructivo.
+- **NMR Spectroscopy (espectroscopía NMR)**: Usa campos magnéticos para detectar fluidos en poros, distinguiendo entre agua ligada y móvil. No destructivo y preciso.
+
+**Ejemplo**: En un núcleo de arenisca del campo Brent, la centrifugación revela $$S_{wi}$$ del 15%, guiando estimaciones de recuperación.
+
+## Técnicas de Medición Geofísicas
+
+En el campo, usamos registros de pozo para estimar saturación sin muestras físicas:
+
+- **Resistivity Logs (registros de resistividad)**: Miden la resistencia eléctrica de la roca; el agua salina conduce electricidad, mientras que el petróleo no. Usa la ecuación de Archie:
+
+<div class="math-wrapper">
+```math
+S_w = \left( \frac{a \cdot R_w}{\phi^m \cdot R_t} \right)^{1/n}
+```
+</div>
+
+Donde $$R_w$$ es resistividad del agua, $$\phi$$ es porosidad, $$R_t$$ es resistividad verdadera, y a, m, n son constantes.
+
+- **Nuclear Logs (registros nucleares)**: Incluyen neutron y density logs para calcular porosidad y saturación de gas.
+- **Sonic Logs (registros sónicos)**: Miden velocidad de ondas para inferir saturación, especialmente en gas.
+
+**Ejemplo**: En el campo Ghawar, registros de resistividad estiman $$S_o$$ del 70%, confirmando un reservorio rico en petróleo.
+
+## Aplicaciones Prácticas en Reservorios de Condensado de Gas
+
+En reservorios de **gas condensate (condensado de gas)**, la saturación es dinámica debido al comportamiento de fase. A medida que la presión cae por debajo del **dew point (punto de rocío)**, el condensado se deposita, aumentando $$ S_o $$ y reduciendo permeabilidad relativa al gas. $$ S_{gc} $$ es crítico—si la saturación de gas cae por debajo de esto, el gas se atrapa, reduciendo recuperación.
+
+- **Reto**: Condensación retrógrada obstruye poros, bajando productividad.
+- **Solución**: Mantener presión por encima del dew point mediante **gas cycling (ciclo de gas)** o usar modelado para predecir saturación.
+
+**Estudio de Caso**: En el campo Arun (Indonesia), mediciones de saturación guiaron la inyección de gas para minimizar condensado atrapado, maximizando recuperación.
+
+## Resumen
+
+La **fluid saturation (saturación de fluidos)** revela la distribución de agua, petróleo y gas en los poros de la roca, impactando la recuperación. Conceptos como $$S_{wi}$$, $$S_{or}$$ y $$S_{gc}$$ son esenciales para entender fluidos móviles vs. atrapados. Técnicas de laboratorio (centrifugación, NMR) y geofísicas (registros de resistividad) proporcionan datos precisos. En reservorios de condensado de gas, la saturación es vital para maximizar recuperación. Entender la saturación desbloquea los secretos de cómo se comportan los fluidos en un reservorio, preparando el terreno para análisis más profundos del reservorio.
+
+## Cuestionario
+
+1. **¿Qué representa la irreducible water saturation ($$S_{wi}$$)?**
+   <br/> a) Agua que fluye libremente durante la producción
+   <br/> b) Agua atrapada por fuerzas capilares en los poros
+   <br/> c) Agua inyectada durante recuperación mejorada
+   <br/> **Respuesta Correcta**: b) Agua atrapada por fuerzas capilares en los poros
+
+2. **¿Qué método es mejor para distinguir fluidos móviles de unidos en una muestra de núcleo?**
+   <br/> a) Centrifugación
+   <br/> b) Registro de resistividad
+   <br/> c) Espectroscopía NMR
+   <br/> **Respuesta Correcta**: c) Espectroscopía NMR
+
+3. **En un reservorio de condensado de gas, ¿qué sucede si la saturación de gas cae por debajo de $$S_{gc}$$?**
+   <br/> a) El flujo de gas aumenta
+   <br/> b) El gas se atrapa e inmoviliza
+   <br/> c) La saturación de petróleo disminuye
+   <br/> **Respuesta Correcta**: b) El gas se atrapa e inmoviliza
+
+## Bibliografía
+
+### Fuentes Utilizadas
+- *Journal of Petroleum Science and Engineering* (2020). Applications of NMR in reservoir characterization. Disponible en [https://www.journals.elsevier.com/journal-of-petroleum-science-and-engineering](https://www.journals.elsevier.com/journal-of-petroleum-science-and-engineering).
+- Selley, R. C., & Sonnenberg, S. A. (2014). *Elements of Petroleum Geology* (3rd ed.). Academic Press.
+- *Petroleum Engineering Handbook* (L.W. Lake, SPE, 2017). Capítulo sobre análisis petrofísico.
+
+### Lecturas Recomendadas
+- Tiab, D., & Donaldson, E. C. (2015). *Petrophysics: Theory and Practice of Measuring Reservoir Rock and Fluid Transport Properties*. Gulf Professional Publishing.
+- Archie, G. E. (1942). *The Electrical Resistivity Log as an Aid in Determining Some Reservoir Characteristics*. SPE.
+
+### Enlaces Directos
+- [SPE Recursos Técnicos](https://www.spe.org/en/): Perspectivas sobre saturación y análisis petrofísico.
+- [AAPG Recursos Educativos](https://www.aapg.org/learn): Webinars sobre caracterización de reservorios y registros de pozo.

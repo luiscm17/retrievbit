@@ -1,7 +1,7 @@
 ---
 title: Comportamiento de Fase de Hidrocarburos  
 description: Una exploración atractiva del comportamiento de fase de hidrocarburos, enfocándose en diagramas P-T y P-V, puntos críticos, regiones de líquido/gas, y sus aplicaciones en la separación en superficie, con comparaciones entre yacimientos de gas condensado y petróleo negro.  
-image: "@assets/training/production/cover.png"  
+image: "@assets/training/production/hydrocarbon-phase-behavior/cover.jpg"  
 imageAlt: "Ingeniero analizando un diagrama de fase"  
 pubDate: 2025-08-04  
 modDate: 2025-08-04  
@@ -46,9 +46,11 @@ En este diagrama, imagina un yacimiento a alta presión y temperatura (punto A).
 
 La presión de punto de burbuja $P_b$ es donde el gas comienza a formarse en un líquido. Se puede estimar usando correlaciones como la ecuación de Standing para petróleo:
 
+<div class="math-wrapper">
 ```math
 P_b = 18.2 \cdot \bigg[ \bigg(\frac{R_s}{\gamma}\bigg)^{0.83} \cdot 10^{(0.00091 \cdot T - 0.0125 \cdot \text{API})} - 1.4 \bigg]
 ```
+</div>
 
 Donde:
 - $P_b$: Presión de punto de burbuja (psia)
@@ -76,9 +78,11 @@ Un **diagrama P-V** grafica la presión contra el volumen específico (volumen p
 
 El factor de volumen de formación de gas $B_g$ relaciona el volumen de gas en condiciones de yacimiento con condiciones de superficie:
 
+<div class="math-wrapper">
 ```math
 B_g = \frac{0.00504 \cdot z \cdot T}{P}
 ```
+</div>
 
 Donde:
 - $B_g$: Factor de volumen de formación de gas (ft³/SCF)
@@ -101,13 +105,14 @@ Por ejemplo, en el Mar del Norte, los ingenieros utilizan diagramas P-T para dis
 ## Estudio de Caso: Yacimientos de Gas Condensado vs. Petróleo Negro
 
 Comparemos dos tipos de yacimientos para ver el comportamiento de fase en acción:
-
-| **Aspecto**                | **Gas Condensado** (Gas Condensate)                              | **Petróleo Negro** (Black Oil)                                  |
-|---------------------------|-----------------------------------------------|-----------------------------------------------|
-| **Composición**           | Alto en hidrocarburos ligeros (metano, etano)  | Alto en hidrocarburos más pesados                   |
-| **Diagrama P-T**           | Gran región de dos fases, cerca del punto de rocío        | Región de dos fases más pequeña, cerca del punto de burbuja   |
-| **Comportamiento**              | Gas en el yacimiento, líquido se condensa en la superficie | Líquido en el yacimiento, gas se forma en la superficie     |
-| **Ejemplo**               | North Field (Qatar)                          | Ghawar (Arabia Saudita)                         |
+<div className="table-wrapper">
+| Aspecto                   | Gas Condensado (Gas Condensate)                              | Petróleo Negro (Black Oil)                                  |
+|---------------------------|--------------------------------------------------------------|-------------------------------------------------------------|
+| Composición               | Alto en hidrocarburos ligeros (metano, etano)                | Alto en hidrocarburos más pesados                           |
+| Diagrama P-T              | Gran región de dos fases, cerca del punto de rocío           | Región de dos fases más pequeña, cerca del punto de burbuja |
+| Comportamiento              | Gas en el yacimiento, líquido se condensa en la superficie | Líquido en el yacimiento, gas se forma en la superficie     |
+| Ejemplo                   | North Field (Qatar)                                          | Ghawar (Arabia Saudita)                                     |
+</div>
 
 - **Gas Condensado (North Field)**: En condiciones de yacimiento, el fluido es un gas. A medida que llega a la superficie, la presión cae por debajo del punto de rocío, causando que se forme líquido (condensado). Los ingenieros diseñan separadores para capturar este valioso líquido.
 - **Petróleo Negro (Ghawar)**: El fluido es líquido en el yacimiento. A medida que la presión disminuye durante la producción, se forman burbujas de gas por debajo del punto de burbuja. Los ingenieros optimizan separadores para manejar altas relaciones gas-petróleo.
@@ -125,22 +130,22 @@ El comportamiento de fase de hidrocarburos, mapeado a través de diagramas P-T y
 ## Cuestionario
 
 1. **¿Qué representa el punto de burbuja en un diagrama P-T?**  
-  - a) El punto donde las fases gas y líquido se fusionan.  
-  - b) La presión donde el gas comienza a formarse en un líquido.  
-  - c) La temperatura donde los hidrocarburos se convierten en gas.  
-  - **Respuesta**: b) La presión donde el gas comienza a formarse en un líquido.
+  <br/> a) El punto donde las fases gas y líquido se fusionan.  
+  <br/> b) La presión donde el gas comienza a formarse en un líquido.  
+  <br/> c) La temperatura donde los hidrocarburos se convierten en gas.  
+  <br/> **Respuesta**: b) La presión donde el gas comienza a formarse en un líquido.
 
 2. **¿Por qué son importantes los diagramas P-V para la ingeniería de producción?**  
-  - a) Predicen cambios de presión en el yacimiento.  
-  - b) Muestran cómo cambia el volumen de hidrocarburos con la presión.  
-  - c) Calculan el punto crítico del agua.  
-  - **Respuesta**: b) Muestran cómo cambia el volumen de hidrocarburos con la presión.
+  <br/> a) Predicen cambios de presión en el yacimiento.  
+  <br/> b) Muestran cómo cambia el volumen de hidrocarburos con la presión.  
+  <br/> c) Calculan el punto crítico del agua.  
+  <br/> **Respuesta**: b) Muestran cómo cambia el volumen de hidrocarburos con la presión.
 
 3. **¿Cómo difiere un yacimiento de gas condensado de uno de petróleo negro?**  
-  - a) El gas condensado es líquido en el yacimiento, el petróleo negro es gas.  
-  - b) El gas condensado forma líquido en la superficie, el petróleo negro forma gas.  
-  - c) Ambos son idénticos en comportamiento de fase.  
-  - **Respuesta**: b) El gas condensado forma líquido en la superficie, el petróleo negro forma gas.
+  <br/> a) El gas condensado es líquido en el yacimiento, el petróleo negro es gas.  
+  <br/> b) El gas condensado forma líquido en la superficie, el petróleo negro forma gas.  
+  <br/> c) Ambos son idénticos en comportamiento de fase.  
+  <br/> **Respuesta**: b) El gas condensado forma líquido en la superficie, el petróleo negro forma gas.
 
 ## Bibliografía
 

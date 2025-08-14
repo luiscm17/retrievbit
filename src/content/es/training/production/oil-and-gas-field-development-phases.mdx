@@ -1,7 +1,7 @@
 ---
 title: Introducción a las Fases de Desarrollo de un Yacimiento de Petróleo y Gas
 description: Una exploración detallada del ciclo de vida de un yacimiento de petróleo y gas, desde la exploración hasta el abandono, destacando el rol de la ingeniería de producción en cada fase.
-image: "@assets/training/production/oil-and-gas-field-development-phases/cover.png"
+image: "@assets/training/production/oil-and-gas-field-development-phases/cover.jpg"
 imageAlt: "Operaciones en un campo de petróleo y gas en progreso"
 pubDate: 2025-08-04  
 modDate: 2025-08-04  
@@ -31,9 +31,11 @@ Una vez realizado un descubrimiento, la fase de evaluación determina si vale la
 - **Rol de la Ingeniería de Producción**: Analiza datos del yacimiento para estimar el potencial de producción y planificar instalaciones superficiales.
 - **Perspectiva Matemática**: Las reservas a menudo se estiman utilizando el método volumétrico:
 
+<div class="math-wrapper">
 ```math
 N = \frac{A \cdot h \cdot \phi \cdot S_o \cdot (1 - S_w)}{B_o}
 ```
+</div>
 
 donde:
 - $$N$$: Petróleo original en sitio (barriles)
@@ -54,9 +56,11 @@ La fase de desarrollo es donde el campo toma forma. Se perforan pozos y se const
 - **Rol de la Ingeniería de Producción**: Selecciona tipos de completamiento (por ejemplo, pozo abierto o entubado) y diseña líneas de flujo para manejar las tasas de producción esperadas.
 - **Perspectiva Matemática**: Los ingenieros de producción calculan el tamaño requerido de la tubería utilizando ecuaciones de caudal, como la ecuación de Darcy-Weisbach para la caída de presión:
 
+<div class="math-wrapper">
 ```math
 \Delta P = f \cdot \frac{L}{D} \cdot \frac{\rho v^2}{2}
 ```
+</div>
 
 donde:
 - $$\Delta P$$: Caída de presión ($$Pa$$)
@@ -76,9 +80,11 @@ La fase de producción es el corazón de las operaciones, donde se extraen y pro
 - **Rol de la Ingeniería de Producción**: Optimiza el rendimiento de los pozos utilizando técnicas como levantamiento por gas o bombas sumergibles eléctricas (ESP, por sus siglas en inglés).
 - **Perspectiva Matemática**: Las tasas de producción se modelan utilizando la Relación de Rendimiento de Afluencia (IPR, por sus siglas en inglés), como la ecuación de Vogel para pozos de petróleo:
 
+<div class="math-wrapper">
 ```math
 q_o = q_{max} \cdot \left[1 - 0.2 \cdot \left(\frac{P_{wf}}{\bar{P}}\right) - 0.8 \cdot \left(\frac{P_{wf}}{\bar{P}}\right)^2\right]
 ```
+</div>
 
 donde:
 - $$q_o$$: Tasa de flujo de petróleo ($$\frac{STB}{día}$$)

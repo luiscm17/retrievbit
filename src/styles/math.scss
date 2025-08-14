@@ -1,0 +1,28 @@
+// Scroll horizontal para ecuaciones solo en móviles
+@media (max-width: 768px) {
+    .math-container {
+        @apply w-full overflow-x-auto my-6 py-2 block;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        scroll-behavior: smooth;
+
+        // Para ecuaciones en bloque
+        .math-display {
+            @apply block w-max min-w-full mx-auto px-4 box-border;
+        }
+
+        // Scrollbar personalizada
+        &::-webkit-scrollbar {
+            @apply h-1.5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 rounded-full dark:bg-gray-600;
+        }
+
+        &::-webkit-scrollbar-track {
+            @apply bg-gray-100 dark:bg-gray-800;
+        }
+    }
+}

@@ -11,14 +11,15 @@ import remarkMath from "remark-math";
 import cloudflare from "@astrojs/cloudflare";
 import rehypePrettyCode from 'rehype-pretty-code';
 import { transformerCopyButton } from '@rehype-pretty/transformers';
-
 // https://astro.build/config
 export default defineConfig({
+  // Redirecciones personalizadas si son necesarias
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],
     routing: {
       prefixDefaultLocale: true,
+      redirectDefaultLocale: true,
     },
     // fallback: {
     //   // Si no se encuentra una traducción, usa el inglés
@@ -32,7 +33,10 @@ export default defineConfig({
     prefetchAll: true
   },
   adapter: cloudflare(),
-  integrations: [react(), sitemap(), tailwind({
+  integrations: [
+    react(),
+    sitemap(),
+    tailwind({
     config: {
       applyBaseStyles: false
     }
